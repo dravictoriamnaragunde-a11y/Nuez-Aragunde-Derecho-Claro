@@ -152,7 +152,7 @@
 
     <!-- Hero Slider -->
     <section id="inicio" class="relative h-screen overflow-hidden">
-        <!-- Slide 1: Derecho de Familia - CORREGIDO A familia.jpg -->
+        <!-- Slide 1: Derecho de Familia -->
         <div class="slide active" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('./familia.jpg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="text-center px-6 max-w-4xl slide-content">
@@ -218,7 +218,6 @@
                     </p>
                 </div>
                 
-                <!-- LOGO CORREGIDO -->
                 <div class="relative reveal flex justify-center">
                     <div class="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full">
                         <img src="./logo.png" alt="Nuñez Aragunde Logo" class="w-full h-auto">
@@ -510,9 +509,15 @@
                 </div>
 
                 <div class="bg-white p-8 md:p-10 shadow-xl rounded-lg reveal">
+                    <!-- FORMULARIO CON REDIRECCIÓN A GRACIAS.HTML -->
                     <form action="https://formsubmit.co/derechoclarona@gmail.com" method="POST" class="space-y-6">
                         <input type="hidden" name="_subject" value="Nueva consulta desde web Nuñez Aragunde">
-                        <input type="hidden" name="_next" value="https://dravictorianmaragunde-a11y.github.io/Nuez-Aragunde-Derecho-Claro/gracias.html">
+                        <!-- URL de redirección corregida - usa ruta relativa -->
+                        <input type="hidden" name="_next" value="gracias.html">
+                        <!-- Desactivar CAPTCHA de FormSubmit para evitar problemas -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Template para el email -->
+                        <input type="hidden" name="_template" value="table">
                         
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
@@ -728,6 +733,3 @@
     </script>
 </body>
 </html>
-
-
-
