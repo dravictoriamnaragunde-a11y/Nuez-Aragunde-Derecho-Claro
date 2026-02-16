@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias | Nuñez Aragunde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Crimson Text', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#2d5a87',
+                        accent: '#d4a574',
+                        light: '#f5f3f0',
+                        dark: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #10b981;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+        .checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            stroke: #10b981;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+        @keyframes scale {
+            0%, 100% { transform: none; }
+            50% { transform: scale3d(1.1, 1.1, 1); }
+        }
+        @keyframes fill {
+            100% { box-shadow: inset 0px 0px 0px 50px #10b981; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light min-h-screen flex items-center justify-center">
+    <div class="text-center px-6 max-w-2xl mx-auto">
+        <div class="mb-8 flex justify-center">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        
+        <h1 class="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">¡Mensaje Enviado!</h1>
+        
+        <p class="text-gray-600 text-lg mb-2">Gracias por contactarnos.</p>
+        <p class="text-gray-600 text-lg mb-8">Hemos recibido tu consulta y nos pondremos en contacto con vos a la brevedad.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-medium hover:bg-secondary transition-all duration-300 shadow-lg rounded-lg">
+                Volver al Inicio
+            </a>
+            <a href="https://wa.me/5491173707992" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium hover:bg-green-600 transition-all duration-300 shadow-lg rounded-lg">
+                Contactar por WhatsApp
+            </a>
+        </div>
+        
+        <p class="text-gray-400 text-sm mt-12">Nuñez Aragunde | Derecho Claro</p>
+    </div>
+</body>
+</html>
