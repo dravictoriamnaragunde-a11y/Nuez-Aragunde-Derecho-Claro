@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,715 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
+                        primary: '#1e3a5f',
+                        secondary: '#2d5a87',
+                        accent: '#d4a574',
+                        light: '#f5f3f0',
+                        dark: '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .slide {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            position: absolute;
+            inset: 0;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide-content {
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.8s ease-out 0.3s;
+        }
+        .slide.active .slide-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #d4a574;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 3000px;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-light antialiased">
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5491173707992" target="_blank" class="whatsapp-float w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-colors">
+        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary flex items-center justify-center">
+                        <span class="text-white font-serif text-xl font-bold">N</span>
+                    </div>
+                    <div>
+                        <h1 class="font-serif text-xl font-bold text-primary tracking-wide">Nuñez Aragunde</h1>
+                        <p class="text-xs text-gray-500 tracking-widest uppercase">Derecho Claro</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors">Inicio</a>
+                    <a href="#nosotros" class="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors">Nosotros</a>
+                    <a href="#areas" class="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors">Áreas de Práctica</a>
+                    <a href="#contacto" class="px-6 py-2.5 bg-primary text-white text-sm font-medium hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl">Contacto</a>
+                </div>
+
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6 text-primary"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#inicio" class="block text-sm font-medium text-gray-700 py-2">Inicio</a>
+                <a href="#nosotros" class="block text-sm font-medium text-gray-700 py-2">Nosotros</a>
+                <a href="#areas" class="block text-sm font-medium text-gray-700 py-2">Áreas de Práctica</a>
+                <a href="#contacto" class="block text-sm font-medium text-primary py-2">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section id="inicio" class="relative h-screen overflow-hidden">
+        <!-- Slide 1: Derecho de Familia -->
+        <div class="slide active" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://raw.githubusercontent.com/dravictorianmaragunde-a11y/Nuez-Aragunde-Derecho-Claro/main/familia.png.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-6 max-w-4xl slide-content">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho de Familia</span>
+                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Protegemos lo<br>que más importa</h2>
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Asesoramiento experto en divorcios, custodia, alimentos y sucesiones. Acompañamos a su familia en los momentos más importantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Derecho Laboral -->
+        <div class="slide" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-6 max-w-4xl slide-content">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho Laboral</span>
+                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Defendemos sus<br>Derechos Laborales</h2>
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Despidos, accidentes laborales, negociaciones colectivas. Representación integral para empleados y empleadores.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Derecho Civil -->
+        <div class="slide" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center px-6 max-w-4xl slide-content">
+                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho Civil y Comercial</span>
+                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Soluciones en<br>Derecho Civil</h2>
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Contratos, propiedades, daños y perjuicios. Asesoramiento estratégico para proteger sus intereses patrimoniales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
+            <button onclick="changeSlide(-1)" class="p-3 border border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 rounded-full">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <div class="flex gap-2" id="slideIndicators">
+                <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
+                <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300"></button>
+                <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300"></button>
+            </div>
+            <button onclick="changeSlide(1)" class="p-3 border border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 rounded-full">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-light to-transparent"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Sobre Nosotros</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">Abogada en CABA – Derecho de Familia, Laboral y Civil</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Asesoramiento jurídico claro y estratégico en Ciudad Autónoma de Buenos Aires. Atención personalizada en derecho de familia, laboral y civil.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        En <strong>Nuñez Aragunde</strong> creemos en el <em>Derecho Claro</em>. Nos especializamos en brindar asesoramiento cercano y profesional en los momentos que más importan, con transparencia y compromiso.
+                    </p>
+                </div>
+                
+                <div class="relative reveal flex justify-center">
+                    <div class="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full">
+                        <img src="https://raw.githubusercontent.com/dravictorianmaragunde-a11y/Nuez-Aragunde-Derecho-Claro/main/logo.png" alt="Nuñez Aragunde Logo" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas -->
+    <section id="areas" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Áreas de Práctica</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Especialistas en Derecho</h2>
+                <p class="text-gray-600 text-lg">Seleccioná un área para conocer nuestros servicios.</p>
+            </div>
+
+            <!-- Derecho de Familia -->
+            <div class="mb-12 reveal">
+                <div class="bg-primary text-white rounded-t-lg px-8 py-4 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">Derecho de Familia en CABA</h3>
+                </div>
+                <div class="bg-light rounded-b-lg p-8">
+                    <p class="text-gray-600 mb-6">Asistencia legal en conflictos familiares: cuota alimentaria, régimen de comunicación, divorcio y compensación económica en Ciudad Autónoma de Buenos Aires.</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="baby" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Cuota Alimentaria</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="users" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Régimen de Comunicación</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="file-text" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Divorcio</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="dollar-sign" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Compensación Económica</h4>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleAccordion('familia-detalle')" class="w-full py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium flex items-center justify-center gap-2">
+                        Más información
+                        <i data-lucide="chevron-down" class="w-4 h-4" id="icon-familia-detalle"></i>
+                    </button>
+
+                    <div id="familia-detalle" class="accordion-content mt-6">
+                        <div class="space-y-6 bg-white p-6 rounded-lg">
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Cuota Alimentaria en CABA</h4>
+                                <p class="text-gray-600 mb-2">Fijación, aumento y ejecución de cuota alimentaria. Embargos, retenciones y acuerdos homologados.</p>
+                                <p class="text-gray-500 text-sm italic">Según el Observatorio de la Deuda Social de la Universidad Católica Argentina, más del 50% de los hogares monoparentales urbanos dependen de ingresos insuficientes. Los juicios por alimentos se encuentran entre los trámites más iniciados del Poder Judicial de la Nación.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Régimen de Comunicación</h4>
+                                <p class="text-gray-600 mb-2">Regulación legal del tiempo de contacto con hijos e hijas cuando no hay acuerdo entre progenitores.</p>
+                                <p class="text-gray-500 text-sm italic">Estudios académicos de la Universidad de Buenos Aires identifican la conflictividad parental como uno de los factores más frecuentes de judicialización reiterada en el fuero de familia.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Divorcio en CABA</h4>
+                                <p class="text-gray-600 mb-2">Divorcio unilateral o de común acuerdo con regulación de bienes, vivienda y responsabilidades parentales.</p>
+                                <p class="text-gray-500 text-sm italic">Desde la entrada en vigencia del Código Civil y Comercial, los procesos de divorcio redujeron su duración promedio según análisis doctrinarios relevados en la Universidad de Buenos Aires.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Compensación Económica</h4>
+                                <p class="text-gray-600 mb-2">Reclamo por desequilibrio económico tras divorcio o ruptura convivencial.</p>
+                                <p class="text-gray-500 text-sm italic">Investigaciones de la Universidad Torcuato Di Tella muestran que la brecha de ingresos post separación afecta principalmente a mujeres con trayectorias laborales interrumpidas por tareas de cuidado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecho Laboral -->
+            <div class="mb-12 reveal">
+                <div class="bg-primary text-white rounded-t-lg px-8 py-4 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">Derecho Laboral en CABA</h3>
+                </div>
+                <div class="bg-light rounded-b-lg p-8">
+                    <p class="text-gray-600 mb-6">Defensa de trabajadores y asesoramiento preventivo en despidos, empleo no registrado, diferencias salariales y hostigamiento laboral.</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="user-x" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Despido e Indemnización</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="file-x" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Trabajo No Registrado</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="calculator" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Diferencias Salariales</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="alert-triangle" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Hostigamiento Laboral</h4>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleAccordion('laboral-detalle')" class="w-full py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium flex items-center justify-center gap-2">
+                        Más información
+                        <i data-lucide="chevron-down" class="w-4 h-4" id="icon-laboral-detalle"></i>
+                    </button>
+
+                    <div id="laboral-detalle" class="accordion-content mt-6">
+                        <div class="space-y-6 bg-white p-6 rounded-lg">
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Despido e Indemnización</h4>
+                                <p class="text-gray-600 mb-2">Revisión de liquidación final y cálculo técnico de indemnización.</p>
+                                <p class="text-gray-500 text-sm italic">El INDEC informa que las variaciones en empleo registrado inciden directamente en el aumento de conflictos laborales judicializados.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Trabajo No Registrado</h4>
+                                <p class="text-gray-600 mb-2">Reclamos por empleo en negro o registración incorrecta.</p>
+                                <p class="text-gray-500 text-sm italic">Según el INDEC, el empleo informal en Argentina ronda históricamente entre el 30% y 40% de la población ocupada.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Diferencias Salariales</h4>
+                                <p class="text-gray-600 mb-2">Reclamo por horas extras impagas, categoría incorrecta o pagos parciales.</p>
+                                <p class="text-gray-500 text-sm italic">Investigaciones del Instituto de Investigaciones Jurídicas de la Universidad de Buenos Aires vinculan una parte significativa de la litigiosidad laboral con errores de encuadramiento convencional y liquidación.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Hostigamiento Laboral</h4>
+                                <p class="text-gray-600 mb-2">Asesoramiento en situaciones de acoso o presión indebida en el trabajo.</p>
+                                <p class="text-gray-500 text-sm italic">Estudios del Observatorio de la Mujer de la Universidad Católica Argentina evidencian el impacto del hostigamiento laboral en la salud mental y la rotación laboral.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecho Civil -->
+            <div class="mb-12 reveal">
+                <div class="bg-primary text-white rounded-t-lg px-8 py-4 flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="scale" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold">Derecho Civil y Comercial en CABA</h3>
+                </div>
+                <div class="bg-light rounded-b-lg p-8">
+                    <p class="text-gray-600 mb-6">Asesoramiento jurídico preventivo y litigioso en contratos, daños, consumo y cobro de deudas.</p>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="file-signature" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Contratos Civiles y Comerciales</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="shield-alert" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Daños y Perjuicios</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="shopping-cart" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Defensa del Consumidor</h4>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <i data-lucide="receipt" class="w-8 h-8 text-primary mx-auto mb-2"></i>
+                            <h4 class="font-semibold text-primary text-sm">Cobro Judicial de Deudas</h4>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleAccordion('civil-detalle')" class="w-full py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors font-medium flex items-center justify-center gap-2">
+                        Más información
+                        <i data-lucide="chevron-down" class="w-4 h-4" id="icon-civil-detalle"></i>
+                    </button>
+
+                    <div id="civil-detalle" class="accordion-content mt-6">
+                        <div class="space-y-6 bg-white p-6 rounded-lg">
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Contratos Civiles y Comerciales</h4>
+                                <p class="text-gray-600 mb-2">Redacción y revisión de contratos para prevenir conflictos futuros.</p>
+                                <p class="text-gray-500 text-sm italic">Investigaciones económicas de la Universidad Torcuato Di Tella muestran que la falta de previsión contractual es uno de los factores más frecuentes en litigios entre pequeñas y medianas empresas.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Daños y Perjuicios</h4>
+                                <p class="text-gray-600 mb-2">Reclamos por responsabilidad contractual y extracontractual.</p>
+                                <p class="text-gray-500 text-sm italic">Los procesos por daños se encuentran entre los más iniciados en el fuero civil según estadísticas del Poder Judicial de la Nación.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Defensa del Consumidor</h4>
+                                <p class="text-gray-600 mb-2">Reclamos contra empresas por incumplimientos, servicios defectuosos o conflictos derivados de compras online.</p>
+                                <p class="text-gray-500 text-sm italic">El INDEC registra crecimiento sostenido del comercio electrónico en Argentina, fenómeno que incrementó los conflictos de consumo digital.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-serif font-bold text-primary text-lg mb-2">Cobro Judicial de Deudas</h4>
+                                <p class="text-gray-600 mb-2">Ejecución de cheques, pagarés y contratos impagos.</p>
+                                <p class="text-gray-500 text-sm italic">Estudios macroeconómicos de la Universidad Torcuato Di Tella señalan que en contextos de alta inflación aumenta la morosidad contractual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full mix-blend-overlay filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Consulta Jurídica en CABA</h2>
+            <p class="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">Si no sabés si tu situación tiene encuadre legal, la primera consulta te permite entender dónde estás y qué opciones reales tenés.</p>
+            <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">Agendá tu consulta y recibí orientación clara, estratégica y personalizada.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent text-white font-medium hover:bg-accent/90 transition-all duration-300 shadow-xl rounded-sm">
+                    Contactar Ahora
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="tel:+541173707992" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-medium hover:bg-white hover:text-primary transition-all duration-300 rounded-sm">
+                    Llamar Ahora
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-light">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <span class="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Contacto</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">Estemos en contacto</h2>
+                    <p class="text-gray-600 text-lg mb-10">Complete el formulario y nos pondremos en contacto con usted a la brevedad. Su consulta es confidencial y sin compromiso.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-primary text-lg mb-1">Dirección</h4>
+                                <p class="text-gray-600">Ciudad Autónoma de Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-primary text-lg mb-1">Email</h4>
+                                <p class="text-gray-600">derechoclarona@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-primary text-lg mb-1">Teléfono</h4>
+                                <p class="text-gray-600">+54 11 7370-7992</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 text-primary">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-primary text-lg mb-1">Horario de Atención</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00 hs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-10 shadow-xl rounded-lg reveal">
+                    <form action="https://formsubmit.co/derechoclarona@gmail.com" method="POST" class="space-y-6">
+                        <input type="hidden" name="_subject" value="Nueva consulta desde web Nuñez Aragunde">
+                        <input type="hidden" name="_next" value="https://dravictorianmaragunde-a11y.github.io/Nuez-Aragunde-Derecho-Claro/gracias.html">
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                                <input type="text" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Su nombre" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Apellido</label>
+                                <input type="text" name="apellido" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Su apellido" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="su@email.com" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="+54 11 7370-7992">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Área de Interés</label>
+                            <select name="area" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                                <option>Seleccione un área</option>
+                                <option>Derecho de Familia</option>
+                                <option>Derecho Laboral</option>
+                                <option>Derecho Civil</option>
+                                <option>Otra consulta</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all resize-none" placeholder="Describa brevemente su consulta..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 bg-primary text-white font-medium hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl rounded-lg flex items-center justify-center gap-2">
+                            Enviar Consulta
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-white/10 flex items-center justify-center">
+                            <span class="text-white font-serif text-xl font-bold">N</span>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold tracking-wide">Nuñez Aragunde</h3>
+                            <p class="text-xs text-gray-400 tracking-widest uppercase">Derecho Claro</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
+                        Derecho Claro. Especialistas en Derecho de Familia, Laboral y Civil. Brindamos asesoramiento cercano y profesional para proteger lo que más importa: su familia, sus derechos y su patrimonio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/5491173707992" target="_blank" class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition-colors">Nosotros</a></li>
+                        <li><a href="#areas" class="text-gray-400 hover:text-white transition-colors">Áreas de Práctica</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Aviso Legal</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Términos de Uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cookies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Accesibilidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Nuñez Aragunde. Todos los derechos reservados.</p>
+                <p class="text-gray-500 text-sm">Diseñado con precisión y excelencia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Accordion functionality
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            content.classList.toggle('active');
+            
+            // Rotate icon
+            if (content.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('#slideIndicators button');
+        let slideInterval;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            indicators.forEach((ind, index) => {
+                ind.classList.toggle('bg-white', index === currentSlide);
+                ind.classList.toggle('bg-white/40', index !== currentSlide);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateSlides();
+            resetInterval();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlides();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => changeSlide(1), 6000);
+        }
+
+        // Start auto-slide
+        resetInterval();
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>     colors: {
                         primary: '#1e3a5f',
                         secondary: '#2d5a87',
                         accent: '#d4a574',
@@ -2491,6 +3200,7 @@
 </body>
 
 </html>
+
 
 
 
