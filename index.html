@@ -872,47 +872,84 @@
             formError.classList.add('hidden');
         }
 
-        // CONTADOR DE VISITAS - Solución robusta con CountAPI
-        async function initVisitCounter() {
+        // CONTADOR DE VISITAS - Siempre numérico con localStorage como respaldo
+        (function initVisitCounter() {
             const counterElement = document.getElementById('visitCount');
-            const namespace = 'nunez-aragunde';
-            const key = 'website-visits';
+            const STORAGE_KEY = 'nunez_aragunde_visit_count';
+            const STORAGE_DATE_KEY = 'nunez_aragunde_visit_date';
+            const NAMESPACE = 'nunez-aragunde';
+            const KEY = 'website-visits';
             
-            try {
-                // Intentar obtener y actualizar el contador
-                const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+            // Obtener contador local como respaldo
+            function getLocalCount() {
+                const stored = localStorage.getItem(STORAGE_KEY);
+                const storedDate = localStorage.getItem(STORAGE_DATE_KEY);
+                const today = new Date().toDateString();
                 
-                if (!response.ok) {
-                    throw new Error('Error en la respuesta de CountAPI');
+                // Si es un nuevo día, no reiniciar (mantener acumulado)
+                // Solo incrementar si es la primera visita de esta sesión
+                if (!stored) {
+                    return 1;
                 }
-                
-                const data = await response.json();
-                
-                // Animar el número
-                animateValue(counterElement, 0, data.value, 1000);
-                counterElement.classList.remove('counter-loading');
-                
-            } catch (error) {
-                console.warn('Error al cargar contador:', error);
-                
-                // Fallback: intentar solo obtener el valor sin incrementar (solo lectura)
+                return parseInt(stored, 10);
+            }
+            
+            // Guardar contador local
+            function saveLocalCount(count) {
+                localStorage.setItem(STORAGE_KEY, count.toString());
+                localStorage.setItem(STORAGE_DATE_KEY, new Date().toDateString());
+            }
+            
+            // Verificar si ya se contó esta sesión
+            const SESSION_KEY = 'nunez_aragunde_session_counted';
+            const sessionCounted = sessionStorage.getItem(SESSION_KEY);
+            
+            // Incrementar contador local si es nueva sesión
+            let localCount = getLocalCount();
+            if (!sessionCounted) {
+                localCount++;
+                saveLocalCount(localCount);
+                sessionStorage.setItem(SESSION_KEY, 'true');
+            }
+            
+            // Mostrar contador local inmediatamente (sin animación de carga)
+            counterElement.textContent = localCount.toLocaleString();
+            counterElement.classList.remove('counter-loading');
+            
+            // Intentar sincronizar con CountAPI
+            async function syncWithAPI() {
                 try {
-                    const getResponse = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
-                    if (getResponse.ok) {
-                        const data = await getResponse.json();
-                        counterElement.textContent = data.value.toLocaleString();
-                        counterElement.classList.remove('counter-loading');
-                    } else {
-                        // Si todo falla, mostrar mensaje genérico
-                        counterElement.textContent = 'Muchos';
-                        counterElement.classList.remove('counter-loading');
+                    const response = await fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`, {
+                        method: 'GET',
+                        // Timeout de 3 segundos
+                        signal: AbortSignal.timeout(3000)
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Error en API');
                     }
-                } catch (fallbackError) {
-                    counterElement.textContent = 'Muchos';
-                    counterElement.classList.remove('counter-loading');
+                    
+                    const data = await response.json();
+                    const apiValue = data.value;
+                    
+                    // Actualizar localStorage con el valor de la API (más preciso)
+                    saveLocalCount(apiValue);
+                    
+                    // Animar desde el valor actual hasta el valor de la API
+                    const currentValue = parseInt(counterElement.textContent.replace(/,/g, ''), 10) || localCount;
+                    if (apiValue !== currentValue) {
+                        animateValue(counterElement, currentValue, apiValue, 800);
+                    }
+                    
+                } catch (error) {
+                    // Silencioso: ya mostramos el contador local
+                    console.log('Usando contador local:', localCount);
                 }
             }
-        }
+            
+            // Ejecutar sincronización con API
+            syncWithAPI();
+        })();
 
         // Animación de números
         function animateValue(element, start, end, duration) {
@@ -927,13 +964,6 @@
                 }
             };
             window.requestAnimationFrame(step);
-        }
-
-        // Inicializar contador cuando el DOM esté listo
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initVisitCounter);
-        } else {
-            initVisitCounter();
         }
     </script>
 </body>
