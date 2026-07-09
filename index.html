@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada Civil y Comercial CABA | Contratos, Daños, Deudas | Nuñez Aragunde</title>
-    <meta name="description" content="Asesoramiento jurídico en derecho civil y comercial en CABA. Contratos, daños y perjuicios, defensa del consumidor y cobro de deudas. Consulta sin compromiso.">
+    <title>Abogada Laboral CABA | Despidos, Indemnización, Trabajo en Negro | Nuñez Aragunde</title>
+    <meta name="description" content="Defensa de trabajadores en CABA. Despidos, indemnización, trabajo no registrado, diferencias salariales y hostigamiento laboral. Primera consulta gratuita.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -62,12 +62,12 @@
         .btn-outline:hover { background: var(--primary); color: var(--white); }
         .btn-accent { background: var(--accent); color: var(--white); }
         .btn-accent:hover { background: var(--accent-light); }
-        .btn-success { background: #27ae60; color: var(--white); }
-        .btn-success:hover { background: #219a52; }
+        .btn-danger { background: #c0392b; color: var(--white); }
+        .btn-danger:hover { background: #a93226; }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
             color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden;
         }
         .hero::before {
@@ -99,6 +99,13 @@
         .form-submit { width: 100%; margin-top: 8px; }
         .form-note { text-align: center; font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
 
+        /* Urgency Banner */
+        .urgency-banner {
+            background: #fff3cd; border-left: 4px solid var(--accent); padding: 20px 24px;
+            margin: 0 0 40px; border-radius: 0 8px 8px 0; display: flex; align-items: center; gap: 16px;
+        }
+        .urgency-banner strong { color: var(--primary); }
+
         /* Problems Section */
         .problems { padding: 100px 0; background: var(--bg-cream); }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
@@ -110,12 +117,13 @@
         .problem-card {
             background: var(--white); padding: 40px 32px; border-radius: 12px;
             box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid #27ae60;
+            border-left: 4px solid #c0392b;
         }
         .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
         .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
         .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
         .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
 
         /* Services */
         .services { padding: 100px 0; background: var(--white); }
@@ -133,25 +141,36 @@
         .service-card li::before { content: "✓"; color: var(--accent); font-weight: bold; }
         .service-highlight { position: absolute; top: 0; right: 0; background: var(--accent); color: var(--white); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 0 12px; }
 
+        /* Calculator Teaser */
+        .calculator-teaser { padding: 80px 0; background: var(--primary); color: var(--white); text-align: center; }
+        .calculator-teaser h2 { font-size: 2.2rem; margin-bottom: 16px; }
+        .calculator-teaser p { opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
+
         /* Process */
-        .process { padding: 100px 0; background: var(--primary); color: var(--white); }
-        .process .section-header h2, .process .section-header p { color: var(--white); }
+        .process { padding: 100px 0; background: var(--bg-cream); }
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
         .step { text-align: center; position: relative; }
         .step-number {
-            width: 60px; height: 60px; background: var(--accent); color: var(--white);
+            width: 60px; height: 60px; background: var(--primary); color: var(--white);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
             font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px; font-family: 'Playfair Display', serif;
         }
-        .step h3 { font-size: 1.3rem; margin-bottom: 12px; }
-        .step p { opacity: 0.85; font-size: 0.95rem; }
+        .step h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        .step p { color: var(--text-medium); font-size: 0.95rem; }
 
         /* Trust */
-        .trust { padding: 80px 0; background: var(--bg-cream); text-align: center; }
+        .trust { padding: 80px 0; background: var(--white); text-align: center; }
         .trust-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
         .trust-item { max-width: 200px; }
         .trust-item .number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Playfair Display', serif; }
         .trust-item p { color: var(--text-medium); font-size: 0.95rem; margin-top: 8px; }
+
+        /* FAQ */
+        .faq { padding: 100px 0; background: var(--bg-cream); }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top: 40px; }
+        .faq-item { background: var(--white); padding: 28px; border-radius: 12px; box-shadow: var(--shadow); }
+        .faq-item h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; }
+        .faq-item p { color: var(--text-medium); font-size: 0.95rem; }
 
         /* CTA Section */
         .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%); text-align: center; }
@@ -189,6 +208,7 @@
             .contact-grid { grid-template-columns: 1fr; }
             .section-header h2 { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -199,7 +219,7 @@
         <a href="/" class="logo">NUÑEZ ARAGUNDE<span>Derecho claro</span></a>
         <ul class="nav-links">
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#faq">Preguntas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <a href="tel:+541173707992" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">📞 Llamar Ahora</a>
@@ -209,19 +229,25 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="section-label">Derecho Civil y Comercial en CABA</div>
-            <h1>Soluciones en <em>Derecho Civil</em></h1>
-            <p>Contratos, propiedades, daños y perjuicios. Asesoramiento estratégico para proteger tus intereses patrimoniales. Revisamos o redactamos contratos claros para prevenir conflictos y pérdidas económicas futuras.</p>
-            <a href="#consulta" class="btn btn-success" style="font-size: 1.1rem; padding: 16px 40px;">Consultá sin compromiso</a>
+            <div class="section-label">Derecho Laboral en CABA</div>
+            <h1>Defendemos tus <em>Derechos Laborales</em></h1>
+            <p>Despidos injustos, trabajo en negro, diferencias salariales y hostigamiento. Revisamos tu liquidación y calculamos lo que realmente te corresponde. No dejes que te paguen menos de lo que la ley establece.</p>
+            <a href="#consulta" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Gratis tu Caso</a>
             <div class="hero-badges">
                 <span class="badge">⚡ Respuesta en 24hs</span>
-                <span class="badge">📝 Revisión de contratos</span>
+                <span class="badge">💰 Sin costo inicial</span>
                 <span class="badge">📍 CABA</span>
             </div>
         </div>
         <div class="hero-form" id="consulta">
-            <h3>Consultá tu caso</h3>
-            <p>¿Vas a firmar algo importante? ¿Te deben dinero? ¿Alguien te causó un daño? Contanos y te orientamos.</p>
+            <div class="urgency-banner">
+                <span style="font-size: 1.5rem;">⚠️</span>
+                <div>
+                    <strong>¡Importante!</strong> Los plazos para reclamar prescriben. No esperes más.
+                </div>
+            </div>
+            <h3>Consultá tu caso sin cargo</h3>
+            <p>Contanos qué pasó y calculamos si te corresponde una indemnización</p>
             <form action="#" method="POST">
                 <div class="form-group">
                     <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -234,19 +260,19 @@
                 </div>
                 <div class="form-group">
                     <select name="servicio" required>
-                        <option value="">¿Qué necesitás?</option>
-                        <option value="contratos">Revisión o redacción de contrato</option>
-                        <option value="danos">Daños y perjuicios</option>
-                        <option value="consumidor">Defensa del consumidor</option>
-                        <option value="deudas">Cobro de deudas</option>
-                        <option value="propiedad">Problemas de propiedad</option>
+                        <option value="">¿Qué te pasó?</option>
+                        <option value="despido">Me despidieron</option>
+                        <option value="trabajo-negro">Trabajo en negro / mal registrado</option>
+                        <option value="salarios">Me deben salario / horas extras</option>
+                        <option value="hostigamiento">Hostigamiento laboral</option>
+                        <option value="accidente">Accidente de trabajo</option>
                         <option value="otro">Otro</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea name="mensaje" placeholder="Contanos brevemente tu situación..."></textarea>
+                    <textarea name="mensaje" placeholder="Contanos brevemente tu situación laboral..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-success form-submit">Enviar Consulta</button>
+                <button type="submit" class="btn btn-danger form-submit">Quiero que revisen mi caso</button>
                 <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
             </form>
         </div>
@@ -256,30 +282,34 @@
 <section class="problems">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">¿Te encontrás en alguna de estas situaciones?</span>
-            <h2>Conflictos que resolvemos</h2>
-            <p>Desde la prevención hasta el litigio, te acompañamos en cada situación patrimonial</p>
+            <span class="section-label">¿Te pasó algo de esto?</span>
+            <h2>Situaciones laborales que resolvemos</h2>
+            <p>Estas son las consultas más frecuentes que recibimos. Si te identificás con alguna, es momento de actuar:</p>
         </div>
         <div class="problems-grid">
             <div class="problem-card">
-                <div class="problem-icon">📝</div>
-                <h3>Vas a firmar un contrato importante</h3>
-                <p>Alquiler, compraventa, préstamo o sociedad. Necesitás que un abogado revise las cláusulas antes de firmar para evitar sorpresas.</p>
+                <div class="problem-icon">📉</div>
+                <h3>Te despidieron sin causa</h3>
+                <p>Te despidieron y dudás si te pagaron correctamente. Revisamos la liquidación y calculamos si corresponde una diferencia indemnizatoria.</p>
+                <span class="problem-tag">URGENTE: Plazo 2 años</span>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">💥</div>
-                <h3>Alguien te causó un daño</h3>
-                <p>Accidente de tránsito, daño a tu propiedad, incumplimiento contractual. Analizamos la responsabilidad y la viabilidad del reclamo.</p>
+                <div class="problem-icon">🚫</div>
+                <h3>Trabajás en negro o mal registrado</h3>
+                <p>Trabajás sin estar registrado o te registraron por menos de lo que realmente ganás. Podés reclamar regularización e indemnizaciones.</p>
+                <span class="problem-tag">RECLAMABLE</span>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">🏢</div>
-                <h3>Una empresa no cumple o no responde</h3>
-                <p>Producto defectuoso, servicio no prestado, incumplimiento de garantía. Gestionamos el reclamo formal y avanzamos judicialmente si es necesario.</p>
+                <div class="problem-icon">💸</div>
+                <h3>Te deben horas extras o salario</h3>
+                <p>No te pagan horas extras, no estás correctamente categorizado o te deben diferencias salariales. Revisamos recibos y tareas reales.</p>
+                <span class="problem-tag">DIFERENCIAS SALARIALES</span>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">💰</div>
-                <h3>Te deben dinero y no pagan</h3>
-                <p>Ya agotaste las vías informales. Podemos iniciar el reclamo judicial para recuperar lo que te corresponde de manera eficaz.</p>
+                <div class="problem-icon">😰</div>
+                <h3>Sufrís hostigamiento laboral</h3>
+                <p>El ambiente de trabajo te está afectando. Si sufrís maltrato o presión indebida, existen herramientas legales para protegerte.</p>
+                <span class="problem-tag">PROTECCIÓN LEGAL</span>
             </div>
         </div>
     </div>
@@ -289,115 +319,112 @@
     <div class="container">
         <div class="section-header">
             <span class="section-label">Nuestros Servicios</span>
-            <h2>Asesoramiento Civil y Comercial</h2>
-            <p>Preventivo y litigioso, para proteger tus intereses patrimoniales</p>
+            <h2>Defensa integral del trabajador</h2>
+            <p>Representación para empleados y asesoramiento preventivo para empleadores</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <span class="service-highlight">PREVENTIVO</span>
-                <h3>📝 Contratos Civiles y Comerciales</h3>
-                <p>Vas a firmar algo importante y querés evitar problemas. Revisamos o redactamos contratos claros para prevenir conflictos y pérdidas económicas futuras.</p>
+                <span class="service-highlight">MÁS CONSULTADO</span>
+                <h3>🚨 Despido e Indemnización</h3>
+                <p>Revisamos tu liquidación final y calculamos si te pagaron correctamente. El objetivo es que cobres lo que la ley establece, nada más, nada menos.</p>
                 <ul>
-                    <li>Contratos de alquiler</li>
-                    <li>Compraventa de inmuebles</li>
-                    <li>Contratos de préstamo</li>
-                    <li>Sociedades y acuerdos comerciales</li>
-                    <li>Contratos de servicios</li>
-                    <li>Cláusulas de confidencialidad</li>
+                    <li>Revisión de liquidación final</li>
+                    <li>Cálculo de indemnización completa</li>
+                    <li>Despido discriminatorio</li>
+                    <li>Despido por enfermedad o embarazo</li>
+                    <li>Despido indirecto (constructivo)</li>
+                    <li>Reinstalación en el puesto</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>💥 Daños y Perjuicios</h3>
-                <p>Alguien te causó un daño y no quiere responder. Analizamos la responsabilidad y la viabilidad del reclamo para obtener la indemnización correspondiente.</p>
+                <h3>📝 Trabajo No Registrado</h3>
+                <p>Trabajás en negro o mal registrado. Analizamos antigüedad, salario real y categoría correcta para proteger tus derechos.</p>
                 <ul>
-                    <li>Accidentes de tránsito</li>
-                    <li>Daños a la propiedad</li>
-                    <li>Incumplimiento contractual</li>
-                    <li>Daños morales</li>
-                    <li>Responsabilidad médica</li>
-                    <li>Responsabilidad civil de terceros</li>
+                    <li>Regularización de relación laboral</li>
+                    <li>Reclamo de diferencias salariales</li>
+                    <li>Aportes y contribuciones omitidos</li>
+                    <li>Multas por trabajo no registrado</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>🛡️ Defensa del Consumidor</h3>
-                <p>Una empresa no cumple o no responde a tu reclamo. Gestionamos el reclamo formal y, si es necesario, avanzamos judicialmente para que se haga cargo.</p>
+                <h3>💵 Diferencias Salariales</h3>
+                <p>Te deben horas extras, no estás correctamente categorizado o hay diferencias entre lo que deberías cobrar y lo que te pagan.</p>
                 <ul>
-                    <li>Productos defectuosos</li>
-                    <li>Servicios no prestados</li>
-                    <li>Incumplimiento de garantía</li>
-                    <li>Publicidad engañosa</li>
-                    <li>Cláusulas abusivas</li>
-                    <li>Reclamo ante Defensa del Consumidor</li>
+                    <li>Horas extras no pagadas</li>
+                    <li>Categorización incorrecta</li>
+                    <li>Comisiones y bonificaciones</li>
+                    <li>Diferencias de salario por antigüedad</li>
                 </ul>
             </div>
             <div class="service-card">
-                <span class="service-highlight">COBRO</span>
-                <h3>💰 Cobro Judicial de Deudas</h3>
-                <p>Te deben dinero y ya agotaste las vías informales. Iniciamos el reclamo judicial para recuperar lo que te corresponde de manera eficaz.</p>
+                <h3>🛡️ Hostigamiento Laboral</h3>
+                <p>Si sufrís maltrato, presión indebida o mobbing en el trabajo, existen herramientas legales para protegerte y hacer cesar la situación.</p>
                 <ul>
-                    <li>Ejecutivo (título válido)</li>
-                    <li>Ordinario (deuda comprobada)</li>
-                    <li>Medidas cautelares (embargo)</li>
-                    <li>Quiebras y concursos</li>
-                    <li>Negociación de deuda</li>
-                    <li>Recuperación de créditos</li>
+                    <li>Denuncia por acoso laboral</li>
+                    <li>Medidas cautelares</li>
+                    <li>Daños y perjuicios por mobbing</li>
+                    <li>Protección ante represalias</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>🏠 Derecho Inmobiliario</h3>
-                <p>Problemas con propiedades, alquileres, linderos o posesión. Asesoramiento para proteger tu patrimonio inmobiliario.</p>
+                <h3>🏥 Accidentes de Trabajo</h3>
+                <p>Te lesionaste en el trabajo o sufrís una enfermedad laboral. Gestionamos el reclamo ante la ART y el empleador.</p>
                 <ul>
-                    <li>Desalojos</li>
-                    <li>Problemas de linderos</li>
-                    <li>Usucapión</li>
-                    <li>Registro de la propiedad</li>
-                    <li>Escrituración</li>
-                    <li>Conflictos de copropiedad</li>
+                    <li>Reclamo ante ART</li>
+                    <li>Incumplimiento de seguridad</li>
+                    <li>Indemnización por incapacidad</li>
+                    <li>Recalificación de accidente</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>⚖️ Mediación y Arbitraje</h3>
-                <p>Antes de ir a juicio, exploramos soluciones alternativas de conflictos más rápidas y económicas.</p>
+                <h3>⚖️ Negociaciones Colectivas</h3>
+                <p>Asesoramiento para sindicatos y delegados en negociaciones paritarias, conflictos colectivos y homologaciones.</p>
                 <ul>
-                    <li>Mediación prejudicial</li>
-                    <li>Arbitraje comercial</li>
-                    <li>Negociación de conflictos</li>
-                    <li>Conciliación</li>
-                    <li>Acuerdos extrajudiciales</li>
+                    <li>Negociación paritaria</li>
+                    <li>Conflictos colectivos de trabajo</li>
                     <li>Homologación de acuerdos</li>
+                    <li>Asesoramiento a sindicatos</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
+<section class="calculator-teaser">
+    <div class="container">
+        <h2>¿Te despidieron? Calculá tu indemnización</h2>
+        <p>Aunque cada caso es particular, podemos hacer una estimación inicial de lo que te podría corresponder según tu antigüedad, salario y tipo de despido.</p>
+        <a href="#consulta" class="btn btn-accent" style="font-size: 1.1rem; padding: 16px 40px;">Consultá y calculamos tu caso</a>
+    </div>
+</section>
+
 <section class="process">
     <div class="container">
         <div class="section-header">
-            <span class="section-label" style="color: var(--accent-light);">Cómo trabajamos</span>
-            <h2>Tu asesoramiento, paso a paso</h2>
-            <p>Desde la prevención hasta el litigio, un proceso claro y estratégico</p>
+            <span class="section-label">Cómo trabajamos</span>
+            <h2>Tu reclamo, paso a paso</h2>
+            <p>Desde la primera consulta hasta el cobro, te acompañamos en todo</p>
         </div>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Diagnóstico inicial</h3>
-                <p>Analizamos tu situación, documentación y objetivos. Te explicamos las opciones legales disponibles en lenguaje claro.</p>
+                <h3>Consulta gratuita</h3>
+                <p>Analizamos tu situación, recibos y documentación sin costo. Te decimos si tu caso tiene viabilidad y qué podés esperar.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3>Estrategia preventiva o litigiosa</h3>
-                <p>Diseñamos el plan de acción: revisamos contratos, iniciamos reclamos o negociamos soluciones según tu caso.</p>
+                <h3>Cálculo de créditos</h3>
+                <p>Calculamos todo lo que te corresponde: indemnización, salarios adeudados, diferencias, horas extras, etc.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Acción y seguimiento</h3>
-                <p>Ejecutamos la estrategia definida: redactamos contratos, iniciamos juicios o gestionamos cobros. Te mantenemos informado.</p>
+                <h3>Reclamo formal</h3>
+                <p>Iniciamos el reclamo judicial o extrajudicial. Negociamos con el empleador para llegar a un acuerdo justo.</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h3>Resolución y protección</h3>
-                <p>Buscamos la mejor solución para tu caso: acuerdo, sentencia favorable o prevención de futuros conflictos.</p>
+                <h3>Cobro de lo que te corresponde</h3>
+                <p>Si no hay acuerdo, llevamos el caso a juicio. Nuestro objetivo es que cobres lo que la ley establece.</p>
             </div>
         </div>
     </div>
@@ -413,8 +440,8 @@
                 <p>Respuesta a tu consulta inicial</p>
             </div>
             <div class="trust-item">
-                <div class="number">📝</div>
-                <p>Contratos claros y seguros</p>
+                <div class="number">$0</div>
+                <p>Costo inicial para evaluar tu caso</p>
             </div>
             <div class="trust-item">
                 <div class="number">CABA</div>
@@ -422,7 +449,42 @@
             </div>
             <div class="trust-item">
                 <div class="number">⚖️</div>
-                <p>Asesoramiento estratégico y claro</p>
+                <p>Solo cobramos si recuperás</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Preguntas Frecuentes</span>
+            <h2>Lo que más nos preguntan</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>¿Cuánto tiempo tengo para reclamar después de un despido?</h4>
+                <p>Tenés <strong>2 años</strong> desde el despido para iniciar un reclamo laboral. Sin embargo, cuanto antes actúes, mejor, porque la evidencia y los testigos están más frescos.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué pasa si trabajé en negro?</h4>
+                <p>Podés reclamar la regularización de la relación laboral y el pago de todos los derechos omitidos: aportes, aguinaldo, vacaciones, indemnización por antigüedad, etc. El trabajo en negro no te quita derechos.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Me cobran por la primera consulta?</h4>
+                <p>No. La primera consulta es <strong>sin cargo</strong>. Analizamos tu caso, evaluamos la viabilidad y te explicamos las opciones. Solo avanzamos si decidís hacerlo.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué documentación necesito traer?</h4>
+                <p>Lo ideal es traer recibos de sueldo, contrato de trabajo (si tenés), carta de despido (si te dieron), WhatsApp o mails relacionados con el trabajo, y cualquier otra prueba que tengas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuánto dura un juicio laboral?</h4>
+                <p>Depende de la complejidad, pero en CABA un juicio laboral puede durar entre <strong>1 y 3 años</strong>. Muchos casos se resuelven por acuerdo en mucho menos tiempo.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Trabajan con porcentaje sobre lo recuperado?</h4>
+                <p>En muchos casos sí, especialmente en reclamos por despido. Eso significa que <strong>no pagás nada de tu bolsillo</strong> y nuestro honorario es un porcentaje de lo que logramos recuperar.</p>
             </div>
         </div>
     </div>
@@ -430,10 +492,10 @@
 
 <section class="cta-section">
     <div class="container">
-        <h2>Protegé tus intereses antes de que sea tarde</h2>
-        <p>Ya sea que necesites revisar un contrato, cobrar una deuda o reclamar un daño, la primera consulta te permite entender dónde estás y qué opciones reales tenés.</p>
+        <h2>No dejes que te paguen menos de lo que te corresponde</h2>
+        <p>Cada día que pasa pueden prescribir tus derechos. La primera consulta es gratuita y sin compromiso. Conocé qué opciones tenés.</p>
         <div class="cta-buttons">
-            <a href="#consulta" class="btn btn-success" style="font-size: 1.1rem; padding: 16px 40px;">Agendar Consulta Ahora</a>
+            <a href="#consulta" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;">Revisá mi caso ahora</a>
             <a href="https://wa.me/541173707992" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">💬 WhatsApp Directo</a>
         </div>
     </div>
@@ -478,7 +540,7 @@
             </div>
 
             <div class="contact-form">
-                <h3>Enviá tu consulta</h3>
+                <h3>Enviá tu consulta laboral</h3>
                 <form action="#" method="POST">
                     <div class="form-group">
                         <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -491,19 +553,19 @@
                     </div>
                     <div class="form-group">
                         <select name="servicio">
-                            <option value="">¿Qué necesitás?</option>
-                            <option value="contratos">Revisión de contrato</option>
-                            <option value="danos">Daños y perjuicios</option>
-                            <option value="consumidor">Defensa del consumidor</option>
-                            <option value="deudas">Cobro de deudas</option>
-                            <option value="propiedad">Derecho inmobiliario</option>
+                            <option value="">¿Qué te pasó?</option>
+                            <option value="despido">Me despidieron</option>
+                            <option value="trabajo-negro">Trabajo en negro</option>
+                            <option value="salarios">Diferencias salariales</option>
+                            <option value="hostigamiento">Hostigamiento</option>
+                            <option value="accidente">Accidente de trabajo</option>
                             <option value="otro">Otro</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="mensaje" placeholder="Contanos tu situación..." rows="4"></textarea>
+                        <textarea name="mensaje" placeholder="Contanos tu situación laboral..." rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success form-submit">Enviar Mensaje</button>
+                    <button type="submit" class="btn btn-danger form-submit">Enviar Consulta</button>
                 </form>
             </div>
         </div>
