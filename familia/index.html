@@ -63,10 +63,28 @@
         .btn-accent { background: var(--accent); color: var(--white); }
         .btn-accent:hover { background: var(--accent-light); }
         
-        /* Hero */
+        /* Problems Section - AHORA PRIMERO */
+        .problems { padding: 140px 0 100px; background: var(--bg-cream); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
+        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        
+        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .problem-card {
+            background: var(--white); padding: 40px 32px; border-radius: 12px;
+            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--accent);
+        }
+        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
+        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        
+        /* Hero - AHORA DESPUÉS */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden;
+            color: var(--white); padding: 100px 0; position: relative; overflow: hidden;
         }
         .hero::before {
             content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
@@ -96,24 +114,6 @@
         .form-group textarea { resize: vertical; min-height: 100px; }
         .form-submit { width: 100%; margin-top: 8px; }
         .form-note { text-align: center; font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
-        
-        /* Problems Section */
-        .problems { padding: 100px 0; background: var(--bg-cream); }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
-        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
-        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-        
-        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .problem-card {
-            background: var(--white); padding: 40px 32px; border-radius: 12px;
-            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid var(--accent);
-        }
-        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
-        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
-        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
         
         /* Services */
         .services { padding: 100px 0; background: var(--white); }
@@ -177,7 +177,7 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero { padding: 120px 0 60px; }
+            .problems { padding: 120px 0 60px; }
             .hero .container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.2rem; }
             .hero-form { order: -1; }
@@ -204,7 +204,41 @@
     </div>
 </header>
 
-<section class="hero">
+<!-- SECCIÓN 1: SITUACIONES QUE RESOLVEMOS (AHORA PRIMERO) -->
+<section class="problems" id="situaciones">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">¿Te resulta familiar?</span>
+            <h2>Situaciones que resolvemos</h2>
+            <p>Sabemos que los conflictos familiares son momentos difíciles. Estas son las situaciones más comunes que acompañamos:</p>
+        </div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon">💔</div>
+                <h3>Divorcio conflictivo</h3>
+                <p>La relación terminó y no sabés cómo empezar. Necesitás organizar bienes, vivienda y responsabilidades parentales sin que se complique más.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">👶</div>
+                <h3>Cuota alimentaria impaga</h3>
+                <p>No están cumpliendo con la cuota o el monto ya no alcanza. Necesitás que se fije, aumente o se exija el pago judicialmente.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🚫</div>
+                <h3>Régimen de comunicación impedido</h3>
+                <p>No hay acuerdo sobre los días con tus hijos o el vínculo está siendo dificultado. Necesitás un esquema claro y obligatorio.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">⚖️</div>
+                <h3>Desequilibrio económico post-separación</h3>
+                <p>Después de la separación quedaste en desventaja económica. Evaluamos si corresponde una compensación por el trabajo del hogar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 2: CONTACTO/HERO (AHORA DESPUÉS) -->
+<section class="hero" id="contacto">
     <div class="container">
         <div class="hero-content">
             <div class="section-label">Derecho de Familia en CABA</div>
@@ -217,7 +251,7 @@
                 <span class="badge">📍 CABA</span>
             </div>
         </div>
-        <div class="hero-form" id="consulta">
+        <div class="hero-form">
             <h3>Consultá sin compromiso</h3>
             <p>Contanos tu situación y te orientamos sin cargo</p>
             <form action="https://formspree.io/f/mvzbrred" method="POST">
@@ -247,38 +281,6 @@
                 <button type="submit" class="btn btn-primary form-submit">Enviar Consulta</button>
                 <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
             </form>
-        </div>
-    </div>
-</section>
-
-<section class="problems">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">¿Te resulta familiar?</span>
-            <h2>Situaciones que resolvemos</h2>
-            <p>Sabemos que los conflictos familiares son momentos difíciles. Estas son las situaciones más comunes que acompañamos:</p>
-        </div>
-        <div class="problems-grid">
-            <div class="problem-card">
-                <div class="problem-icon">💔</div>
-                <h3>Divorcio conflictivo</h3>
-                <p>La relación terminó y no sabés cómo empezar. Necesitás organizar bienes, vivienda y responsabilidades parentales sin que se complique más.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">👶</div>
-                <h3>Cuota alimentaria impaga</h3>
-                <p>No están cumpliendo con la cuota o el monto ya no alcanza. Necesitás que se fije, aumente o se exija el pago judicialmente.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🚫</div>
-                <h3>Régimen de comunicación impedido</h3>
-                <p>No hay acuerdo sobre los días con tus hijos o el vínculo está siendo dificultado. Necesitás un esquema claro y obligatorio.</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">⚖️</div>
-                <h3>Desequilibrio económico post-separación</h3>
-                <p>Después de la separación quedaste en desventaja económica. Evaluamos si corresponde una compensación por el trabajo del hogar.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -423,7 +425,7 @@
     </div>
 </section>
 
-<section class="contact" id="contacto">
+<section class="contact">
     <div class="container">
         <div class="contact-grid">
             <div class="contact-info">
