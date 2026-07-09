@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -238,6 +237,7 @@
             .stats-grid { gap: 30px; }
         }
     </style>
+<base target="_blank">
 </head>
 <body>
 
@@ -276,52 +276,26 @@
                 <span class="badge">📍 CABA</span>
             </div>
         </div>
-        <div class="hero-form" id="consulta">
-            <div class="emergency-banner">
-                <span class="icon">⏱️</span>
-                <div>
-                    <h4>¿Tu tratamiento fue negado? Actuá rápido</h4>
-                    <p>Los amparos de salud se resuelven en 48 a 72 horas hábiles. Cada día de espera puede afectar tu tratamiento.</p>
-                </div>
-            </div>
-            <h3>Consultá tu caso de salud</h3>
-            <p>Contanos qué te negaron y analizamos tu situación sin cargo</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
-                </div>
-                <div class="form-group">
-                    <select name="servicio" required>
-                        <option value="">¿Qué te negaron?</option>
-                        <option value="medicamento">Medicamento / Droga</option>
-                        <option value="cirugia">Cirugía / Intervención</option>
-                        <option value="tratamiento">Tratamiento / Terapia</option>
-                        <option value="internacion">Internación / Alta médica</option>
-                        <option value="practica">Práctica médica / Estudio</option>
-                        <option value="protesis">Prótesis / Órtesis</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="obra_social" placeholder="Obra social o prepaga (ej: OSDE, Swiss Medical, PAMI)">
-                </div>
-                <div class="form-group">
-                    <textarea name="mensaje" placeholder="Contanos brevemente: ¿qué te negaron, desde cuándo, qué diagnóstico tenés?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-health form-submit">Quiero que analicen mi caso</button>
-                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
-            </form>
-        </div>
-    </div>
-</section>
 
-<section class="problems">
+<header>
+    <div class="container">
+        <a href="/" class="logo">NUÑEZ ARAGUNDE<span>Derecho claro</span></a>
+        <ul class="nav-links">
+            <li><a href="#situaciones">Situaciones</a></li>
+            <li><a href="#consulta">Consulta</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#faq">Preguntas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="https://wa.me/5491173707992" target="_blank" rel="noopener noreferrer" style="width: 44px; height: 44px; background: #25D366; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        
+    </div>
+</header>
+
+<section class="problems" id="situaciones">
     <div class="container">
         <div class="section-header">
             <span class="section-label">¿Te pasó algo de esto?</span>
@@ -365,6 +339,64 @@
                 <p>Resonancias, tomografías, estudios de laboratorio o cualquier práctica diagnóstica que tu médico indicó y tu cobertura rechazó.</p>
                 <span class="problem-tag">RECLAMABLE</span>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="section-label">Amparos de Salud en CABA</div>
+            <h1>Tu salud no puede <em>esperar</em></h1>
+            <p>Si tu obra social o prepaga te negó un medicamento, tratamiento, cirugía o práctica médica, podemos ayudarte a obtener la cobertura que la ley te garantiza. Los amparos de salud son urgentes y actuamos rápido.</p>
+            <a href="#consulta" class="btn btn-health" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Urgente tu Caso</a>
+            <div class="hero-badges">
+                <span class="badge">⚡ Respuesta en 24hs</span>
+                <span class="badge">🏥 Amparos en 48-72hs</span>
+                <span class="badge">📍 CABA</span>
+            </div>
+        </div>
+        <div class="hero-form" id="consulta">
+            <div class="emergency-banner">
+                <span class="icon">⏱️</span>
+                <div>
+                    <h4>¿Tu tratamiento fue negado? Actuá rápido</h4>
+                    <p>El juez entiende que la salud no puede esperar y actúa con celeridad.</p>
+                </div>
+            </div>
+            <h3>Consultá tu caso de salud</h3>
+            <p>Contanos qué te negaron y analizamos tu situación sin cargo</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
+                </div>
+                <div class="form-group">
+                    <select name="servicio" required>
+                        <option value="">¿Qué te negaron?</option>
+                        <option value="medicamento">Medicamento / Droga</option>
+                        <option value="cirugia">Cirugía / Intervención</option>
+                        <option value="tratamiento">Tratamiento / Terapia</option>
+                        <option value="internacion">Internación / Alta médica</option>
+                        <option value="practica">Práctica médica / Estudio</option>
+                        <option value="protesis">Prótesis / Órtesis</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="obra_social" placeholder="Obra social o prepaga (ej: OSDE, Swiss Medical, PAMI)">
+                </div>
+                <div class="form-group">
+                    <textarea name="mensaje" placeholder="Contanos brevemente: ¿qué te negaron, desde cuándo, qué diagnóstico tenés?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-health form-submit">Quiero que analicen mi caso</button>
+                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
+            </form>
         </div>
     </div>
 </section>
@@ -477,8 +509,8 @@
             </div>
             <div class="step-item">
                 <div class="number">3</div>
-                <h3>Audiencia judicial</h3>
-                <p>El juez convoca a una audiencia donde presentamos los argumentos y la obra social debe justificar la negativa.</p>
+                <h3>Medidas cautelares</h3>
+                <p>El juez dicta las medidas cautelares pertinentes para proteger tu derecho a la salud.</p>
                 <span class="step-time">📅 48-72 horas hábiles</span>
             </div>
             <div class="step-item">
@@ -486,31 +518,6 @@
                 <h3>Sentencia favorable</h3>
                 <p>En la gran mayoría de los casos, el juez ordena a la obra social que cubra el tratamiento, medicamento o práctica.</p>
                 <span class="step-time">✅ 48-72 horas hábiles</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="stats">
-    <div class="container">
-        <span class="section-label">Resultados</span>
-        <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 16px;">Tu salud es nuestro compromiso</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="number">48hs</div>
-                <p>Tiempo promedio de resolución del amparo</p>
-            </div>
-            <div class="stat-item">
-                <div class="number">95%+</div>
-                <p>De amparos de salud resultan favorables</p>
-            </div>
-            <div class="stat-item">
-                <div class="number">24hs</div>
-                <p>Respuesta a tu consulta inicial</p>
-            </div>
-            <div class="stat-item">
-                <div class="number">$0</div>
-                <p>Costo inicial para evaluar tu caso</p>
             </div>
         </div>
     </div>
@@ -527,24 +534,14 @@
             <div class="coverage-card">
                 <div class="icon">🏛️</div>
                 <h4>Obras Sociales</h4>
-                <p>PAMI, IOMA, OSDE (plan básico), Swiss Medical (plan básico), Galeno, Medicus, Omint, Sancor Salud y todas las obras sociales del país.</p>
+                <p>PAMI, OBSBA, OSECAC, OSPEDIM, OSCHOCA y todas las obras sociales del país.</p>
             </div>
             <div class="coverage-card">
                 <div class="icon">🏢</div>
                 <h4>Prepagas</h4>
                 <p>OSDE, Swiss Medical, Galeno, Medicus, Omint, Sancor Salud, Hospital Italiano, Británico, Alemán y todas las prepagas del mercado.</p>
             </div>
-            <div class="coverage-card">
-                <div class="icon">💳</div>
-                <h4>Medicina de Empresas</h4>
-                <p>Coberturas médicas contratadas por empresas para sus empleados. También reclamamos contra ART por accidentes de trabajo.</p>
             </div>
-            <div class="coverage-card">
-                <div class="icon">🌍</div>
-                <h4>Coberturas Internacionales</h4>
-                <p>Seguros de salud internacionales que operan en Argentina. La ley argentina protege tu derecho a la salud en todo el territorio nacional.</p>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -557,15 +554,16 @@
         <div class="faq-grid">
             <div class="faq-item">
                 <h4>¿Cuánto tarda un amparo de salud?</h4>
-                <p>Los amparos de salud son <strong>procesos urgentes</strong> que se resuelven en <strong>48 a 72 horas hábiles</strong>. El juez entiende que la salud no puede esperar y actúa con celeridad.</p>
-            </div>
-            <div class="faq-item">
-                <h4>¿Qué necesito para iniciar un amparo?</h4>
-                <p>Necesitás: <strong>prescripción médica</strong> del tratamiento/medicamento que te negaron, <strong>denegatoria formal</strong> de la obra social o prepaga, y <strong>historia clínica</strong> que justifique la necesidad. Nosotros te guiamos en cada paso.</p>
+                <p>Los amparos de salud son <strong>procesos urgentes</strong>. El juez entiende que la salud no puede esperar y actúa con celeridad.</p>
             </div>
             <div class="faq-item">
                 <h4>¿Cuánto cuesta un amparo de salud?</h4>
-                <p>La <strong>primera consulta es gratuita</strong>. Los honorarios del amparo dependen de cada caso, pero en muchas situaciones podemos trabajar con un porcentaje sobre lo que logramos que te cubra la obra social. No pagás nada de tu bolsillo por adelantado.</p>
+                <p>Ofrecemos <strong>planes de pago pensados en cada cliente</strong>. La primera consulta es gratuita y sin compromiso. Los honorarios se ajustan a cada situación.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>¿Qué necesito para iniciar un amparo?</h4>
+                <p>Necesitás: <strong>prescripción médica</strong> del tratamiento/medicamento que te negaron, <strong>denegatoria formal</strong> de la obra social o prepaga, y <strong>historia clínica</strong> que justifique la necesidad. Nosotros te guiamos en cada paso.</p>
             </div>
             <div class="faq-item">
                 <h4>¿Y si el medicamento no está en el PMO?</h4>
@@ -586,7 +584,7 @@
 <section class="cta-section">
     <div class="container">
         <h2>Tu salud no puede esperar. Actuá hoy.</h2>
-        <p>Cada día de demora puede afectar tu tratamiento y tu calidad de vida. Los amparos de salud se resuelven en 48 a 72 horas hábiles. La primera consulta es gratuita y sin compromiso.</p>
+        <p>Cada día de demora puede afectar tu tratamiento y tu calidad de vida. El juez entiende que la salud no puede esperar y actúa con celeridad. La primera consulta es gratuita y sin compromiso.</p>
         <div class="cta-buttons">
             <a href="#consulta" class="btn btn-health" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Urgente tu Caso</a>
             <a href="https://wa.me/541173707992" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">💬 WhatsApp Directo</a>
@@ -617,10 +615,10 @@
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-item-icon"></div>
+                    <div class="contact-item-icon">💬</div>
                     <div>
                         <h4>Teléfono / WhatsApp</h4>
-                        <p></p>
+                        <p><a href="https://wa.me/5491173707992" target="_blank" rel="noopener noreferrer">11-7370-7992</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
