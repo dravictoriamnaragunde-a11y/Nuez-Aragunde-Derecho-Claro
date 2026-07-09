@@ -21,20 +21,20 @@
             --shadow: 0 4px 20px rgba(0,0,0,0.08);
             --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
             line-height: 1.6;
             background: var(--bg-light);
         }
-        
+
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
-        
+
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
+
         /* Header */
         header {
             background: var(--white);
@@ -42,16 +42,16 @@
             position: fixed; width: 100%; top: 0; z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        
+
         header .container { display: flex; justify-content: space-between; align-items: center; }
-        
+
         .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; }
         .logo span { display: block; font-size: 0.85rem; font-weight: 400; color: var(--text-light); font-family: 'Inter', sans-serif; }
-        
+
         .nav-links { display: flex; gap: 32px; list-style: none; }
         .nav-links a { text-decoration: none; color: var(--text-medium); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary); }
-        
+
         .btn {
             display: inline-block; padding: 14px 32px; border-radius: 4px;
             font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem;
@@ -64,30 +64,34 @@
         .btn-accent:hover { background: var(--accent-light); }
         .btn-danger { background: #c0392b; color: var(--white); }
         .btn-danger:hover { background: #a93226; }
-        
-        /* Problems Section - AHORA PRIMERO */
-        .problems { padding: 140px 0 100px; background: var(--bg-cream); }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
-        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
-        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-        
-        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .problem-card {
-            background: var(--white); padding: 40px 32px; border-radius: 12px;
-            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid #c0392b;
+
+        /* WhatsApp Icon Button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #25D366;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
         }
-        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
-        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
-        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
-        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
-        
-        /* Hero - AHORA DESPUÉS */
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
-            color: var(--white); padding: 100px 0; position: relative; overflow: hidden;
+            color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden;
         }
         .hero::before {
             content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
@@ -99,7 +103,7 @@
         .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 32px; max-width: 90%; }
         .hero-badges { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
         .badge { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2); }
-        
+
         .hero-form {
             background: var(--white); padding: 40px; border-radius: 12px;
             box-shadow: var(--shadow-lg); color: var(--text-dark);
@@ -117,14 +121,33 @@
         .form-group textarea { resize: vertical; min-height: 100px; }
         .form-submit { width: 100%; margin-top: 8px; }
         .form-note { text-align: center; font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
-        
+
         /* Urgency Banner */
         .urgency-banner {
             background: #fff3cd; border-left: 4px solid var(--accent); padding: 20px 24px;
             margin: 0 0 40px; border-radius: 0 8px 8px 0; display: flex; align-items: center; gap: 16px;
         }
         .urgency-banner strong { color: var(--primary); }
-        
+
+        /* Problems Section */
+        .problems { padding: 100px 0; background: var(--bg-cream); padding-top: 140px; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
+        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+
+        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .problem-card {
+            background: var(--white); padding: 40px 32px; border-radius: 12px;
+            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #c0392b;
+        }
+        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
+        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
+
         /* Services */
         .services { padding: 100px 0; background: var(--white); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
@@ -140,12 +163,12 @@
         .service-card li { padding: 8px 0; color: var(--text-medium); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
         .service-card li::before { content: "✓"; color: var(--accent); font-weight: bold; }
         .service-highlight { position: absolute; top: 0; right: 0; background: var(--accent); color: var(--white); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 0 12px; }
-        
+
         /* Calculator Teaser */
         .calculator-teaser { padding: 80px 0; background: var(--primary); color: var(--white); text-align: center; }
         .calculator-teaser h2 { font-size: 2.2rem; margin-bottom: 16px; }
         .calculator-teaser p { opacity: 0.9; max-width: 600px; margin: 0 auto 32px; }
-        
+
         /* Process */
         .process { padding: 100px 0; background: var(--bg-cream); }
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
@@ -157,27 +180,27 @@
         }
         .step h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
         .step p { color: var(--text-medium); font-size: 0.95rem; }
-        
+
         /* Trust */
         .trust { padding: 80px 0; background: var(--white); text-align: center; }
         .trust-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
         .trust-item { max-width: 200px; }
         .trust-item .number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Playfair Display', serif; }
         .trust-item p { color: var(--text-medium); font-size: 0.95rem; margin-top: 8px; }
-        
+
         /* FAQ */
         .faq { padding: 100px 0; background: var(--bg-cream); }
         .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top: 40px; }
         .faq-item { background: var(--white); padding: 28px; border-radius: 12px; box-shadow: var(--shadow); }
         .faq-item h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; }
         .faq-item p { color: var(--text-medium); font-size: 0.95rem; }
-        
+
         /* CTA Section */
         .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%); text-align: center; }
         .cta-section h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; }
         .cta-section p { font-size: 1.1rem; color: var(--text-medium); max-width: 600px; margin: 0 auto 40px; }
         .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        
+
         /* Contact */
         .contact { padding: 100px 0; background: var(--white); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
@@ -189,18 +212,18 @@
         .contact-item p { color: var(--text-medium); font-size: 0.95rem; }
         .contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; }
         .contact-item a:hover { text-decoration: underline; }
-        
+
         .contact-form { background: var(--bg-light); padding: 40px; border-radius: 12px; }
         .contact-form h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 24px; color: var(--primary); }
-        
+
         /* Footer */
         footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
         footer p { opacity: 0.8; font-size: 0.9rem; }
         footer a { color: var(--accent-light); text-decoration: none; }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            .problems { padding: 120px 0 60px; }
+            .hero { padding: 120px 0 60px; }
             .hero .container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.2rem; }
             .hero-form { order: -1; }
@@ -209,8 +232,11 @@
             .section-header h2 { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
             .faq-grid { grid-template-columns: 1fr; }
+            .problems { padding-top: 100px; }
         }
     </style>
+<base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -222,5 +248,375 @@
             <li><a href="#faq">Preguntas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://wa.me/5491173707992" target="_blank" rel="noopener noreferrer" style="width: 44px; height: 44px; background: #25D366; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0
+        <a href="https://wa.me/541173707992" class="whatsapp-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+</header>
+
+<!-- SECCIÓN 1: ¿Te pasó algo de esto? -->
+<section class="problems">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">¿Te pasó algo de esto?</span>
+            <h2>Situaciones laborales que resolvemos</h2>
+            <p>Estas son las consultas más frecuentes que recibimos. Si te identificás con alguna, es momento de actuar:</p>
+        </div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon">📉</div>
+                <h3>Te despidieron sin causa</h3>
+                <p>Te despidieron y dudás si te pagaron correctamente. Revisamos la liquidación y calculamos si corresponde una diferencia indemnizatoria.</p>
+                <span class="problem-tag">URGENTE: Plazo 2 años</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🚫</div>
+                <h3>Trabajás en negro o mal registrado</h3>
+                <p>Trabajás sin estar registrado o te registraron por menos de lo que realmente ganás. Podés reclamar regularización e indemnizaciones.</p>
+                <span class="problem-tag">RECLAMABLE</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">💸</div>
+                <h3>Te deben horas extras o salario</h3>
+                <p>No te pagan horas extras, no estás correctamente categorizado o te deben diferencias salariales. Revisamos recibos y tareas reales.</p>
+                <span class="problem-tag">DIFERENCIAS SALARIALES</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">😰</div>
+                <h3>Sufrís hostigamiento laboral</h3>
+                <p>El ambiente de trabajo te está afectando. Si sufrís maltrato o presión indebida, existen herramientas legales para protegerte.</p>
+                <span class="problem-tag">PROTECCIÓN LEGAL</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 2: Derecho Laboral en CABA - Defendemos tus Derechos Laborales -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="section-label">Derecho Laboral en CABA</div>
+            <h1>Defendemos tus <em>Derechos Laborales</em></h1>
+            <p>Despidos injustos, trabajo en negro, diferencias salariales y hostigamiento. Revisamos tu liquidación y calculamos lo que realmente te corresponde. No dejes que te paguen menos de lo que la ley establece.</p>
+            <a href="#consulta" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Gratis tu Caso</a>
+            <div class="hero-badges">
+                <span class="badge">⚡ Respuesta en 24hs</span>
+                <span class="badge">💰 Sin costo inicial</span>
+                <span class="badge">📍 CABA</span>
+            </div>
+        </div>
+        <div class="hero-form" id="consulta">
+            <div class="urgency-banner">
+                <span style="font-size: 1.5rem;">⚠️</span>
+                <div>
+                    <strong>¡Importante!</strong> Los plazos para reclamar prescriben. No esperes más.
+                </div>
+            </div>
+            <h3>Consultá tu caso sin cargo</h3>
+            <p>Contanos qué pasó y calculamos si te corresponde una indemnización</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
+                </div>
+                <div class="form-group">
+                    <select name="servicio" required>
+                        <option value="">¿Qué te pasó?</option>
+                        <option value="despido">Me despidieron</option>
+                        <option value="trabajo-negro">Trabajo en negro / mal registrado</option>
+                        <option value="salarios">Me deben salario / horas extras</option>
+                        <option value="hostigamiento">Hostigamiento laboral</option>
+                        <option value="accidente">Accidente de trabajo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensaje" placeholder="Contanos brevemente tu situación laboral..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger form-submit">Quiero que revisen mi caso</button>
+                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 3: Servicios -->
+<section class="services" id="servicios">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Nuestros Servicios</span>
+            <h2>Defensa integral del trabajador</h2>
+            <p>Representación para empleados y asesoramiento preventivo para empleadores</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-highlight">MÁS CONSULTADO</span>
+                <h3>🚨 Despido e Indemnización</h3>
+                <p>Revisamos tu liquidación final y calculamos si te pagaron correctamente. El objetivo es que cobres lo que la ley establece, nada más, nada menos.</p>
+                <ul>
+                    <li>Revisión de liquidación final</li>
+                    <li>Cálculo de indemnización completa</li>
+                    <li>Despido discriminatorio</li>
+                    <li>Despido por enfermedad o embarazo</li>
+                    <li>Despido indirecto (constructivo)</li>
+                    <li>Reinstalación en el puesto</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>📝 Trabajo No Registrado</h3>
+                <p>Trabajás en negro o mal registrado. Analizamos antigüedad, salario real y categoría correcta para proteger tus derechos.</p>
+                <ul>
+                    <li>Regularización de relación laboral</li>
+                    <li>Reclamo de diferencias salariales</li>
+                    <li>Aportes y contribuciones omitidos</li>
+                    <li>Multas por trabajo no registrado</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>💵 Diferencias Salariales</h3>
+                <p>Te deben horas extras, no estás correctamente categorizado o hay diferencias entre lo que deberías cobrar y lo que te pagan.</p>
+                <ul>
+                    <li>Horas extras no pagadas</li>
+                    <li>Categorización incorrecta</li>
+                    <li>Comisiones y bonificaciones</li>
+                    <li>Diferencias de salario por antigüedad</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🛡️ Hostigamiento Laboral</h3>
+                <p>Si sufrís maltrato, presión indebida o mobbing en el trabajo, existen herramientas legales para protegerte y hacer cesar la situación.</p>
+                <ul>
+                    <li>Denuncia por acoso laboral</li>
+                    <li>Medidas cautelares</li>
+                    <li>Daños y perjuicios por mobbing</li>
+                    <li>Protección ante represalias</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🏥 Accidentes de Trabajo</h3>
+                <p>Te lesionaste en el trabajo o sufrís una enfermedad laboral. Gestionamos el reclamo ante la ART y el empleador.</p>
+                <ul>
+                    <li>Reclamo ante ART</li>
+                    <li>Incumplimiento de seguridad</li>
+                    <li>Indemnización por incapacidad</li>
+                    <li>Recalificación de accidente</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>⚖️ Negociaciones Colectivas</h3>
+                <p>Asesoramiento para sindicatos y delegados en negociaciones paritarias, conflictos colectivos y homologaciones.</p>
+                <ul>
+                    <li>Negociación paritaria</li>
+                    <li>Conflictos colectivos de trabajo</li>
+                    <li>Homologación de acuerdos</li>
+                    <li>Asesoramiento a sindicatos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 4: Calculadora -->
+<section class="calculator-teaser">
+    <div class="container">
+        <h2>¿Te despidieron? Calculá tu indemnización</h2>
+        <p>Aunque cada caso es particular, podemos hacer una estimación inicial de lo que te podría corresponder según tu antigüedad, salario y tipo de despido.</p>
+        <a href="#consulta" class="btn btn-accent" style="font-size: 1.1rem; padding: 16px 40px;">Consultá y calculamos tu caso</a>
+    </div>
+</section>
+
+<!-- SECCIÓN 5: Proceso -->
+<section class="process">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Cómo trabajamos</span>
+            <h2>Tu reclamo, paso a paso</h2>
+            <p>Desde la primera consulta hasta el cobro, te acompañamos en todo</p>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Consulta gratuita</h3>
+                <p>Analizamos tu situación, recibos y documentación sin costo. Te decimos si tu caso tiene viabilidad y qué podés esperar.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Cálculo de créditos</h3>
+                <p>Calculamos todo lo que te corresponde: indemnización, salarios adeudados, diferencias, horas extras, etc.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Reclamo formal</h3>
+                <p>Iniciamos el reclamo judicial o extrajudicial. Negociamos con el empleador para llegar a un acuerdo justo.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Cobro de lo que te corresponde</h3>
+                <p>Si no hay acuerdo, llevamos el caso a juicio. Nuestro objetivo es que cobres lo que la ley establece.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 6: Trust -->
+<section class="trust">
+    <div class="container">
+        <span class="section-label">Por qué elegirnos</span>
+        <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 16px;">Derecho Claro, resultados concretos</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div class="number">24hs</div>
+                <p>Respuesta a tu consulta inicial</p>
+            </div>
+            <div class="trust-item">
+                <div class="number">$0</div>
+                <p>Costo inicial para evaluar tu caso</p>
+            </div>
+            <div class="trust-item">
+                <div class="number">CABA</div>
+                <p>Atención presencial y virtual</p>
+            </div>
+            <div class="trust-item">
+                <div class="number">⚖️</div>
+                <p>Solo cobramos si recuperás</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 7: FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Preguntas Frecuentes</span>
+            <h2>Lo que más nos preguntan</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>¿Cuánto tiempo tengo para reclamar después de un despido?</h4>
+                <p>Tenés <strong>2 años</strong> desde el despido para iniciar un reclamo laboral. Sin embargo, cuanto antes actúes, mejor, porque la evidencia y los testigos están más frescos.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué pasa si trabajé en negro?</h4>
+                <p>Podés reclamar la regularización de la relación laboral y el pago de todos los derechos omitidos: aportes, aguinaldo, vacaciones, indemnización por antigüedad, etc. El trabajo en negro no te quita derechos.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Me cobran por la primera consulta?</h4>
+                <p>No. La primera consulta es <strong>sin cargo</strong>. Analizamos tu caso, evaluamos la viabilidad y te explicamos las opciones. Solo avanzamos si decidís hacerlo.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué documentación necesito traer?</h4>
+                <p>Lo ideal es traer recibos de sueldo, contrato de trabajo (si tenés), carta de despido (si te dieron), WhatsApp o mails relacionados con el trabajo, y cualquier otra prueba que tengas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuánto dura un juicio laboral?</h4>
+                <p>Depende de la complejidad, pero en CABA un juicio laboral puede durar entre <strong>1 y 3 años</strong>. Muchos casos se resuelven por acuerdo en mucho menos tiempo.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Trabajan con porcentaje sobre lo recuperado?</h4>
+                <p>En muchos casos sí, especialmente en reclamos por despido. Eso significa que <strong>no pagás nada de tu bolsillo</strong> y nuestro honorario es un porcentaje de lo que logramos recuperar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 8: CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>No dejes que te paguen menos de lo que te corresponde</h2>
+        <p>Cada día que pasa pueden prescribir tus derechos. La primera consulta es gratuita y sin compromiso. Conocé qué opciones tenés.</p>
+        <div class="cta-buttons">
+            <a href="#consulta" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;">Revisá mi caso ahora</a>
+            <a href="https://wa.me/541173707992" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">💬 WhatsApp Directo</a>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 9: Contacto -->
+<section class="contact" id="contacto">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <span class="section-label">Contacto</span>
+                <h2>Estemos en contacto</h2>
+                <p>Completá el formulario o contactanos directamente. Tu consulta es confidencial y sin compromiso.</p>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Ciudad Autónoma de Buenos Aires, Argentina</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:derechoclarona@gmail.com">derechoclarona@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div>
+                        <h4>Teléfono / WhatsApp</h4>
+                        <p><a href="tel:+541173707992">+54 11 7370-7992</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">🕐</div>
+                    <div>
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Enviá tu consulta laboral</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="servicio">
+                            <option value="">¿Qué te pasó?</option>
+                            <option value="despido">Me despidieron</option>
+                            <option value="trabajo-negro">Trabajo en negro</option>
+                            <option value="salarios">Diferencias salariales</option>
+                            <option value="hostigamiento">Hostigamiento</option>
+                            <option value="accidente">Accidente de trabajo</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Contanos tu situación laboral..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger form-submit">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Nuñez Aragunde | Derecho Claro. Todos los derechos reservados.</p>
+        <p style="margin-top: 8px; opacity: 0.6;">Abogada en CABA - Especialista en Derecho de Familia, Laboral y Civil</p>
+    </div>
+</footer>
+
+</body>
+</html>
