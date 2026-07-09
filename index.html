@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogada Derecho de Familia CABA | Divorcio, Custodia, Alimentos | Nuñez Aragunde</title>
-    <meta name="description" content="Asesoramiento experto en derecho de familia en CABA. Divorcios, cuota alimentaria, régimen de comunicación y sucesiones. Primera consulta sin compromiso.">
+    <title>Abogada Civil y Comercial CABA | Contratos, Daños, Deudas | Nuñez Aragunde</title>
+    <meta name="description" content="Asesoramiento jurídico en derecho civil y comercial en CABA. Contratos, daños y perjuicios, defensa del consumidor y cobro de deudas. Consulta sin compromiso.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -62,10 +62,12 @@
         .btn-outline:hover { background: var(--primary); color: var(--white); }
         .btn-accent { background: var(--accent); color: var(--white); }
         .btn-accent:hover { background: var(--accent-light); }
+        .btn-success { background: #27ae60; color: var(--white); }
+        .btn-success:hover { background: #219a52; }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
             color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden;
         }
         .hero::before {
@@ -108,7 +110,7 @@
         .problem-card {
             background: var(--white); padding: 40px 32px; border-radius: 12px;
             box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid #27ae60;
         }
         .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
         .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
@@ -121,6 +123,7 @@
         .service-card {
             padding: 40px; border-radius: 12px; background: var(--bg-light);
             transition: all 0.3s; border: 1px solid transparent;
+            position: relative; overflow: hidden;
         }
         .service-card:hover { background: var(--white); border-color: var(--accent); box-shadow: var(--shadow-lg); }
         .service-card h3 { font-size: 1.4rem; margin-bottom: 16px; color: var(--primary); }
@@ -128,6 +131,7 @@
         .service-card ul { list-style: none; }
         .service-card li { padding: 8px 0; color: var(--text-medium); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
         .service-card li::before { content: "✓"; color: var(--accent); font-weight: bold; }
+        .service-highlight { position: absolute; top: 0; right: 0; background: var(--accent); color: var(--white); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 0 12px; }
 
         /* Process */
         .process { padding: 100px 0; background: var(--primary); color: var(--white); }
@@ -205,19 +209,19 @@
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="section-label">Derecho de Familia en CABA</div>
-            <h1>Protegemos lo que <em>más importa</em></h1>
-            <p>Asesoramiento experto en divorcios, custodia, cuota alimentaria y sucesiones. Acompañamos a tu familia en los momentos más importantes con transparencia y compromiso.</p>
-            <a href="#consulta" class="btn btn-accent" style="font-size: 1.1rem; padding: 16px 40px;">Agendar Consulta Gratuita</a>
+            <div class="section-label">Derecho Civil y Comercial en CABA</div>
+            <h1>Soluciones en <em>Derecho Civil</em></h1>
+            <p>Contratos, propiedades, daños y perjuicios. Asesoramiento estratégico para proteger tus intereses patrimoniales. Revisamos o redactamos contratos claros para prevenir conflictos y pérdidas económicas futuras.</p>
+            <a href="#consulta" class="btn btn-success" style="font-size: 1.1rem; padding: 16px 40px;">Consultá sin compromiso</a>
             <div class="hero-badges">
                 <span class="badge">⚡ Respuesta en 24hs</span>
-                <span class="badge">🔒 Confidencialidad total</span>
+                <span class="badge">📝 Revisión de contratos</span>
                 <span class="badge">📍 CABA</span>
             </div>
         </div>
         <div class="hero-form" id="consulta">
-            <h3>Consultá sin compromiso</h3>
-            <p>Contanos tu situación y te orientamos sin cargo</p>
+            <h3>Consultá tu caso</h3>
+            <p>¿Vas a firmar algo importante? ¿Te deben dinero? ¿Alguien te causó un daño? Contanos y te orientamos.</p>
             <form action="#" method="POST">
                 <div class="form-group">
                     <input type="text" name="nombre" placeholder="Nombre completo" required>
@@ -231,18 +235,18 @@
                 <div class="form-group">
                     <select name="servicio" required>
                         <option value="">¿Qué necesitás?</option>
-                        <option value="divorcio">Divorcio</option>
-                        <option value="alimentos">Cuota Alimentaria</option>
-                        <option value="comunicacion">Régimen de Comunicación</option>
-                        <option value="compensacion">Compensación Económica</option>
-                        <option value="sucesiones">Sucesiones</option>
+                        <option value="contratos">Revisión o redacción de contrato</option>
+                        <option value="danos">Daños y perjuicios</option>
+                        <option value="consumidor">Defensa del consumidor</option>
+                        <option value="deudas">Cobro de deudas</option>
+                        <option value="propiedad">Problemas de propiedad</option>
                         <option value="otro">Otro</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <textarea name="mensaje" placeholder="Contanos brevemente tu situación..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary form-submit">Enviar Consulta</button>
+                <button type="submit" class="btn btn-success form-submit">Enviar Consulta</button>
                 <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
             </form>
         </div>
@@ -252,30 +256,30 @@
 <section class="problems">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">¿Te resulta familiar?</span>
-            <h2>Situaciones que resolvemos</h2>
-            <p>Sabemos que los conflictos familiares son momentos difíciles. Estas son las situaciones más comunes que acompañamos:</p>
+            <span class="section-label">¿Te encontrás en alguna de estas situaciones?</span>
+            <h2>Conflictos que resolvemos</h2>
+            <p>Desde la prevención hasta el litigio, te acompañamos en cada situación patrimonial</p>
         </div>
         <div class="problems-grid">
             <div class="problem-card">
-                <div class="problem-icon">💔</div>
-                <h3>Divorcio conflictivo</h3>
-                <p>La relación terminó y no sabés cómo empezar. Necesitás organizar bienes, vivienda y responsabilidades parentales sin que se complique más.</p>
+                <div class="problem-icon">📝</div>
+                <h3>Vas a firmar un contrato importante</h3>
+                <p>Alquiler, compraventa, préstamo o sociedad. Necesitás que un abogado revise las cláusulas antes de firmar para evitar sorpresas.</p>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">👶</div>
-                <h3>Cuota alimentaria impaga</h3>
-                <p>No están cumpliendo con la cuota o el monto ya no alcanza. Necesitás que se fije, aumente o se exija el pago judicialmente.</p>
+                <div class="problem-icon">💥</div>
+                <h3>Alguien te causó un daño</h3>
+                <p>Accidente de tránsito, daño a tu propiedad, incumplimiento contractual. Analizamos la responsabilidad y la viabilidad del reclamo.</p>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">🚫</div>
-                <h3>Régimen de comunicación impedido</h3>
-                <p>No hay acuerdo sobre los días con tus hijos o el vínculo está siendo dificultado. Necesitás un esquema claro y obligatorio.</p>
+                <div class="problem-icon">🏢</div>
+                <h3>Una empresa no cumple o no responde</h3>
+                <p>Producto defectuoso, servicio no prestado, incumplimiento de garantía. Gestionamos el reclamo formal y avanzamos judicialmente si es necesario.</p>
             </div>
             <div class="problem-card">
-                <div class="problem-icon">⚖️</div>
-                <h3>Desequilibrio económico post-separación</h3>
-                <p>Después de la separación quedaste en desventaja económica. Evaluamos si corresponde una compensación por el trabajo del hogar.</p>
+                <div class="problem-icon">💰</div>
+                <h3>Te deben dinero y no pagan</h3>
+                <p>Ya agotaste las vías informales. Podemos iniciar el reclamo judicial para recuperar lo que te corresponde de manera eficaz.</p>
             </div>
         </div>
     </div>
@@ -285,101 +289,115 @@
     <div class="container">
         <div class="section-header">
             <span class="section-label">Nuestros Servicios</span>
-            <h2>Especialistas en Derecho de Familia</h2>
-            <p>Brindamos asesoramiento integral en cada etapa del proceso familiar</p>
+            <h2>Asesoramiento Civil y Comercial</h2>
+            <p>Preventivo y litigioso, para proteger tus intereses patrimoniales</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <h3>📋 Divorcio</h3>
-                <p>Iniciamos el divorcio y organizamos bienes, vivienda y responsabilidades parentales. El proceso es directo, pero hacerlo bien desde el inicio evita problemas futuros.</p>
+                <span class="service-highlight">PREVENTIVO</span>
+                <h3>📝 Contratos Civiles y Comerciales</h3>
+                <p>Vas a firmar algo importante y querés evitar problemas. Revisamos o redactamos contratos claros para prevenir conflictos y pérdidas económicas futuras.</p>
                 <ul>
-                    <li>Divorcio de mutuo acuerdo</li>
-                    <li>Divorcio unilateral</li>
-                    <li>División de bienes</li>
-                    <li>Asignación de vivienda</li>
+                    <li>Contratos de alquiler</li>
+                    <li>Compraventa de inmuebles</li>
+                    <li>Contratos de préstamo</li>
+                    <li>Sociedades y acuerdos comerciales</li>
+                    <li>Contratos de servicios</li>
+                    <li>Cláusulas de confidencialidad</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>💰 Cuota Alimentaria</h3>
-                <p>Analizamos ingresos reales y solicitamos medidas para asegurar el cobro. No tenés que resolver esto sola/o.</p>
+                <h3>💥 Daños y Perjuicios</h3>
+                <p>Alguien te causó un daño y no quiere responder. Analizamos la responsabilidad y la viabilidad del reclamo para obtener la indemnización correspondiente.</p>
                 <ul>
-                    <li>Fijación de cuota alimentaria</li>
-                    <li>Aumento de alimentos</li>
-                    <li>Ejecución de deuda alimentaria</li>
-                    <li>Modificación de cuota</li>
+                    <li>Accidentes de tránsito</li>
+                    <li>Daños a la propiedad</li>
+                    <li>Incumplimiento contractual</li>
+                    <li>Daños morales</li>
+                    <li>Responsabilidad médica</li>
+                    <li>Responsabilidad civil de terceros</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>👨‍👩‍👧 Régimen de Comunicación</h3>
-                <p>Regulamos legalmente el vínculo con tus hijos y establecemos un esquema claro y obligatorio. Ordenar la situación hoy evita conflictos mayores mañana.</p>
+                <h3>🛡️ Defensa del Consumidor</h3>
+                <p>Una empresa no cumple o no responde a tu reclamo. Gestionamos el reclamo formal y, si es necesario, avanzamos judicialmente para que se haga cargo.</p>
                 <ul>
-                    <li>Fijación de régimen de visitas</li>
-                    <li>Impedimento de contacto</li>
-                    <li>Violación de régimen</li>
-                    <li>Traslado de menores</li>
+                    <li>Productos defectuosos</li>
+                    <li>Servicios no prestados</li>
+                    <li>Incumplimiento de garantía</li>
+                    <li>Publicidad engañosa</li>
+                    <li>Cláusulas abusivas</li>
+                    <li>Reclamo ante Defensa del Consumidor</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>🏠 Compensación Económica</h3>
-                <p>Si hubo un desequilibrio real por el trabajo del hogar, evaluamos la situación y definimos si el reclamo es viable.</p>
+                <span class="service-highlight">COBRO</span>
+                <h3>💰 Cobro Judicial de Deudas</h3>
+                <p>Te deben dinero y ya agotaste las vías informales. Iniciamos el reclamo judicial para recuperar lo que te corresponde de manera eficaz.</p>
                 <ul>
-                    <li>Evaluación de viabilidad</li>
-                    <li>Cálculo de compensación</li>
-                    <li>Negociación extrajudicial</li>
-                    <li>Reclamo judicial</li>
+                    <li>Ejecutivo (título válido)</li>
+                    <li>Ordinario (deuda comprobada)</li>
+                    <li>Medidas cautelares (embargo)</li>
+                    <li>Quiebras y concursos</li>
+                    <li>Negociación de deuda</li>
+                    <li>Recuperación de créditos</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>📜 Sucesiones</h3>
-                <p>Acompañamos en la sucesión de bienes con claridad y eficiencia, respetando la voluntad del causante y los derechos de los herederos.</p>
+                <h3>🏠 Derecho Inmobiliario</h3>
+                <p>Problemas con propiedades, alquileres, linderos o posesión. Asesoramiento para proteger tu patrimonio inmobiliario.</p>
                 <ul>
-                    <li>Sucesión intestada</li>
-                    <li>Sucesión testamentaria</li>
-                    <li>Partición de bienes</li>
-                    <li>Impugnación de testamento</li>
+                    <li>Desalojos</li>
+                    <li>Problemas de linderos</li>
+                    <li>Usucapión</li>
+                    <li>Registro de la propiedad</li>
+                    <li>Escrituración</li>
+                    <li>Conflictos de copropiedad</li>
                 </ul>
             </div>
             <div class="service-card">
-                <h3>🛡️ Medidas Cautelares</h3>
-                <p>Cuando la situación lo requiere, solicitamos medidas urgentes para proteger a los menores y los bienes familiares.</p>
+                <h3>⚖️ Mediación y Arbitraje</h3>
+                <p>Antes de ir a juicio, exploramos soluciones alternativas de conflictos más rápidas y económicas.</p>
                 <ul>
-                    <li>Medidas de no innovar</li>
-                    <li>Prohibición de enajenar</li>
-                    <li>Embargos precautorios</li>
-                    <li>Medidas de protección</li>
+                    <li>Mediación prejudicial</li>
+                    <li>Arbitraje comercial</li>
+                    <li>Negociación de conflictos</li>
+                    <li>Conciliación</li>
+                    <li>Acuerdos extrajudiciales</li>
+                    <li>Homologación de acuerdos</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="process" id="proceso">
+<section class="process">
     <div class="container">
         <div class="section-header">
             <span class="section-label" style="color: var(--accent-light);">Cómo trabajamos</span>
-            <h2>Tu caso, paso a paso</h2>
-            <p>Un proceso transparente y cercano para que entiendas cada etapa</p>
+            <h2>Tu asesoramiento, paso a paso</h2>
+            <p>Desde la prevención hasta el litigio, un proceso claro y estratégico</p>
         </div>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Consulta inicial</h3>
-                <p>Escuchamos tu situación sin cargo. Analizamos los hechos, la viabilidad jurídica y las opciones disponibles.</p>
+                <h3>Diagnóstico inicial</h3>
+                <p>Analizamos tu situación, documentación y objetivos. Te explicamos las opciones legales disponibles en lenguaje claro.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3>Estrategia personalizada</h3>
-                <p>Diseñamos un plan de acción a tu medida, explicándote cada paso en lenguaje claro y sin tecnicismos.</p>
+                <h3>Estrategia preventiva o litigiosa</h3>
+                <p>Diseñamos el plan de acción: revisamos contratos, iniciamos reclamos o negociamos soluciones según tu caso.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Acción judicial o extrajudicial</h3>
-                <p>Iniciamos las gestiones necesarias, siempre buscando la solución más rápida y favorable para tu situación.</p>
+                <h3>Acción y seguimiento</h3>
+                <p>Ejecutamos la estrategia definida: redactamos contratos, iniciamos juicios o gestionamos cobros. Te mantenemos informado.</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h3>Acompañamiento continuo</h3>
-                <p>Te mantenemos informado/a en cada etapa. Estamos disponibles para resolver tus dudas durante todo el proceso.</p>
+                <h3>Resolución y protección</h3>
+                <p>Buscamos la mejor solución para tu caso: acuerdo, sentencia favorable o prevención de futuros conflictos.</p>
             </div>
         </div>
     </div>
@@ -395,8 +413,8 @@
                 <p>Respuesta a tu consulta inicial</p>
             </div>
             <div class="trust-item">
-                <div class="number">100%</div>
-                <p>Confidencialidad garantizada</p>
+                <div class="number">📝</div>
+                <p>Contratos claros y seguros</p>
             </div>
             <div class="trust-item">
                 <div class="number">CABA</div>
@@ -412,10 +430,10 @@
 
 <section class="cta-section">
     <div class="container">
-        <h2>No esperes más para resolver tu situación</h2>
-        <p>Cada día que pasa puede afectar tus derechos y los de tu familia. La primera consulta es sin compromiso y te permite entender qué opciones reales tenés.</p>
+        <h2>Protegé tus intereses antes de que sea tarde</h2>
+        <p>Ya sea que necesites revisar un contrato, cobrar una deuda o reclamar un daño, la primera consulta te permite entender dónde estás y qué opciones reales tenés.</p>
         <div class="cta-buttons">
-            <a href="#consulta" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">Agendar Consulta Ahora</a>
+            <a href="#consulta" class="btn btn-success" style="font-size: 1.1rem; padding: 16px 40px;">Agendar Consulta Ahora</a>
             <a href="https://wa.me/541173707992" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">💬 WhatsApp Directo</a>
         </div>
     </div>
@@ -474,18 +492,18 @@
                     <div class="form-group">
                         <select name="servicio">
                             <option value="">¿Qué necesitás?</option>
-                            <option value="divorcio">Divorcio</option>
-                            <option value="alimentos">Cuota Alimentaria</option>
-                            <option value="comunicacion">Régimen de Comunicación</option>
-                            <option value="compensacion">Compensación Económica</option>
-                            <option value="sucesiones">Sucesiones</option>
+                            <option value="contratos">Revisión de contrato</option>
+                            <option value="danos">Daños y perjuicios</option>
+                            <option value="consumidor">Defensa del consumidor</option>
+                            <option value="deudas">Cobro de deudas</option>
+                            <option value="propiedad">Derecho inmobiliario</option>
                             <option value="otro">Otro</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <textarea name="mensaje" placeholder="Contanos tu situación..." rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary form-submit">Enviar Mensaje</button>
+                    <button type="submit" class="btn btn-success form-submit">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
