@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amparo de Salud CABA | Medicamentos, Tratamientos, Cirugías | Nuñez Aragunde</title>
+    <meta name="description" content="Amparos de salud en CABA. Obtené cobertura para medicamentos, tratamientos, cirugías y prácticas médicas que tu obra social o prepaga niega. Primera consulta gratuita.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2a4a73;
+            --accent: #c9a96e;
+            --accent-light: #d4b87a;
+            --bg-cream: #f5f1eb;
+            --bg-light: #faf8f5;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --white: #ffffff;
+            --health: #e74c3c;
+            --health-light: #c0392b;
+            --health-bg: #fdf2f2;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; }
+        .logo span { display: block; font-size: 0.85rem; font-weight: 400; color: var(--text-light); font-family: 'Inter', sans-serif; }
+
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-medium); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .btn {
+            display: inline-block; padding: 14px 32px; border-radius: 4px;
+            font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: var(--white); }
+        .btn-accent { background: var(--accent); color: var(--white); }
+        .btn-accent:hover { background: var(--accent-light); }
+        .btn-health { background: var(--health); color: var(--white); }
+        .btn-health:hover { background: var(--health-light); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+        /* Urgency Top Bar */
+        .urgency-bar {
+            background: var(--health); color: var(--white); text-align: center; padding: 12px;
+            font-size: 0.95rem; font-weight: 500; position: fixed; top: 0; width: 100%; z-index: 1001;
+            display: flex; align-items: center; justify-content: center; gap: 12px;
+        }
+        .urgency-bar a { color: var(--white); text-decoration: underline; font-weight: 700; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
+            color: var(--white); padding: 180px 0 100px; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
+            background: rgba(255,255,255,0.03); border-radius: 50%;
+        }
+        .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 3rem; line-height: 1.15; margin-bottom: 24px; }
+        .hero h1 em { font-style: italic; color: #ff6b6b; }
+        .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 32px; max-width: 90%; }
+        .hero-badges { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+        .badge { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2); }
+
+        .hero-form {
+            background: var(--white); padding: 40px; border-radius: 12px;
+            box-shadow: var(--shadow-lg); color: var(--text-dark);
+        }
+        .hero-form h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 8px; color: var(--primary); }
+        .hero-form p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 24px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 6px;
+            font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--primary);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit { width: 100%; margin-top: 8px; }
+        .form-note { text-align: center; font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: var(--health-bg); border: 2px solid var(--health); border-radius: 12px;
+            padding: 28px 32px; margin-bottom: 32px; display: flex; align-items: flex-start; gap: 20px;
+        }
+        .emergency-banner .icon { font-size: 2.5rem; flex-shrink: 0; }
+        .emergency-banner h4 { font-family: 'Inter', sans-serif; color: var(--health); font-size: 1.1rem; margin-bottom: 8px; }
+        .emergency-banner p { color: var(--text-medium); font-size: 0.95rem; }
+
+        /* Problems Section */
+        .problems { padding: 100px 0; background: var(--bg-cream); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
+        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+
+        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .problem-card {
+            background: var(--white); padding: 40px 32px; border-radius: 12px;
+            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--health);
+        }
+        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
+        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .problem-tag { display: inline-block; background: var(--health-bg); color: var(--health); padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
+
+        /* Services */
+        .services { padding: 100px 0; background: var(--white); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+        .service-card {
+            padding: 40px; border-radius: 12px; background: var(--bg-light);
+            transition: all 0.3s; border: 1px solid transparent;
+            position: relative; overflow: hidden;
+        }
+        .service-card:hover { background: var(--white); border-color: var(--health); box-shadow: var(--shadow-lg); }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 16px; color: var(--primary); }
+        .service-card p { color: var(--text-medium); margin-bottom: 20px; }
+        .service-card ul { list-style: none; }
+        .service-card li { padding: 8px 0; color: var(--text-medium); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
+        .service-card li::before { content: "✓"; color: var(--health); font-weight: bold; }
+        .service-highlight { position: absolute; top: 0; right: 0; background: var(--health); color: var(--white); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 0 12px; }
+
+        /* How it Works */
+        .how-it-works { padding: 100px 0; background: var(--primary); color: var(--white); }
+        .how-it-works .section-header h2, .how-it-works .section-header p { color: var(--white); }
+        .steps-timeline { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-top: 60px; position: relative; }
+        .step-item { text-align: center; position: relative; }
+        .step-item .number {
+            width: 70px; height: 70px; background: var(--health); color: var(--white);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; font-weight: 700; margin: 0 auto 20px; font-family: 'Playfair Display', serif;
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.4);
+        }
+        .step-item h3 { font-size: 1.2rem; margin-bottom: 12px; }
+        .step-item p { opacity: 0.85; font-size: 0.95rem; }
+        .step-time { display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 14px; border-radius: 50px; font-size: 0.8rem; margin-top: 12px; }
+
+        /* Stats */
+        .stats { padding: 80px 0; background: var(--bg-cream); text-align: center; }
+        .stats-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
+        .stat-item { max-width: 220px; }
+        .stat-item .number { font-size: 3rem; font-weight: 700; color: var(--health); font-family: 'Playfair Display', serif; }
+        .stat-item p { color: var(--text-medium); font-size: 0.95rem; margin-top: 8px; }
+
+        /* Coverage Types */
+        .coverage { padding: 100px 0; background: var(--white); }
+        .coverage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 50px; }
+        .coverage-card {
+            background: var(--bg-light); padding: 32px; border-radius: 12px;
+            text-align: center; transition: all 0.3s; border: 2px solid transparent;
+        }
+        .coverage-card:hover { border-color: var(--health); transform: translateY(-5px); box-shadow: var(--shadow); }
+        .coverage-card .icon { font-size: 3rem; margin-bottom: 16px; }
+        .coverage-card h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--primary); margin-bottom: 10px; }
+        .coverage-card p { color: var(--text-medium); font-size: 0.9rem; }
+
+        /* FAQ */
+        .faq { padding: 100px 0; background: var(--bg-cream); }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top: 40px; }
+        .faq-item { background: var(--white); padding: 28px; border-radius: 12px; box-shadow: var(--shadow); }
+        .faq-item h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; }
+        .faq-item p { color: var(--text-medium); font-size: 0.95rem; }
+        .faq-item strong { color: var(--health); }
+
+        /* CTA Section */
+        .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--health-bg) 0%, var(--white) 100%); text-align: center; }
+        .cta-section h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; }
+        .cta-section p { font-size: 1.1rem; color: var(--text-medium); max-width: 600px; margin: 0 auto 40px; }
+        .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        /* Contact */
+        .contact { padding: 100px 0; background: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-info h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 24px; }
+        .contact-info > p { color: var(--text-medium); margin-bottom: 40px; font-size: 1.05rem; }
+        .contact-item { display: flex; gap: 20px; margin-bottom: 28px; }
+        .contact-item-icon { width: 50px; height: 50px; background: var(--health-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-item h4 { font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 4px; color: var(--primary); }
+        .contact-item p { color: var(--text-medium); font-size: 0.95rem; }
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .contact-item a:hover { text-decoration: underline; }
+
+        .contact-form { background: var(--bg-light); padding: 40px; border-radius: 12px; }
+        .contact-form h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 24px; color: var(--primary); }
+
+        /* Footer */
+        footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
+        footer p { opacity: 0.8; font-size: 0.9rem; }
+        footer a { color: var(--accent-light); text-decoration: none; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .urgency-bar { font-size: 0.8rem; padding: 10px; }
+            .hero { padding: 160px 0 60px; }
+            .hero .container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-form { order: -1; }
+            .nav-links { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .stats-grid { gap: 30px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<div class="urgency-bar">
+    <span>🚨</span>
+    <span>Los amparos de salud son <strong>URGENTES</strong>. Cada día cuenta. Consultanos ahora:</span>
+    <a href="tel:+541173707992">+54 11 7370-7992</a>
+</div>
+
+<header>
+    <div class="container">
+        <a href="/" class="logo">NUÑEZ ARAGUNDE<span>Derecho claro</span></a>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#faq">Preguntas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="tel:+541173707992" class="btn btn-health" style="padding: 10px 24px; font-size: 0.9rem;">📞 Llamar Ahora</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="section-label">Amparos de Salud en CABA</div>
+            <h1>Tu salud no puede <em>esperar</em></h1>
+            <p>Si tu obra social o prepaga te negó un medicamento, tratamiento, cirugía o práctica médica, podemos ayudarte a obtener la cobertura que la ley te garantiza. Los amparos de salud son urgentes y actuamos rápido.</p>
+            <a href="#consulta" class="btn btn-health" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Urgente tu Caso</a>
+            <div class="hero-badges">
+                <span class="badge">⚡ Respuesta en 24hs</span>
+                <span class="badge">🏥 Amparos en 48-72hs</span>
+                <span class="badge">📍 CABA</span>
+            </div>
+        </div>
+        <div class="hero-form" id="consulta">
+            <div class="emergency-banner">
+                <span class="icon">⏱️</span>
+                <div>
+                    <h4>¿Tu tratamiento fue negado? Actuá rápido</h4>
+                    <p>Los amparos de salud se resuelven en 48 a 72 horas hábiles. Cada día de espera puede afectar tu tratamiento.</p>
+                </div>
+            </div>
+            <h3>Consultá tu caso de salud</h3>
+            <p>Contanos qué te negaron y analizamos tu situación sin cargo</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
+                </div>
+                <div class="form-group">
+                    <select name="servicio" required>
+                        <option value="">¿Qué te negaron?</option>
+                        <option value="medicamento">Medicamento / Droga</option>
+                        <option value="cirugia">Cirugía / Intervención</option>
+                        <option value="tratamiento">Tratamiento / Terapia</option>
+                        <option value="internacion">Internación / Alta médica</option>
+                        <option value="practica">Práctica médica / Estudio</option>
+                        <option value="protesis">Prótesis / Órtesis</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="obra_social" placeholder="Obra social o prepaga (ej: OSDE, Swiss Medical, PAMI)">
+                </div>
+                <div class="form-group">
+                    <textarea name="mensaje" placeholder="Contanos brevemente: ¿qué te negaron, desde cuándo, qué diagnóstico tenés?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-health form-submit">Quiero que analicen mi caso</button>
+                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="problems">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">¿Te pasó algo de esto?</span>
+            <h2>Situaciones que resolvemos con amparos de salud</h2>
+            <p>Estas son las negativas más frecuentes que recibimos. Si te identificás con alguna, es momento de actuar:</p>
+        </div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon">💊</div>
+                <h3>Te negaron un medicamento</h3>
+                <p>Tu obra social o prepaga se niega a cubrir un medicamento que te recetó tu médico. El tratamiento es indispensable y no podés pagarlo de tu bolsillo.</p>
+                <span class="problem-tag">MÁS FRECUENTE</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🏥</div>
+                <h3>Te negaron una cirugía</h3>
+                <p>Necesitás una intervención quirúrgica urgente o programada y tu cobertura médica la rechazó. El tiempo juega en contra de tu salud.</p>
+                <span class="problem-tag">URGENTE</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🧬</div>
+                <h3>Te negaron un tratamiento oncológico</h3>
+                <p>Quimioterapia, radioterapia, inmunoterapia u otro tratamiento oncológico fue rechazado. Necesitás actuar rápido para no interrumpir tu tratamiento.</p>
+                <span class="problem-tag">PRIORIDAD MÁXIMA</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🦽</div>
+                <h3>Te negaron una prótesis o órtesis</h3>
+                <p>Necesitás una prótesis, silla de ruedas, muletas u otro elemento de ortopedia y tu cobertura médica no quiere hacerse cargo.</p>
+                <span class="problem-tag">RECLAMABLE</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🧠</div>
+                <h3>Te negaron una terapia psicológica o psiquiátrica</h3>
+                <p>Sesiones de psicología, internación psiquiátrica o tratamiento farmacológico para salud mental fueron rechazados por tu obra social.</p>
+                <span class="problem-tag">DERECHO GARANTIZADO</span>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🩺</div>
+                <h3>Te negaron un estudio o práctica médica</h3>
+                <p>Resonancias, tomografías, estudios de laboratorio o cualquier práctica diagnóstica que tu médico indicó y tu cobertura rechazó.</p>
+                <span class="problem-tag">RECLAMABLE</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="servicios">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Nuestros Servicios</span>
+            <h2>Amparos de Salud Integrales</h2>
+            <p>Defendemos tu derecho a la salud con amparos judiciales rápidos y efectivos</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-highlight">URGENTE</span>
+                <h3>💊 Amparo por Medicamentos</h3>
+                <p>Cuando tu obra social o prepaga se niega a cubrir un medicamento que tu médico indicó como indispensable. Actuamos rápido para que no interrumpas tu tratamiento.</p>
+                <ul>
+                    <li>Medicamentos oncológicos</li>
+                    <li>Medicamentos para enfermedades crónicas</li>
+                    <li>Medicamentos de alto costo</li>
+                    <li>Medicamentos huérfanos</li>
+                    <li>Drogas no incluidas en el PMO</li>
+                    <li>Medicamentos importados</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <span class="service-highlight">URGENTE</span>
+                <h3>🏥 Amparo por Cirugías e Intervenciones</h3>
+                <p>Cobertura para cirugías programadas o urgentes que tu obra social o prepaga rechazó. Protegemos tu derecho a recibir la atención médica que necesitás.</p>
+                <ul>
+                    <li>Cirugías oncológicas</li>
+                    <li>Cirugías cardíacas</li>
+                    <li>Trasplantes</li>
+                    <li>Cirugías reconstructivas</li>
+                    <li>Intervenciones de alta complejidad</li>
+                    <li>Cirugías de urgencia</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🧬 Amparo por Tratamientos</h3>
+                <p>Terapias, tratamientos médicos y rehabilitaciones que tu cobertura médica se niega a autorizar. Garantizamos el acceso a los tratamientos que tu salud requiere.</p>
+                <ul>
+                    <li>Quimioterapia y radioterapia</li>
+                    <li>Inmunoterapia oncológica</li>
+                    <li>Terapia génica</li>
+                    <li>Rehabilitación física</li>
+                    <li>Tratamientos de fertilidad</li>
+                    <li>Terapias alternativas indicadas</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🦽 Amparo por Prótesis y Órtesis</h3>
+                <p>Elementos de ortopedia, prótesis y ayudas técnicas que tu obra social o prepaga se niega a cubrir. Tu movilidad y calidad de vida no son negociables.</p>
+                <ul>
+                    <li>Prótesis de cadera, rodilla, etc.</li>
+                    <li>Sillas de ruedas</li>
+                    <li>Muletas y andadores</li>
+                    <li>Prótesis auditivas</li>
+                    <li>Prótesis oculares</li>
+                    <li>Ayudas técnicas para discapacidad</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🧠 Amparo por Salud Mental</h3>
+                <p>Terapias psicológicas, internaciones psiquiátricas y tratamientos farmacológicos para salud mental. La ley garantiza cobertura integral en salud mental.</p>
+                <ul>
+                    <li>Sesiones de psicología</li>
+                    <li>Internación psiquiátrica</li>
+                    <li>Medicación psiquiátrica</li>
+                    <li>Terapias especializadas</li>
+                    <li>Rehabilitación psicosocial</li>
+                    <li>Tratamiento de adicciones</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🩺 Amparo por Estudios y Prácticas</h3>
+                <p>Estudios diagnósticos, imágenes y prácticas médicas que tu cobertura rechazó. El diagnóstico oportuno es fundamental para cualquier tratamiento.</p>
+                <ul>
+                    <li>Resonancias magnéticas</li>
+                    <li>Tomografías computadas</li>
+                    <li>PET-CT y estudios nucleares</li>
+                    <li>Estudios genéticos</li>
+                    <li>Biopsias y estudios de laboratorio</li>
+                    <li>Endoscopias y colonoscopias</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how-it-works" id="como-funciona">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label" style="color: var(--accent-light);">Cómo funciona</span>
+            <h2>Tu amparo de salud, paso a paso</h2>
+            <p>Actuamos rápido porque tu salud no puede esperar</p>
+        </div>
+        <div class="steps-timeline">
+            <div class="step-item">
+                <div class="number">1</div>
+                <h3>Consulta gratuita</h3>
+                <p>Nos contactás y analizamos tu caso sin cargo. Evaluamos la viabilidad del amparo y la documentación que necesitás.</p>
+                <span class="step-time">📅 Hoy mismo</span>
+            </div>
+            <div class="step-item">
+                <div class="number">2</div>
+                <h3>Presentación del amparo</h3>
+                <p>Redactamos y presentamos el amparo judicial con toda la documentación médica y legal necesaria.</p>
+                <span class="step-time">⚡ 24-48 horas</span>
+            </div>
+            <div class="step-item">
+                <div class="number">3</div>
+                <h3>Audiencia judicial</h3>
+                <p>El juez convoca a una audiencia donde presentamos los argumentos y la obra social debe justificar la negativa.</p>
+                <span class="step-time">📅 48-72 horas hábiles</span>
+            </div>
+            <div class="step-item">
+                <div class="number">4</div>
+                <h3>Sentencia favorable</h3>
+                <p>En la gran mayoría de los casos, el juez ordena a la obra social que cubra el tratamiento, medicamento o práctica.</p>
+                <span class="step-time">✅ 48-72 horas hábiles</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container">
+        <span class="section-label">Resultados</span>
+        <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 16px;">Tu salud es nuestro compromiso</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="number">48hs</div>
+                <p>Tiempo promedio de resolución del amparo</p>
+            </div>
+            <div class="stat-item">
+                <div class="number">95%+</div>
+                <p>De amparos de salud resultan favorables</p>
+            </div>
+            <div class="stat-item">
+                <div class="number">24hs</div>
+                <p>Respuesta a tu consulta inicial</p>
+            </div>
+            <div class="stat-item">
+                <div class="number">$0</div>
+                <p>Costo inicial para evaluar tu caso</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coverage">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Coberturas</span>
+            <h2>Trabajamos con todas las obras sociales y prepagas</h2>
+            <p>Independientemente de tu cobertura médica, la ley garantiza tu derecho a la salud</p>
+        </div>
+        <div class="coverage-grid">
+            <div class="coverage-card">
+                <div class="icon">🏛️</div>
+                <h4>Obras Sociales</h4>
+                <p>PAMI, IOMA, OSDE (plan básico), Swiss Medical (plan básico), Galeno, Medicus, Omint, Sancor Salud y todas las obras sociales del país.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="icon">🏢</div>
+                <h4>Prepagas</h4>
+                <p>OSDE, Swiss Medical, Galeno, Medicus, Omint, Sancor Salud, Hospital Italiano, Británico, Alemán y todas las prepagas del mercado.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="icon">💳</div>
+                <h4>Medicina de Empresas</h4>
+                <p>Coberturas médicas contratadas por empresas para sus empleados. También reclamamos contra ART por accidentes de trabajo.</p>
+            </div>
+            <div class="coverage-card">
+                <div class="icon">🌍</div>
+                <h4>Coberturas Internacionales</h4>
+                <p>Seguros de salud internacionales que operan en Argentina. La ley argentina protege tu derecho a la salud en todo el territorio nacional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Preguntas Frecuentes</span>
+            <h2>Lo que más nos preguntan sobre amparos de salud</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>¿Cuánto tarda un amparo de salud?</h4>
+                <p>Los amparos de salud son <strong>procesos urgentes</strong> que se resuelven en <strong>48 a 72 horas hábiles</strong>. El juez entiende que la salud no puede esperar y actúa con celeridad.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Qué necesito para iniciar un amparo?</h4>
+                <p>Necesitás: <strong>prescripción médica</strong> del tratamiento/medicamento que te negaron, <strong>denegatoria formal</strong> de la obra social o prepaga, y <strong>historia clínica</strong> que justifique la necesidad. Nosotros te guiamos en cada paso.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuánto cuesta un amparo de salud?</h4>
+                <p>La <strong>primera consulta es gratuita</strong>. Los honorarios del amparo dependen de cada caso, pero en muchas situaciones podemos trabajar con un porcentaje sobre lo que logramos que te cubra la obra social. No pagás nada de tu bolsillo por adelantado.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Y si el medicamento no está en el PMO?</h4>
+                <p><strong>No importa.</strong> El PMO (Programa Médico Obligatorio) es un piso mínimo, no un techo. Si tu médico indicó un tratamiento como indispensable y la obra social se niega, tenés derecho a reclamarlo por amparo. Los jueces suelen fallar a favor del paciente.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Puedo hacer un amparo si ya pagué el tratamiento?</h4>
+                <p>Sí. Si pagaste de tu bolsillo un tratamiento que tu obra social debía cubrir, podés reclamar el <strong>reintegro</strong> de los gastos a través de un amparo o acción de repetición.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿El amparo sirve para tratamientos en el exterior?</h4>
+                <p>En casos específicos donde el tratamiento no está disponible en el país o existe una mejor opción en el exterior, se puede solicitar cobertura para tratamientos en el extranjero. Evaluamos la viabilidad caso por caso.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Tu salud no puede esperar. Actuá hoy.</h2>
+        <p>Cada día de demora puede afectar tu tratamiento y tu calidad de vida. Los amparos de salud se resuelven en 48 a 72 horas hábiles. La primera consulta es gratuita y sin compromiso.</p>
+        <div class="cta-buttons">
+            <a href="#consulta" class="btn btn-health" style="font-size: 1.1rem; padding: 16px 40px;">Consultá Urgente tu Caso</a>
+            <a href="https://wa.me/541173707992" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">💬 WhatsApp Directo</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contacto">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <span class="section-label">Contacto</span>
+                <h2>Estemos en contacto</h2>
+                <p>Completá el formulario o contactanos directamente. Tu consulta es confidencial y sin compromiso. Respondemos en menos de 24 horas.</p>
+
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Ciudad Autónoma de Buenos Aires, Argentina</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:derechoclarona@gmail.com">derechoclarona@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div>
+                        <h4>Teléfono / WhatsApp</h4>
+                        <p><a href="tel:+541173707992">+54 11 7370-7992</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">🕐</div>
+                    <div>
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Enviá tu consulta de salud</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="servicio">
+                            <option value="">¿Qué te negaron?</option>
+                            <option value="medicamento">Medicamento</option>
+                            <option value="cirugia">Cirugía</option>
+                            <option value="tratamiento">Tratamiento</option>
+                            <option value="internacion">Internación</option>
+                            <option value="practica">Práctica médica</option>
+                            <option value="protesis">Prótesis / Órtesis</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="obra_social" placeholder="Obra social o prepaga">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" placeholder="Contanos tu situación de salud..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-health form-submit">Enviar Consulta Urgente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Nuñez Aragunde | Derecho Claro. Todos los derechos reservados.</p>
+        <p style="margin-top: 8px; opacity: 0.6;">Abogada en CABA - Especialista en Derecho de Familia, Laboral, Civil y Amparos de Salud</p>
+    </div>
+</footer>
+
+</body>
+</html>
