@@ -65,10 +65,29 @@
         .btn-danger { background: #c0392b; color: var(--white); }
         .btn-danger:hover { background: #a93226; }
         
-        /* Hero */
+        /* Problems Section - AHORA PRIMERO */
+        .problems { padding: 140px 0 100px; background: var(--bg-cream); }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
+        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        
+        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .problem-card {
+            background: var(--white); padding: 40px 32px; border-radius: 12px;
+            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #c0392b;
+        }
+        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
+        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
+        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
+        
+        /* Hero - AHORA DESPUÉS */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
-            color: var(--white); padding: 160px 0 100px; position: relative; overflow: hidden;
+            color: var(--white); padding: 100px 0; position: relative; overflow: hidden;
         }
         .hero::before {
             content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
@@ -105,25 +124,6 @@
             margin: 0 0 40px; border-radius: 0 8px 8px 0; display: flex; align-items: center; gap: 16px;
         }
         .urgency-banner strong { color: var(--primary); }
-        
-        /* Problems Section */
-        .problems { padding: 100px 0; background: var(--bg-cream); }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
-        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
-        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-        
-        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .problem-card {
-            background: var(--white); padding: 40px 32px; border-radius: 12px;
-            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid #c0392b;
-        }
-        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
-        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
-        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
-        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
         
         /* Services */
         .services { padding: 100px 0; background: var(--white); }
@@ -200,7 +200,7 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero { padding: 120px 0 60px; }
+            .problems { padding: 120px 0 60px; }
             .hero .container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.2rem; }
             .hero-form { order: -1; }
@@ -223,124 +223,4 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <a href="https://wa.me/5491173707992" target="_blank" rel="noopener noreferrer" style="width: 44px; height: 44px; background: #25D366; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        </a>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="section-label">Derecho Laboral en CABA</div>
-            <h1>Defendemos tus <em>Derechos Laborales</em></h1>
-            <p>Despidos injustos, trabajo en negro, diferencias salariales y hostigamiento. Revisamos tu liquidación y calculamos lo que realmente te corresponde. No dejes que te paguen menos de lo que la ley establece.</p>
-            <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20consultar%20por%20Derecho%20Laboral" target="_blank" rel="noopener noreferrer" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;">💬 Consultar por WhatsApp</a>
-            <div class="hero-badges">
-                <span class="badge">⚡ Respuesta en 24hs</span>
-                <span class="badge">💰 Sin costo inicial</span>
-                <span class="badge">📍 CABA</span>
-            </div>
-        </div>
-        <div class="hero-form" id="consulta">
-            <div class="urgency-banner">
-                <span style="font-size: 1.5rem;">⚠️</span>
-                <div>
-                    <strong>¡Importante!</strong> Los plazos para reclamar prescriben. No esperes más.
-                </div>
-            </div>
-            <h3>Consultá tu caso sin cargo</h3>
-            <p>Contanos qué pasó y calculamos si te corresponde una indemnización</p>
-            <form action="https://formspree.io/f/mvzbrred" method="POST">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
-                </div>
-                <div class="form-group">
-                    <select name="servicio" required>
-                        <option value="">¿Qué te pasó?</option>
-                        <option value="despido">Me despidieron</option>
-                        <option value="trabajo-negro">Trabajo en negro / mal registrado</option>
-                        <option value="salarios">Me deben salario / horas extras</option>
-                        <option value="hostigamiento">Hostigamiento laboral</option>
-                        <option value="accidente">Accidente de trabajo</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="mensaje" placeholder="Contanos brevemente tu situación laboral..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-danger form-submit">Quiero que revisen mi caso</button>
-                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<section class="problems">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">¿Te pasó algo de esto?</span>
-            <h2>Situaciones laborales que resolvemos</h2>
-            <p>Estas son las consultas más frecuentes que recibimos. Si te identificás con alguna, es momento de actuar:</p>
-        </div>
-        <div class="problems-grid">
-            <div class="problem-card">
-                <div class="problem-icon">📉</div>
-                <h3>Te despidieron sin causa</h3>
-                <p>Te despidieron y dudás si te pagaron correctamente. Revisamos la liquidación y calculamos si corresponde una diferencia indemnizatoria.</p>
-                <span class="problem-tag">URGENTE: Plazo 2 años</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🚫</div>
-                <h3>Trabajás en negro o mal registrado</h3>
-                <p>Trabajás sin estar registrado o te registraron por menos de lo que realmente ganás. Podés reclamar regularización e indemnizaciones.</p>
-                <span class="problem-tag">RECLAMABLE</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">💸</div>
-                <h3>Te deben horas extras o salario</h3>
-                <p>No te pagan horas extras, no estás correctamente categorizado o te deben diferencias salariales. Revisamos recibos y tareas reales.</p>
-                <span class="problem-tag">DIFERENCIAS SALARIALES</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">😰</div>
-                <h3>Sufrís hostigamiento laboral</h3>
-                <p>El ambiente de trabajo te está afectando. Si sufrís maltrato o presión indebida, existen herramientas legales para protegerte.</p>
-                <span class="problem-tag">PROTECCIÓN LEGAL</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="services" id="servicios">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-label">Nuestros Servicios</span>
-            <h2>Defensa integral del trabajador</h2>
-            <p>Representación para empleados y asesoramiento preventivo para empleadores</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-highlight">MÁS CONSULTADO</span>
-                <h3>🚨 Despido e Indemnización</h3>
-                <p>Revisamos tu liquidación final y calculamos si te pagaron correctamente. El objetivo es que cobres lo que la ley establece, nada más, nada menos.</p>
-                <ul>
-                    <li>Revisión de liquidación final</li>
-                    <li>Cálculo de indemnización completa</li>
-                    <li>Despido discriminatorio</li>
-                    <li>Despido por enfermedad o embarazo</li>
-                    <li>Despido indirecto (constructivo)</li>
-                    <li>Reinstalación en el puesto</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3>📝 Trabajo No Registrado</h3>
-                <p>Trabajás en negro o mal registrado. Analizamos antigüedad, salario real y categoría correcta para proteger tus derechos.</p>
-                <ul>
-                    <li>Regularización de relación laboral</li>
-                    <li
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0
