@@ -1,10 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPC95JQD');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amparo de Salud CABA | Medicamentos, Tratamientos, Cirugías | Nuñez Aragunde</title>
-    <meta name="description" content="Amparos de salud urgentes en CABA. Medicamentos, tratamientos, cirugías y prácticas médicas negadas. Primera consulta gratuita.">
+    <meta name="description" content="Amparos de salud urgentes en CABA. Medicamentos, tratamientos, cirugías y prácticas médicas negadas. Resolución en 48-72hs. Primera consulta gratuita. WhatsApp +54 9 11 7370-7992.">
+    <meta name="keywords" content="amparo de salud, medicamentos negados, obra social, prepaga, CABA, amparo medicamentos, amparo cirugía, amparo tratamiento, derecho a la salud, Nuñez Aragunde">
+    <meta name="author" content="Nuñez Aragunde - Derecho Claro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Amparo de Salud CABA | Medicamentos, Tratamientos, Cirugías">
+    <meta property="og:description" content="¿Tu obra social te negó la cobertura? Amparos de salud resueltos en 48-72hs. Primera consulta gratuita.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salud.derechoclaro.com.ar">
+    <meta property="og:image" content="https://salud.derechoclaro.com.ar/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://salud.derechoclaro.com.ar">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -20,24 +38,67 @@
             --white: #ffffff;
             --shadow: 0 4px 20px rgba(0,0,0,0.08);
             --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            --danger: #e74c3c;
+            --danger-dark: #c0392b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-dark);
             line-height: 1.6;
             background: var(--bg-light);
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-        /* ===== BANNER DE URGENCIA ===== */
+        /* ===== UTILIDADES REUTILIZABLES ===== */
+        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: 8px;
+            font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: var(--white); }
+        .btn-accent { background: var(--accent); color: var(--white); }
+        .btn-accent:hover { background: var(--accent-light); transform: translateY(-2px); }
+        .btn-danger { background: var(--danger); color: var(--white); }
+        .btn-danger:hover { background: var(--danger-dark); transform: translateY(-2px); }
+        .btn-whatsapp { background: var(--whatsapp); color: var(--white); }
+        .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.3); }
+        .btn-whatsapp svg { width: 20px; height: 20px; }
+
+        .cta-inline {
+            background: var(--bg-cream);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        .cta-inline h3 { font-size: 1.6rem; color: var(--primary); margin-bottom: 12px; }
+        .cta-inline p { color: var(--text-medium); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-inline.urgent { background: #fdeaea; border: 1px solid #f5c6cb; }
+        .cta-inline.urgent h3 { color: var(--danger); }
+
+        /* ===== BANNER DE URGENCIA - MANTENER INTACTO ===== */
         .urgency-top-banner {
-            background: #e74c3c;
+            background: var(--danger);
             color: var(--white);
             padding: 12px 0;
             font-size: 0.95rem;
@@ -55,20 +116,20 @@
             gap: 12px;
             flex-wrap: wrap;
         }
-        .urgency-top-banner .icon-urgency {
-            font-size: 1.2rem;
-        }
+        .urgency-top-banner .icon-urgency { font-size: 1.2rem; }
         .urgency-top-banner a {
             color: var(--white);
-            text-decoration: underline;
+            text-decoration: none;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            transition: all 0.3s;
         }
-        .urgency-top-banner a:hover {
-            opacity: 0.9;
-        }
+        .urgency-top-banner a:hover { background: rgba(255,255,255,0.3); transform: scale(1.02); }
 
         /* ===== HEADER ===== */
         header {
@@ -79,35 +140,22 @@
             top: 44px;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
         }
-
+        header.scrolled { padding: 12px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         header .container { display: flex; justify-content: space-between; align-items: center; }
 
         .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); text-decoration: none; font-weight: 700; }
         .logo span { display: block; font-size: 0.85rem; font-weight: 400; color: var(--text-light); font-family: 'Inter', sans-serif; }
 
-        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-medium); font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--primary); }
 
-        .btn {
-            display: inline-block; padding: 14px 32px; border-radius: 4px;
-            font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem;
-        }
-        .btn-primary { background: var(--primary); color: var(--white); }
-        .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-        .btn-outline:hover { background: var(--primary); color: var(--white); }
-        .btn-accent { background: var(--accent); color: var(--white); }
-        .btn-accent:hover { background: var(--accent-light); }
-        .btn-danger { background: #c0392b; color: var(--white); }
-        .btn-danger:hover { background: #a93226; }
-
-        /* WhatsApp icon button */
         .whatsapp-icon-btn {
             width: 44px;
             height: 44px;
-            background: #25D366;
+            background: var(--whatsapp);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -116,113 +164,147 @@
             text-decoration: none;
             transition: transform 0.3s;
         }
-        .whatsapp-icon-btn:hover {
-            transform: scale(1.1);
-        }
+        .whatsapp-icon-btn:hover { transform: scale(1.1); }
 
-        /* ===== PROBLEMAS / SOLUCIONES - PRIMERO ===== */
-        .problems {
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-menu { display: none; }
+
+        /* ===== HERO ORIENTADO AL PROBLEMA ===== */
+        .hero-problem {
             padding: 180px 0 100px;
-            background: var(--bg-cream);
-        }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
-        .section-header p { color: var(--text-medium); font-size: 1.1rem; }
-        .section-label { display: inline-block; color: var(--accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
-
-        .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .problem-card {
-            background: var(--white); padding: 40px 32px; border-radius: 12px;
-            box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid #c0392b;
-        }
-        .problem-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .problem-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
-        .problem-card p { color: var(--text-medium); font-size: 0.95rem; }
-        .problem-icon { font-size: 2.5rem; margin-bottom: 16px; }
-        .problem-tag { display: inline-block; background: #fdeaea; color: #c0392b; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-top: 12px; }
-
-        /* ===== HERO - DESPUÉS ===== */
-        .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #2c3e50 100%);
-            color: var(--white); padding: 100px 0; position: relative; overflow: hidden;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
         }
-        .hero::before {
+        .hero-problem::before {
             content: ''; position: absolute; top: -50%; right: -10%; width: 600px; height: 600px;
             background: rgba(255,255,255,0.03); border-radius: 50%;
         }
-        .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .hero h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 24px; }
-        .hero h1 em { font-style: italic; color: var(--accent-light); }
-        .hero p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 32px; max-width: 90%; }
+        .hero-problem .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-problem .section-label { color: var(--accent-light); }
+        .hero-problem h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 24px; }
+        .hero-problem h1 em { font-style: italic; color: var(--accent-light); }
+        .hero-problem > .container > div > p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 32px; max-width: 90%; }
         .hero-badges { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
         .badge { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2); }
 
-        .hero-form {
-            background: var(--white); padding: 40px; border-radius: 12px;
-            box-shadow: var(--shadow-lg); color: var(--text-dark);
-        }
-        .hero-form h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 8px; color: var(--primary); }
-        .hero-form p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 24px; }
-        .form-group { margin-bottom: 16px; }
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%; padding: 14px 16px; border: 1px solid #e0e0e0; border-radius: 6px;
-            font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: border-color 0.3s;
-        }
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-            outline: none; border-color: var(--primary);
-        }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .form-submit { width: 100%; margin-top: 8px; }
-        .form-note { text-align: center; font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
+        .hero-benefits { list-style: none; margin-bottom: 32px; }
+        .hero-benefits li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 1.05rem; }
+        .hero-benefits li svg { width: 24px; height: 24px; color: var(--whatsapp); flex-shrink: 0; }
 
-        /* ===== SERVICIOS ===== */
-        .services { padding: 100px 0; background: var(--white); }
+        .hero-cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-cta-group .btn { font-size: 1.1rem; padding: 16px 40px; }
+        .hero-cta-group .btn-outline { border-color: rgba(255,255,255,0.5); color: var(--white); }
+        .hero-cta-group .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+        /* ===== SOBRE NOSOTROS ===== */
+        .about { padding: 100px 0; background: var(--white); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-logo-box { background: var(--bg-cream); border-radius: 16px; padding: 48px; display: flex; align-items: center; justify-content: center; }
+        .about-logo-box img { width: 100%; max-width: 400px; height: auto; }
+        .about-content h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 20px; }
+        .about-content p { color: var(--text-medium); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.7; }
+        
+        
+        
+        
+
+        /* ===== POR QUÉ ELEGIRNOS ===== */
+        .why-choose { padding: 100px 0; background: var(--bg-cream); }
+        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 60px; }
+        .pillar-card {
+            background: var(--white); padding: 40px 32px; border-radius: 12px;
+            box-shadow: var(--shadow); transition: all 0.3s;
+        }
+        .pillar-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .pillar-icon { width: 56px; height: 56px; background: rgba(30,58,95,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary); }
+        .pillar-icon svg { width: 28px; height: 28px; }
+        .pillar-card h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 12px; }
+        .pillar-card p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.6; }
+
+        /* ===== CÓMO TRABAJAMOS ===== */
+        .how-we-work { padding: 100px 0; background: var(--white); }
+        .process-steps-v2 { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 60px auto 0; }
+        .process-step-v2 { display: flex; gap: 24px; position: relative; }
+        .process-step-v2:not(:last-child)::before {
+            content: ''; position: absolute; left: 28px; top: 60px; width: 2px; height: calc(100% - 40px);
+            background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+        .step-number-v2 {
+            width: 56px; height: 56px; background: var(--primary); color: var(--white);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; font-weight: 700; font-family: 'Playfair Display', serif;
+            flex-shrink: 0; z-index: 1;
+        }
+        .step-content-v2 { padding-bottom: 40px; }
+        .step-content-v2 h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
+        .step-content-v2 p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.6; }
+
+        /* ===== SERVICIOS PRINCIPALES ===== */
+        .services { padding: 100px 0; background: var(--bg-light); }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
         .service-card {
-            padding: 40px; border-radius: 12px; background: var(--bg-light);
+            padding: 40px; border-radius: 12px; background: var(--white);
             transition: all 0.3s; border: 1px solid transparent;
             position: relative; overflow: hidden;
         }
         .service-card:hover { background: var(--white); border-color: var(--accent); box-shadow: var(--shadow-lg); }
         .service-card h3 { font-size: 1.4rem; margin-bottom: 16px; color: var(--primary); }
-        .service-card p { color: var(--text-medium); margin-bottom: 20px; }
-        .service-card ul { list-style: none; }
-        .service-card li { padding: 8px 0; color: var(--text-medium); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
+        .service-card p { color: var(--text-medium); margin-bottom: 20px; font-size: 0.95rem; }
+        .service-card ul { list-style: none; margin-bottom: 24px; }
+        .service-card li { padding: 6px 0; color: var(--text-medium); font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
         .service-card li::before { content: "✓"; color: var(--accent); font-weight: bold; }
         .service-highlight { position: absolute; top: 0; right: 0; background: var(--accent); color: var(--white); padding: 6px 16px; font-size: 0.75rem; font-weight: 600; border-radius: 0 0 0 12px; }
+        .service-card .btn { width: 100%; justify-content: center; font-size: 0.95rem; padding: 12px 24px; }
 
-        /* ===== PROCESO ===== */
-        .process { padding: 100px 0; background: var(--bg-cream); }
-        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; }
-        .step { text-align: center; position: relative; }
-        .step-number {
-            width: 60px; height: 60px; background: var(--primary); color: var(--white);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px; font-family: 'Playfair Display', serif;
-        }
-        .step h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--primary); }
-        .step p { color: var(--text-medium); font-size: 0.95rem; }
-
-        /* ===== TRUST ===== */
-        .trust { padding: 80px 0; background: var(--white); text-align: center; }
-        .trust-grid { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
-        .trust-item { max-width: 200px; }
-        .trust-item .number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Playfair Display', serif; }
-        .trust-item p { color: var(--text-medium); font-size: 0.95rem; margin-top: 8px; }
+        /* ===== BLOQUES ESPECIALIDADES MÉDICAS ===== */
+        .specialty-block { padding: 100px 0; }
+        .specialty-block:nth-child(odd) { background: var(--white); }
+        .specialty-block:nth-child(even) { background: var(--bg-cream); }
+        .specialty-block.urgent { background: #fdeaea; }
+        .specialty-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .specialty-content .section-label { color: var(--accent); }
+        .specialty-content h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 16px; }
+        .specialty-content > p { color: var(--text-medium); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.7; }
+        .specialty-list { list-style: none; margin-bottom: 32px; }
+        .specialty-list li { display: flex; align-items: center; gap: 12px; padding: 8px 0; color: var(--text-medium); }
+        .specialty-list li svg { width: 20px; height: 20px; color: var(--whatsapp); flex-shrink: 0; }
+        .specialty-icon { font-size: 8rem; text-align: center; opacity: 0.08; }
+        .specialty-block.urgent .specialty-icon { opacity: 0.12; color: var(--danger); }
 
         /* ===== FAQ ===== */
-        .faq { padding: 100px 0; background: var(--bg-cream); }
-        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top: 40px; }
-        .faq-item { background: var(--white); padding: 28px; border-radius: 12px; box-shadow: var(--shadow); }
-        .faq-item h4 { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--primary); margin-bottom: 12px; }
-        .faq-item p { color: var(--text-medium); font-size: 0.95rem; }
+        .faq { padding: 100px 0; background: var(--white); }
+        .faq-list { max-width: 800px; margin: 60px auto 0; }
+        .faq-item { border-bottom: 1px solid #e8e2d8; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 24px 0; background: none; border: none; cursor: pointer; text-align: left;
+            font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--primary);
+            transition: color 0.3s;
+        }
+        .faq-question:hover { color: var(--accent); }
+        .faq-question .faq-toggle {
+            width: 32px; height: 32px; background: var(--primary); color: var(--white);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; margin-left: 16px; transition: transform 0.3s;
+        }
+        .faq-question.active .faq-toggle { transform: rotate(45deg); background: var(--accent); }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .faq-answer.active { max-height: 500px; opacity: 1; }
+        .faq-answer p { padding: 0 0 24px 0; color: var(--text-medium); line-height: 1.7; font-size: 0.95rem; }
+        .faq-answer strong { color: var(--primary); }
 
-        /* ===== CTA SECTION ===== */
-        .cta-section { padding: 100px 0; background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%); text-align: center; }
-        .cta-section h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; }
-        .cta-section p { font-size: 1.1rem; color: var(--text-medium); max-width: 600px; margin: 0 auto 40px; }
+        /* ===== CTA FINAL ===== */
+        .cta-final { padding: 100px 0; background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%); text-align: center; }
+        .cta-final h2 { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; }
+        .cta-final p { font-size: 1.1rem; color: var(--text-medium); max-width: 600px; margin: 0 auto 40px; }
         .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .cta-buttons .btn { font-size: 1.1rem; padding: 16px 40px; }
 
         /* ===== CONTACTO ===== */
         .contact { padding: 100px 0; background: var(--white); }
@@ -233,115 +315,180 @@
         .contact-item-icon { width: 50px; height: 50px; background: var(--bg-cream); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
         .contact-item h4 { font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 4px; color: var(--primary); }
         .contact-item p { color: var(--text-medium); font-size: 0.95rem; }
-        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; }
-        .contact-item a:hover { text-decoration: underline; }
+        .contact-item a { color: var(--primary); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .contact-item a:hover { color: var(--accent); text-decoration: underline; }
+        .contact-item .whatsapp-link { color: var(--whatsapp); font-weight: 600; }
+        .contact-item .whatsapp-link:hover { color: var(--whatsapp-dark); }
+        .social-links { display: flex; gap: 12px; margin-top: 16px; }
+        .social-link {
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--bg-cream); display: flex; align-items: center; justify-content: center;
+            color: var(--primary); text-decoration: none; transition: all 0.3s;
+        }
+        .social-link:hover { background: var(--primary); color: var(--white); transform: translateY(-2px); }
+        .social-link svg { width: 20px; height: 20px; }
 
-        .contact-form { background: var(--bg-light); padding: 40px; border-radius: 12px; }
-        .contact-form h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 24px; color: var(--primary); }
+        .contact-form-wrapper { background: var(--bg-light); padding: 40px; border-radius: 12px; }
+        .contact-form-wrapper h3 { font-family: 'Inter', sans-serif; font-size: 1.3rem; margin-bottom: 8px; color: var(--primary); }
+        .contact-form-wrapper > p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; }
+        .form-iframe { width: 100%; height: 600px; border: none; border-radius: 8px; }
 
         /* ===== FOOTER ===== */
-        footer { background: var(--primary); color: var(--white); padding: 40px 0; text-align: center; }
-        footer p { opacity: 0.8; font-size: 0.9rem; }
-        footer a { color: var(--accent-light); text-decoration: none; }
+        footer { background: var(--primary); color: var(--white); padding: 60px 0 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand h3 { font-size: 1.5rem; margin-bottom: 16px; }
+        .footer-brand p { opacity: 0.7; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+        .footer-brand .social-links { margin-top: 16px; }
+        .footer-brand .social-link { background: rgba(255,255,255,0.1); color: var(--white); }
+        .footer-brand .social-link:hover { background: var(--accent); }
+        .footer-column h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-light); margin-bottom: 20px; font-family: 'Inter', sans-serif; font-weight: 600; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 12px; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-column a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .footer-bottom p { opacity: 0.6; font-size: 0.85rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+        .footer-bottom a:hover { color: var(--accent-light); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .urgency-top-banner { font-size: 0.8rem; padding: 10px 0; }
             .urgency-top-banner .container { gap: 6px; }
             header { top: 40px; }
-            .problems { padding: 160px 0 60px; }
-            .hero .container { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero-form { order: -1; }
             .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .mobile-menu.active { display: block; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 20px; box-shadow: var(--shadow-lg); }
+            .mobile-menu a { display: block; padding: 12px 0; color: var(--text-medium); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--bg-cream); }
+            .mobile-menu a:last-child { border-bottom: none; }
+
+            .hero-problem { padding: 140px 0 60px; }
+            .hero-problem .container { grid-template-columns: 1fr; }
+            .hero-problem h1 { font-size: 2.2rem; }
+            .hero-form { order: -1; }
+            .hero-cta-group { flex-direction: column; }
+            .hero-cta-group .btn { width: 100%; justify-content: center; }
+
+            .about-grid { grid-template-columns: 1fr; }
+            .about-logo-box { padding: 32px; }
+            .specialty-grid { grid-template-columns: 1fr; }
+            .specialty-icon { font-size: 5rem; order: -1; }
             .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
             .section-header h2 { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
-            .faq-grid { grid-template-columns: 1fr; }
+            .success-grid { grid-template-columns: 1fr; }
+            .cta-buttons { flex-direction: column; }
+            .cta-buttons .btn { width: 100%; justify-content: center; }
+            .process-step-v2:not(:last-child)::before { left: 20px; }
+            .step-number-v2 { width: 44px; height: 44px; font-size: 1.1rem; }
         }
+
+        @media (max-width: 480px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            
+            .pillars-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Animaciones */
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+        .animate-pulse { animation: pulse-slow 2s infinite; }
     </style>
 <base target="_blank">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPC95JQD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-<!-- BANNER DE URGENCIA -->
-<div class="urgency-top-banner">
+<!-- BANNER DE URGENCIA - MANTENER INTACTO -->
+<div class="urgency-top-banner" role="alert" aria-label="Aviso de urgencia">
     <div class="container">
         <span class="icon-urgency">🚨</span>
         <span>Los amparos de salud son <strong>URGENTES</strong>. Cada día cuenta. Consultanos por WhatsApp:</span>
-        <a href="https://wa.me/5491173707992" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20un%20amparo%20de%20salud%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" rel="noopener noreferrer" aria-label="Consultar urgente por WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
             WhatsApp Urgente
         </a>
     </div>
 </div>
 
-<header>
+<!-- HEADER -->
+<header id="main-header">
     <div class="container">
         <a href="/" class="logo">NUÑEZ ARAGUNDE<span>Derecho claro</span></a>
         <ul class="nav-links">
             <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
+            <li><a href="#como-trabajamos">Cómo Trabajamos</a></li>
+            
             <li><a href="#faq">Preguntas</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="https://wa.me/5491173707992" class="whatsapp-icon-btn" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <a href="https://wa.me/5491173707992?text=Hola%2C%20vi%20su%20p%C3%A1gina%20de%20amparos%20de%20salud%20y%20necesito%20ayuda%20urgente.%20%C2%BFMe%20pueden%20asesorar%3F" class="whatsapp-icon-btn" target="_blank" rel="noopener noreferrer" title="Consultar por WhatsApp" aria-label="Abrir WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
         </a>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menú móvil">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="container">
+            <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+            <a href="#sobre-nosotros" onclick="closeMobileMenu()">Sobre Nosotros</a>
+            <a href="#por-que-elegirnos" onclick="closeMobileMenu()">¿Por qué elegirnos?</a>
+            <a href="#como-trabajamos" onclick="closeMobileMenu()">Cómo Trabajamos</a>
+            
+            <a href="#faq" onclick="closeMobileMenu()">Preguntas Frecuentes</a>
+            <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+        </div>
     </div>
 </header>
 
-<!-- PROBLEMAS / SOLUCIONES - PRIMERO -->
-<section class="problems" id="problemas">
-    <div class="container">
-        <div class="problems-grid">
-            <div class="problem-card">
-                <div class="problem-icon">💊</div>
-                <h3>Te negaron un medicamento</h3>
-                <p>Tu obra social o prepaga se niega a cubrir un medicamento que te recetó tu médico. El tratamiento es indispensable y no podés pagarlo de tu bolsillo.</p>
-                <span class="problem-tag">MÁS FRECUENTE</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🏥</div>
-                <h3>Te negaron una cirugía</h3>
-                <p>Necesitás una intervención quirúrgica urgente o programada y tu cobertura médica la rechazó. El tiempo juega en contra de tu salud.</p>
-                <span class="problem-tag">URGENTE</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🧬</div>
-                <h3>Te negaron un tratamiento oncológico</h3>
-                <p>Quimioterapia, radioterapia, inmunoterapia u otro tratamiento oncológico fue rechazado. Necesitás actuar rápido para no interrumpir tu tratamiento.</p>
-                <span class="problem-tag">PRIORIDAD MÁXIMA</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🦽</div>
-                <h3>Te negaron una prótesis u órtesis</h3>
-                <p>Necesitás una prótesis, silla de ruedas, muletas u otro elemento de ortopedia y tu cobertura médica no quiere hacerse cargo.</p>
-                <span class="problem-tag">RECLAMABLE</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🧠</div>
-                <h3>Te negaron terapia psicológica o psiquiátrica</h3>
-                <p>Sesiones de psicología, internación psiquiátrica o tratamiento farmacológico para salud mental fueron rechazados por tu obra social.</p>
-                <span class="problem-tag">DERECHO GARANTIZADO</span>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">🩺</div>
-                <h3>Te negaron un estudio o práctica médica</h3>
-                <p>Resonancias, tomografías, estudios de laboratorio o cualquier práctica diagnóstica que tu médico indicó y tu cobertura rechazó.</p>
-                <span class="problem-tag">RECLAMABLE</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HERO - DESPUÉS -->
-<section class="hero">
+<!-- HERO ORIENTADO AL PROBLEMA -->
+<section class="hero-problem" id="inicio" aria-label="Hero principal">
     <div class="container">
         <div>
-            <div class="section-label">Amparos de Salud en CABA</div>
-            <h1>Tu salud no puede <em>esperar</em></h1>
-            <p>Si tu obra social o prepaga te negó un medicamento, tratamiento, cirugía o práctica médica, podemos ayudarte a obtener la cobertura que la ley te garantiza. Los amparos de salud son urgentes y actuamos rápido.</p>
-            <a href="https://wa.me/541173707992" class="btn btn-accent" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 16px 40px;">💬 Consultar por WhatsApp</a>
+            <span class="section-label">Amparos de Salud en CABA</span>
+            <h1>Tu obra social te negó la cobertura. <em>Ahora qué.</em></h1>
+            <p>Sentís que te dejaron solo con un tratamiento indispensable que no podés pagar. En <strong>Nuñez Aragunde</strong> iniciamos amparos de salud que se resuelven en <strong style="color: var(--accent-light);">48 a 72 horas hábiles</strong>. Tu salud no puede esperar, y nosotros tampoco.</p>
+
+            <ul class="hero-benefits">
+                <li>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Respuesta en menos de 24 horas
+                </li>
+                <li>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Primera consulta gratuita y sin compromiso
+                </li>
+                <li>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    Amparos resueltos en 48-72 horas hábiles
+                </li>
+                <li>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    No importa si no está en el PMO
+                </li>
+            </ul>
+
+            <div class="hero-cta-group">
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20un%20amparo%20de%20salud%20urgente.%20Mi%20obra%20social%20me%20neg%C3%B3%20un%20tratamiento%20indispensable.%20%C2%BFMe%20pueden%20ayudar%3F" class="btn btn-whatsapp animate-pulse" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Necesito un amparo urgente
+                </a>
+                <a href="#como-trabajamos" class="btn btn-outline">Conocé cómo funciona →</a>
+            </div>
+
             <div class="hero-badges">
                 <span class="badge">⚡ Respuesta en 24hs</span>
                 <span class="badge">🔒 Confidencialidad total</span>
@@ -349,42 +496,156 @@
             </div>
         </div>
         <div class="hero-form" id="consulta">
-            <h3>Consultá sin compromiso</h3>
-            <p>Contanos tu situación y te orientamos sin cargo</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="telefono" placeholder="Teléfono (WhatsApp)" required>
-                </div>
-                <div class="form-group">
-                    <select name="servicio" required>
-                        <option value="">¿Qué te negaron?</option>
-                        <option value="medicamentos">Medicamentos</option>
-                        <option value="cirugia">Cirugía</option>
-                        <option value="tratamiento">Tratamiento oncológico</option>
-                        <option value="protesis">Prótesis / Órtesis</option>
-                        <option value="salud-mental">Salud mental</option>
-                        <option value="estudios">Estudios / Prácticas</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="mensaje" placeholder="Contanos brevemente tu situación..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-danger form-submit">Quiero que revisen mi caso</button>
-                <p class="form-note">🔒 Tu consulta es 100% confidencial. Respondemos en menos de 24 horas.</p>
-            </form>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20vi%20su%20p%C3%A1gina%20de%20amparos%20de%20salud%20y%20quiero%20hacer%20una%20consulta%20sin%20compromiso.%20%C2%BFMe%20pueden%20orientar%3F" class="btn btn-whatsapp animate-pulse" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center; padding: 20px 32px; font-size: 1.1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Consultar por WhatsApp
+                </a>
+            </div>
+    </div>
+</section>
+
+<!-- CTA DESPUÉS DEL HERO -->
+<div class="container">
+    <div class="cta-inline urgent">
+        <h3>¿Tu salud está en riesgo por una negativa de cobertura?</h3>
+        <p>Cada día de demora puede afectar tu tratamiento. Los amparos de salud son procesos urgentes y actuamos en menos de 24 horas desde tu primer contacto.</p>
+        <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20un%20amparo%20de%20salud%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" class="btn btn-danger animate-pulse" target="_blank" rel="noopener noreferrer">
+            Solicitar amparo urgente ahora
+        </a>
+    </div>
+</div>
+
+<!-- SOBRE NOSOTROS -->
+<section class="about" id="sobre-nosotros" aria-label="Sobre Nosotros">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Sobre Nosotros</span>
+            <h2>Nuñez Aragunde — Derecho Claro</h2>
+            <p>Asesoramiento jurídico claro y estratégico en Ciudad Autónoma de Buenos Aires.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-logo-box">
+                <img src="./logo.png" alt="Logo de Nuñez Aragunde - Derecho Claro" loading="lazy" width="400" height="200">
+            </div>
+            <div class="about-content">
+                <p>En <strong>Nuñez Aragunde</strong> creemos en el <em>Derecho Claro</em>. Nos especializamos en brindar asesoramiento cercano y profesional en los momentos que más importan, con transparencia y compromiso.</p>
+                <p>En materia de <strong>amparos de salud</strong>, entendemos que cada hora cuenta. Por eso actuamos con la urgencia que tu situación médica requiere. No te dejamos solo frente a tu obra social o prepaga.</p>
+                
+            </div>
+        </div>
+
+        <div class="cta-inline">
+            <h3>¿Querés conocernos mejor?</h3>
+            <p>Escribinos y contanos tu situación. La primera consulta es sin compromiso.</p>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20sobre%20un%20amparo%20de%20salud.%20%C2%BFTienen%20disponibilidad%3F" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escribinos por WhatsApp
+            </a>
         </div>
     </div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="services" id="servicios">
+<!-- ¿POR QUÉ ELEGIR DERECHO CLARO? -->
+<section class="why-choose" id="por-que-elegirnos" aria-label="¿Por qué elegir Derecho Claro?">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">¿Por qué elegirnos?</span>
+            <h2>Lo que nos diferencia</h2>
+            <p>No somos solo otro estudio jurídico. Estas son las razones por las que nuestros pacientes nos eligen y nos recomiendan.</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3>Velocidad real</h3>
+                <p>Los amparos de salud son urgentes por naturaleza. Actuamos en 24 horas desde tu primer contacto. No te hacemos esperar mientras tu salud empeora.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Especialización médica</h3>
+                <p>Conocemos el lenguaje médico y legal. Entendemos prescripciones, historias clínicas y protocolos de obras sociales. No tenés que traducir nada.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h3>Resultados comprobados</h3>
+                <p>La gran mayoría de nuestros amparos se resuelven favorablemente. Sabemos qué argumentos funcionan ante cada juez y cada obra social.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>Cercanía en momentos difíciles</h3>
+                <p>Sabemos que atravesar una negativa de cobertura mientras te enfrentás a una enfermedad es agotador. Te acompañamos con empatía real, no con tecnicismos.</p>
+            </div>
+        </div>
+
+        <div class="cta-inline">
+            <h3>¿Te identificás con nuestro enfoque?</h3>
+            <p>Hablemos. La primera consulta es gratuita y sin compromiso.</p>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20sobre%20un%20amparo%20de%20salud.%20%C2%BFTienen%20disponibilidad%3F" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escribinos por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CÓMO TRABAJAMOS -->
+<section class="how-we-work" id="como-trabajamos" aria-label="Cómo Trabajamos">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">Nuestro Proceso</span>
+            <h2>Cómo funciona un amparo de salud</h2>
+            <p>Un método claro y transparente para que sepas exactamente qué esperar en cada etapa.</p>
+        </div>
+        <div class="process-steps-v2">
+            <div class="process-step-v2">
+                <div class="step-number-v2">1</div>
+                <div class="step-content-v2">
+                    <h3>Consulta inicial gratuita</h3>
+                    <p>Nos contactás por WhatsApp y analizamos tu caso sin cargo. Evaluamos la viabilidad del amparo, la documentación que necesitás y te damos una opinión honesta sobre tus chances.</p>
+                </div>
+            </div>
+            <div class="process-step-v2">
+                <div class="step-number-v2">2</div>
+                <div class="step-content-v2">
+                    <h3>Estrategia personalizada</h3>
+                    <p>Redactamos y presentamos el amparo judicial con toda la documentación médica y legal necesaria. Cada amparo es distinto porque cada paciente es distinto.</p>
+                </div>
+            </div>
+            <div class="process-step-v2">
+                <div class="step-number-v2">3</div>
+                <div class="step-content-v2">
+                    <h3>Medidas cautelares</h3>
+                    <p>El juez dicta las medidas cautelares pertinentes para proteger tu derecho a la salud. En la gran mayoría de los casos, esto significa que la obra social debe cubrir el tratamiento de inmediato.</p>
+                </div>
+            </div>
+            <div class="process-step-v2">
+                <div class="step-number-v2">4</div>
+                <div class="step-content-v2">
+                    <h3>Sentencia favorable</h3>
+                    <p>En la gran mayoría de los casos, el juez ordena a la obra social que cubra el tratamiento. Te acompañamos hasta que la cobertura esté efectivamente garantizada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-inline urgent">
+            <h3>¿Listo para empezar?</h3>
+            <p>El primer paso es el más simple: escribinos por WhatsApp y contanos tu situación.</p>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20iniciar%20un%20amparo%20de%20salud.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" class="btn btn-danger animate-pulse" target="_blank" rel="noopener noreferrer">
+                Iniciar amparo ahora
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS PRINCIPALES -->
+<section class="services" id="servicios" aria-label="Servicios de Amparos de Salud">
     <div class="container">
         <div class="section-header">
             <span class="section-label">Nuestros Servicios</span>
@@ -404,6 +665,7 @@
                     <li>Drogas no incluidas en el PMO</li>
                     <li>Medicamentos importados</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20un%20medicamento%20que%20mi%20m%C3%A9dico%20indic%C3%B3%20como%20indispensable.%20%C2%BFPueden%20iniciar%20un%20amparo%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por medicamentos</a>
             </div>
             <div class="service-card">
                 <h3>🏥 Amparo por Cirugías e Intervenciones</h3>
@@ -416,6 +678,7 @@
                     <li>Intervenciones de alta complejidad</li>
                     <li>Cirugías de urgencia</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20una%20cirug%C3%ADa%20que%20necesito.%20%C2%BFPueden%20ayudarme%20con%20un%20amparo%20de%20salud%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por cirugía</a>
             </div>
             <div class="service-card">
                 <h3>🧬 Amparo por Tratamientos</h3>
@@ -428,6 +691,7 @@
                     <li>Tratamientos de fertilidad</li>
                     <li>Terapias alternativas indicadas</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20un%20tratamiento%20m%C3%A9dico.%20%C2%BFPueden%20iniciar%20un%20amparo%20de%20salud%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por tratamiento</a>
             </div>
             <div class="service-card">
                 <h3>🦽 Amparo por Prótesis y Órtesis</h3>
@@ -440,6 +704,7 @@
                     <li>Prótesis oculares</li>
                     <li>Ayudas técnicas para discapacidad</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20una%20pr%C3%B3tesis%20u%20%C3%B3rtesis%20que%20necesito.%20%C2%BFPueden%20ayudarme%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por prótesis</a>
             </div>
             <div class="service-card">
                 <h3>🧠 Amparo por Salud Mental</h3>
@@ -452,6 +717,7 @@
                     <li>Rehabilitación psicosocial</li>
                     <li>Tratamiento de adicciones</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20cobertura%20para%20salud%20mental.%20%C2%BFPueden%20iniciar%20un%20amparo%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por salud mental</a>
             </div>
             <div class="service-card">
                 <h3>🩺 Amparo por Estudios y Prácticas</h3>
@@ -464,126 +730,391 @@
                     <li>Biopsias y estudios de laboratorio</li>
                     <li>Endoscopias y colonoscopias</li>
                 </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20un%20estudio%20o%20pr%C3%A1ctica%20m%C3%A9dica%20que%20mi%20m%C3%A9dico%20indic%C3%B3.%20%C2%BFPuedo%20reclamar%3F" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Consultar por estudios</a>
             </div>
+        </div>
+
+        <div class="cta-inline urgent">
+            <h3>¿No encontrás tu caso?</h3>
+            <p>No te preocupés. Contanos tu situación por WhatsApp y te decimos si podemos ayudarte.</p>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20no%20encuentro%20mi%20caso%20en%20la%20lista.%20%C2%BFPueden%20asesorarme%20sobre%20si%20tengo%20un%20amparo%20viable%3F" class="btn btn-danger" target="_blank" rel="noopener noreferrer">
+                Consultar por mi caso específico
+            </a>
         </div>
     </div>
 </section>
 
-<!-- PROCESO -->
-<section class="process" id="proceso">
+<!-- BLOQUES INDEPENDIENTES POR ESPECIALIDAD MÉDICA -->
+
+<!-- DIABETES -->
+<section class="specialty-block" id="diabetes" aria-label="Amparo de Salud - Diabetes">
     <div class="container">
-        <div class="section-header">
-            <span class="section-label">Cómo trabajamos</span>
-            <h2>Tu amparo de salud, paso a paso</h2>
-            <p>Desde la primera consulta hasta la sentencia, te acompañamos en todo</p>
-        </div>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Consulta inicial</h3>
-                <p>Nos contactás y analizamos tu caso sin cargo. Evaluamos la viabilidad del amparo y la documentación que necesitás.</p>
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Diabetes</h2>
+                <p>Tu obra social te negó insulina, tiras reactivas, bombas de insulina o cualquier tratamiento indispensable para tu control diabético. La ley te garantiza la cobertura integral de tu enfermedad.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Insulina y análogos</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Tiras reactivas y glucómetros</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Bombas de insulina</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sensores de monitoreo continuo (CGM)</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación para complicaciones</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Consultas con especialistas</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20medicaci%C3%B3n%20o%20insumos%20para%20diabetes%20(insulina%2C%20tiras%20reactivas%2C%20bombas).%20%C2%BFPueden%20ayudarme%20con%20un%20amparo%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por amparo de diabetes</a>
             </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Estrategia personalizada</h3>
-                <p>Redactamos y presentamos el amparo judicial con toda la documentación médica y legal necesaria.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Medidas cautelares</h3>
-                <p>El juez dicta las medidas cautelares pertinentes para proteger tu derecho a la salud.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Sentencia favorable</h3>
-                <p>En la gran mayoría de los casos, el juez ordena a la obra social que cubra el tratamiento.</p>
-            </div>
+            <div class="specialty-icon" aria-hidden="true">💉</div>
         </div>
     </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust" id="trust">
+<!-- FERTILIDAD ASISTIDA -->
+<section class="specialty-block" id="fertilidad" aria-label="Amparo de Salud - Fertilidad Asistida">
     <div class="container">
-        <span class="section-label">Por qué elegirnos</span>
-        <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 16px;">Derecho Claro, resultados concretos</h2>
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="number">24hs</div>
-                <p>Respuesta a tu consulta inicial</p>
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Fertilidad Asistida</h2>
+                <p>Tu obra social o prepaga te negó cobertura para tratamientos de fertilidad asistida. La Ley 26.862 garantiza el acceso integral a los procedimientos médicos de alta complejidad de reproducción humana.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Fecundación in vitro (FIV)</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Inyección intracitoplasmática de espermatozoides (ICSI)</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Inseminación artificial</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación hormonal</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Criopreservación de óvulos y embriones</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Diagnóstico genético preimplantacional</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20o%20prepaga%20me%20neg%C3%B3%20cobertura%20para%20tratamientos%20de%20fertilidad%20asistida.%20%C2%BFPueden%20iniciar%20un%20amparo%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por amparo de fertilidad</a>
             </div>
-            <div class="trust-item">
-                <div class="number">100%</div>
-                <p>Confidencialidad garantizada</p>
-            </div>
-            <div class="trust-item">
-                <div class="number">CABA</div>
-                <p>Atención presencial y virtual</p>
-            </div>
-            <div class="trust-item">
-                <div class="number">⚖️</div>
-                <p>Asesoramiento estratégico y claro</p>
-            </div>
+            <div class="specialty-icon" aria-hidden="true">🧬</div>
         </div>
     </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
+<!-- PMO -->
+<section class="specialty-block" id="pmo" aria-label="Amparo de Salud - PMO">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>PMO — Programa Médico Obligatorio</h2>
+                <p>Tu obra social te negó un tratamiento diciendo que "no está en el PMO". Eso no es legal. El PMO es un piso mínimo, no un techo. Si tu médico indicó un tratamiento como indispensable, tenés derecho a reclamarlo.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicamentos fuera del PMO</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Tratamientos no incluidos en el vademécum</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Prácticas de alta complejidad</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicamentos de última generación</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Tratamientos importados</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Terapias innovadoras</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20un%20tratamiento%20diciendo%20que%20no%20est%C3%A1%20en%20el%20PMO.%20%C2%BFEso%20es%20legal%3F%20%C2%BFPuedo%20reclamar%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por negativa de PMO</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">📋</div>
+        </div>
+    </div>
+</section>
+
+<!-- DISCAPACIDAD -->
+<section class="specialty-block" id="discapacidad" aria-label="Amparo de Salud - Discapacidad">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Discapacidad</h2>
+                <p>Tu obra social te negó cobertura para tratamientos, medicación, prótesis o rehabilitación relacionadas con tu discapacidad. La Ley 24.901 y la Convención de ONU garantizan tu derecho a la salud integral.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Prótesis y órtesis</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Rehabilitación física y ocupacional</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación específica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Terapias especializadas</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ayudas técnicas y tecnología asistiva</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Adaptaciones del hogar y vehículo</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20cobertura%20para%20tratamientos%2C%20medicaci%C3%B3n%20o%20pr%C3%B3tesis%20relacionadas%20con%20mi%20discapacidad.%20%C2%BFPueden%20ayudarme%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por amparo de discapacidad</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">♿</div>
+        </div>
+    </div>
+</section>
+
+<!-- MEDICACIÓN DE ALTO COSTO -->
+<section class="specialty-block urgent" id="alto-costo" aria-label="Amparo de Salud - Medicación de Alto Costo">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud — Urgente</span>
+                <h2>Medicación de Alto Costo</h2>
+                <p>Tu obra social te negó un medicamento de alto costo que tu médico indicó como indispensable. No importa el precio: si es necesario para tu tratamiento, la ley te respalda.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicamentos oncológicos de última generación</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Inmunoterapia y terapias dirigidas</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicamentos huérfanos</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Terapias génica y celular</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicamentos para enfermedades raras</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Tratamientos importados exclusivos</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20un%20medicamento%20de%20alto%20costo%20que%20mi%20m%C3%A9dico%20indic%C3%B3%20como%20indispensable.%20%C2%BFPueden%20iniciar%20un%20amparo%3F" class="btn btn-danger animate-pulse" target="_blank" rel="noopener noreferrer">Consultar URGENTE por medicamento de alto costo</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">💰</div>
+        </div>
+    </div>
+</section>
+
+<!-- INTERNACIÓN DOMICILIARIA -->
+<section class="specialty-block" id="internacion-domiciliaria" aria-label="Amparo de Salud - Internación Domiciliaria">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Internación Domiciliaria</h2>
+                <p>Tu obra social te negó la internación domiciliaria que tu médico indicó. La internación domiciliaria es un derecho cuando está médicamente indicada y puede mejorar significativamente tu calidad de vida.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Cuidados paliativos en domicilio</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Internación por patologías crónicas</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Rehabilitación domiciliaria post-cirugía</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atención médica y de enfermería en casa</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Suministro de insumos y equipamiento</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Control y seguimiento médico remoto</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20la%20internaci%C3%B3n%20domiciliaria%20que%20mi%20m%C3%A9dico%20indic%C3%B3.%20%C2%BFPuedo%20reclamar%20por%20amparo%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por internación domiciliaria</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">🏠</div>
+        </div>
+    </div>
+</section>
+
+<!-- SALUD MENTAL -->
+<section class="specialty-block" id="salud-mental" aria-label="Amparo de Salud - Salud Mental">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Salud Mental</h2>
+                <p>Tu obra social te negó sesiones de psicología, internación psiquiátrica, medicación psiquiátrica o cualquier tratamiento para salud mental. La Ley 26.657 garantiza el acceso integral a la salud mental.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sesiones de psicología y psicoterapia</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Internación psiquiátrica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación psiquiátrica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Terapias especializadas (DBT, EMDR, etc.)</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Rehabilitación psicosocial</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Tratamiento de adicciones</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20sesiones%20de%20psicolog%C3%ADa%2C%20internaci%C3%B3n%20psiqui%C3%A1trica%20o%20medicaci%C3%B3n%20para%20salud%20mental.%20%C2%BFPueden%20ayudarme%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por amparo de salud mental</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">🧠</div>
+        </div>
+    </div>
+</section>
+
+<!-- ONCOLOGÍA -->
+<section class="specialty-block urgent" id="oncologia" aria-label="Amparo de Salud - Oncología">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud — Urgente</span>
+                <h2>Oncología</h2>
+                <p>Tu obra social te negó quimioterapia, radioterapia, inmunoterapia u otro tratamiento oncológico. Cada día de demora puede afectar tu pronóstico. Actuamos con la urgencia que tu caso requiere.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Quimioterapia y radioterapia</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Inmunoterapia oncológica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Terapias dirigidas y hormonales</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Cirugías oncológicas</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Trasplantes de médula ósea</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación de soporte y paliativa</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20me%20neg%C3%B3%20quimioterapia%2C%20radioterapia%2C%20inmunoterapia%20u%20otro%20tratamiento%20oncol%C3%B3gico.%20Necesito%20un%20amparo%20urgente." class="btn btn-danger animate-pulse" target="_blank" rel="noopener noreferrer">Consultar URGENTE por oncología</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">🎗️</div>
+        </div>
+    </div>
+</section>
+
+<!-- GERIATRÍA -->
+<section class="specialty-block" id="geriatria" aria-label="Amparo de Salud - Geriatría">
+    <div class="container">
+        <div class="specialty-grid">
+            <div class="specialty-content">
+                <span class="section-label">Amparo de Salud</span>
+                <h2>Geriatría</h2>
+                <p>Tu obra social o prepaga te negó cobertura para tratamientos, medicación o cuidados geriátricos. Los adultos mayores tienen derecho a una atención integral y digna de su salud.</p>
+                <ul class="specialty-list">
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Medicación para patologías propias del envejecimiento</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Rehabilitación y fisioterapia geriátrica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Cuidados paliativos</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Internación geriátrica</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atención domiciliaria especializada</li>
+                    <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Prótesis y ayudas técnicas para movilidad</li>
+                </ul>
+                <a href="https://wa.me/5491173707992?text=Hola%2C%20mi%20obra%20social%20o%20prepaga%20me%20neg%C3%B3%20cobertura%20para%20tratamientos%2C%20medicaci%C3%B3n%20o%20cuidados%20geri%C3%A1tricos.%20%C2%BFPueden%20ayudarme%3F" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por amparo geriátrico</a>
+            </div>
+            <div class="specialty-icon" aria-hidden="true">👴</div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="cta-inline urgent">
+        <h3>¿Tu especialidad no está en la lista?</h3>
+        <p>No te preocupés. Contanos tu situación por WhatsApp y evaluamos tu caso sin cargo.</p>
+        <a href="https://wa.me/5491173707992?text=Hola%2C%20no%20encuentro%20mi%20caso%20en%20la%20lista.%20%C2%BFPueden%20asesorarme%20sobre%20si%20tengo%20un%20amparo%20viable%3F" class="btn btn-danger" target="_blank" rel="noopener noreferrer">
+            Consultar por mi caso específico
+        </a>
+    </div>
+</div>
+
+
+<!-- FAQ AMPLIADA -->
+<section class="faq" id="faq" aria-label="Preguntas Frecuentes">
     <div class="container">
         <div class="section-header">
             <span class="section-label">Preguntas Frecuentes</span>
-            <h2>Lo que más nos preguntan</h2>
+            <h2>Resolvemos tus dudas</h2>
+            <p>Estas son las preguntas que más nos hacen sobre amparos de salud. Si no encontrás la tuya, escribinos directamente por WhatsApp.</p>
         </div>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4>¿Cuánto tarda un amparo de salud?</h4>
-                <p>Los amparos de salud son <strong>procesos urgentes</strong>. El juez entiende que la salud no puede esperar y actúa con celeridad. Generalmente se resuelven en 48-72 horas hábiles.</p>
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="true">
+                    <span itemprop="name">¿Cuánto tarda un amparo de salud?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer active" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Los amparos de salud son <strong>procesos urgentes</strong>. El juez entiende que la salud no puede esperar y actúa con celeridad. Generalmente se resuelven en <strong>48-72 horas hábiles</strong>. En casos de extrema urgencia, como tratamientos oncológicos, podemos solicitar medidas cautelares inmediatas que se resuelven en 24 horas.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>¿Cuánto cuesta un amparo de salud?</h4>
-                <p>Ofrecemos <strong>planes de pago pensados en cada cliente</strong>. La primera consulta es gratuita y sin compromiso. Los honorarios se ajustan a cada situación.</p>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Cuánto cuesta un amparo de salud?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Ofrecemos <strong>planes de pago pensados en cada cliente</strong>. La primera consulta es gratuita y sin compromiso. Los honorarios se ajustan a cada situación y al tipo de amparo. En muchos casos, trabajamos con un porcentaje sobre el resultado o con cuotas adaptadas a tus posibilidades. Te damos todos los detalles antes de que tomes una decisión.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>¿Qué necesito para iniciar un amparo?</h4>
-                <p>Necesitás: <strong>prescripción médica</strong> del tratamiento/medicamento que te negaron, <strong>denegatoria formal</strong> de la obra social o prepaga, e <strong>historia clínica</strong> que justifique la necesidad. Nosotros te guiamos en cada paso.</p>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Qué necesito para iniciar un amparo?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Necesitás: (1) <strong>Prescripción médica</strong> del tratamiento/medicamento que te negaron, firmada por un médico matriculado. (2) <strong>Denegatoria formal</strong> de la obra social o prepaga (puede ser un rechazo por escrito, un mail, o incluso una negativa verbal documentada). (3) <strong>Historia clínica</strong> que justifique la necesidad del tratamiento. Nosotros te guiamos en cada paso para reunir la documentación.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>¿Y si el medicamento no está en el PMO?</h4>
-                <p><strong>No importa.</strong> El PMO es un piso mínimo, no un techo. Si tu médico indicó un tratamiento como indispensable y la obra social se niega, tenés derecho a reclamarlo. Los jueces suelen fallar a favor del paciente.</p>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Y si el medicamento no está en el PMO?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text"><strong>No importa.</strong> El PMO (Programa Médico Obligatorio) es un piso mínimo, no un techo. Si tu médico indicó un tratamiento como indispensable y la obra social se niega, tenés derecho a reclamarlo. Los jueces suelen fallar a favor del paciente cuando hay una prescripción médica que justifica la necesidad. Ya hemos ganado amparos por medicamentos oncológicos, de fertilidad, para enfermedades raras y muchos otros fuera del PMO.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>¿Puedo hacer un amparo si ya pagué el tratamiento?</h4>
-                <p>Sí. Si pagaste de tu bolsillo un tratamiento que tu obra social debía cubrir, podés reclamar el <strong>reintegro</strong> de los gastos a través de un amparo o acción de repetición.</p>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Puedo hacer un amparo si ya pagué el tratamiento?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Sí. Si pagaste de tu bolsillo un tratamiento que tu obra social debía cubrir, podés reclamar el <strong>reintegro</strong> de los gastos a través de un amparo o acción de repetición. Es importante que guardes todos los comprobantes de pago y la prescripción médica que indicaba el tratamiento. Evaluamos la viabilidad de tu caso en la primera consulta gratuita.</p>
+                </div>
             </div>
-            <div class="faq-item">
-                <h4>¿El amparo sirve para tratamientos en el exterior?</h4>
-                <p>En casos específicos donde el tratamiento no está disponible en el país o existe una mejor opción en el exterior, se puede solicitar cobertura. Evaluamos la viabilidad caso por caso.</p>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿El amparo sirve para tratamientos en el exterior?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">En casos específicos donde el tratamiento no está disponible en el país o existe una mejor opción en el exterior, se puede solicitar cobertura. Evaluamos la viabilidad caso por caso, considerando la disponibilidad del tratamiento en Argentina, la urgencia de la situación y las posibilidades del paciente.</p>
+                </div>
             </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Qué pasa si la obra social no cumple con la sentencia?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Si la obra social no cumple con la sentencia del juez, existen mecanismos legales para hacerla cumplir: desde multas y apercibimientos hasta denuncias ante el SSSalud o la Superintendencia de Servicios de Salud. En nuestra experiencia, la gran mayoría de las obras sociales cumplen con la sentencia una vez que está firme.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Puedo hacer un amparo si no tengo obra social?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Si no tenés obra social pero tenés prepaga, el amparo funciona de la misma manera. Si no tenés ninguna cobertura, podés evaluar otras opciones legales como reclamar al Estado por incumplimiento del derecho a la salud. La primera consulta es gratuita y te orientamos sobre tu situación específica.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Necesito estar en CABA para hacer un amparo?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Nuestro estudio está en CABA y atendemos principalmente casos con jurisdicción en la Ciudad Autónoma de Buenos Aires. Sin embargo, evaluamos casos de otras jurisdicciones según la complejidad y la urgencia. Escribinos y te decimos si podemos ayudarte.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Puedo hacer un amparo por un familiar?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Sí. Podés iniciar un amparo como representante legal de un menor de edad, de una persona con discapacidad, o de un adulto mayor que no pueda gestionar el trámite por sí mismo. También podés hacerlo como cuidador o familiar directo si el paciente te autoriza.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Qué pasa si el juez rechaza el amparo?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Si bien la gran mayoría de los amparos de salud se resuelven favorablemente, en caso de un rechazo inicial podemos apelar la decisión o presentar un nuevo amparo con argumentos adicionales. Antes de iniciar cualquier acción, te damos una evaluación honesta de tus chances para que tomes una decisión informada.</p>
+                </div>
+            </div>
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                    <span itemprop="name">¿Los amparos de salud funcionan para salud mental?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <p itemprop="text">Absolutamente. La Ley 26.657 garantiza el acceso integral a la salud mental. Hemos logrado amparos favorables para sesiones de psicología, internación psiquiátrica, medicación psiquiátrica y tratamientos de adicciones. La salud mental es tan importante como la física y los jueces lo reconocen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-inline">
+            <h3>¿Te quedó alguna duda?</h3>
+            <p>Escribinos por WhatsApp y te respondemos personalmente. Sin compromiso.</p>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20asesoramiento%20sobre%20un%20amparo%20de%20salud.%20%C2%BFPodr%C3%ADan%20contactarme%3F" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Escribinos por WhatsApp
+            </a>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
+<!-- CTA FINAL -->
+<section class="cta-final" id="cta-final" aria-label="Llamado a la acción final">
     <div class="container">
         <h2>Tu salud no puede esperar. Actuá hoy.</h2>
         <p>Cada día de demora puede afectar tu tratamiento y tu calidad de vida. La primera consulta es gratuita y sin compromiso.</p>
         <div class="cta-buttons">
-            <a href="https://wa.me/541173707992" class="btn btn-danger" style="font-size: 1.1rem; padding: 16px 40px;" target="_blank" rel="noopener noreferrer">💬 Consultar por WhatsApp</a>
-            <a href="#contacto" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">📧 Enviar consulta</a>
+            <a href="https://wa.me/5491173707992?text=Hola%2C%20necesito%20un%20amparo%20de%20salud%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" class="btn btn-danger animate-pulse" target="_blank" rel="noopener noreferrer">
+                💬 Consultar URGENTE por WhatsApp
+            </a>
         </div>
     </div>
 </section>
 
 <!-- CONTACTO -->
-<section class="contact" id="contacto">
+<section class="contact" id="contacto" aria-label="Contacto">
     <div class="container">
         <div class="contact-grid">
             <div class="contact-info">
                 <span class="section-label">Contacto</span>
                 <h2>Estemos en contacto</h2>
-                <p>Completá el formulario o contactanos directamente. Tu consulta es confidencial y sin compromiso.</p>
+                <p>Complete el formulario y nos pondremos en contacto con usted a la brevedad. Su consulta es confidencial y sin compromiso.</p>
 
                 <div class="contact-item">
                     <div class="contact-item-icon">📍</div>
@@ -593,17 +1124,11 @@
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-icon" style="background: rgba(37,211,102,0.1); color: #25D366;">💬</div>
                     <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:derechoclarona@gmail.com">derechoclarona@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-item-icon">📞</div>
-                    <div>
-                        <h4>Teléfono / WhatsApp</h4>
-                        <p><a href="tel:+541173707992">+54 11 7370-7992</a></p>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/5491173707992" class="whatsapp-link" target="_blank" rel="noopener noreferrer">+54 9 11 7370-7992</a></p>
+                        <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Respuesta en menos de 24 horas</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -613,48 +1138,298 @@
                         <p>Lunes a Viernes: 9:00 - 18:00 hs</p>
                     </div>
                 </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contacto@derechoclaro.com.ar">contacto@derechoclaro.com.ar</a></p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 32px;">
+                    <h4 style="font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--primary); margin-bottom: 16px;">Seguinos en redes</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/derechoclarona/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61582577855095&locale=es_LA" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@derechoclaro0" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.89 2.89 2.89 0 0 1 2.88-2.89c.28 0 .55.04.81.11v-3.5a6.37 6.37 0 0 0-.81-.05A6.34 6.34 0 0 0 2.45 15.5a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.83a8.23 8.23 0 0 0 4.46 1.31V6.69z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5491173707992" class="social-link" style="background: #25D366; color: white;" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-form">
-                <h3>Enviá tu consulta de salud</h3>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/mvzbrred" method="POST" id="contact-form" class="space-y-6">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                        <div>
+                            <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Nombre</label>
+                            <input type="text" name="nombre" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s;" placeholder="Su nombre" required>
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Apellido</label>
+                            <input type="text" name="apellido" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s;" placeholder="Su apellido" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" required>
+
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Email</label>
+                        <input type="email" name="email" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s;" placeholder="su@email.com" required>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Teléfono</label>
+                        <input type="tel" name="telefono" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s;" placeholder="+54 11 7370-7992">
                     </div>
-                    <div class="form-group">
-                        <select name="servicio">
-                            <option value="">¿Qué te negaron?</option>
-                            <option value="medicamentos">Medicamentos</option>
-                            <option value="cirugia">Cirugía</option>
-                            <option value="tratamiento">Tratamiento oncológico</option>
-                            <option value="protesis">Prótesis / Órtesis</option>
-                            <option value="salud-mental">Salud mental</option>
-                            <option value="estudios">Estudios / Prácticas</option>
-                            <option value="otro">Otro</option>
+
+                    <div style="margin-bottom: 16px;">
+                        <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Área de Interés</label>
+                        <select name="area" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s; background: white;">
+                            <option>Seleccione un área</option>
+                            <option>Amparo de Salud</option>
+                            <option>Derecho de Familia</option>
+                            <option>Derecho Laboral</option>
+                            <option>Derecho Civil</option>
+                            <option>Otra consulta</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <textarea name="mensaje" placeholder="Contanos tu situación de salud..." rows="4"></textarea>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-medium); margin-bottom: 6px;">Mensaje</label>
+                        <textarea name="mensaje" rows="4" style="width: 100%; padding: 12px 16px; border: 1px solid #e8e2d8; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.95rem; outline: none; transition: all 0.3s; resize: none;" placeholder="Describa brevemente su consulta..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-danger form-submit">Enviar Consulta</button>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%; justify-content: center; gap: 8px;">
+                        <span>Enviar Consulta</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
                 </form>
+
+                <!-- Mensaje de éxito (oculto por defecto) -->
+                <div id="form-success" style="display: none; text-align: center; padding: 40px 0;">
+                    <div style="width: 80px; height: 80px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                        <svg style="width: 40px; height: 40px; color: #16a34a;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 12px;">¡Mensaje Enviado!</h3>
+                    <p style="color: var(--text-medium); margin-bottom: 8px;">Gracias por contactarnos.</p>
+                    <p style="color: var(--text-medium); margin-bottom: 24px;">Hemos recibido tu consulta y nos pondremos en contacto con vos a la brevedad.</p>
+                    <button onclick="resetForm()" class="btn btn-primary" style="padding: 12px 24px;">
+                        Enviar otra consulta
+                    </button>
+                </div>
+
+                <!-- Mensaje de error (oculto por defecto) -->
+                <div id="form-error" style="display: none; margin-top: 16px; padding: 16px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; text-align: center;">
+                    <p style="color: #dc2626;">Hubo un error al enviar el mensaje. Por favor, intente nuevamente.</p>
+                </div>
             </div>
         </div>
     </div>
-</section>
-
-<footer>
+</section><!-- FOOTER CORPORATIVO -->
+<footer aria-label="Footer institucional">
     <div class="container">
-        <p>© 2026 Nuñez Aragunde | Derecho Claro. Todos los derechos reservados.</p>
-        <p style="margin-top: 8px; opacity: 0.6;">Abogada en CABA - Especialista en Amparos de Salud</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Nuñez Aragunde</h3>
+                <p>Derecho Claro. Asesoramiento jurídico cercano, transparente y estratégico en Ciudad Autónoma de Buenos Aires.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/derechoclarona/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61582577855095&locale=es_LA" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@derechoclaro0" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.89 2.89 2.89 0 0 1 2.88-2.89c.28 0 .55.04.81.11v-3.5a6.37 6.37 0 0 0-.81-.05A6.34 6.34 0 0 0 2.45 15.5a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.83a8.23 8.23 0 0 0 4.46 1.31V6.69z"/></svg>
+                    </a>
+                    <a href="https://wa.me/5491173707992" class="social-link" style="background: #25D366; color: white;" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Amparo por Medicamentos</a></li>
+                    <li><a href="#servicios">Amparo por Cirugías</a></li>
+                    <li><a href="#servicios">Amparo por Tratamientos</a></li>
+                    <li><a href="#servicios">Amparo por Prótesis</a></li>
+                    <li><a href="#servicios">Amparo por Salud Mental</a></li>
+                    <li><a href="#servicios">Amparo por Estudios</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li><a href="#diabetes">Diabetes</a></li>
+                    <li><a href="#fertilidad">Fertilidad Asistida</a></li>
+                    <li><a href="#pmo">PMO</a></li>
+                    <li><a href="#discapacidad">Discapacidad</a></li>
+                    <li><a href="#alto-costo">Alto Costo</a></li>
+                    <li><a href="#oncologia">Oncología</a></li>
+                    <li><a href="#salud-mental">Salud Mental</a></li>
+                    <li><a href="#geriatria">Geriatría</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Derecho Claro</h4>
+                <ul>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#por-que-elegirnos">¿Por qué elegirnos?</a></li>
+                    <li><a href="#como-trabajamos">Cómo Trabajamos</a></li>
+                    
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Nuñez Aragunde | Derecho Claro. Todos los derechos reservados.</p>
+            <div>
+                <a href="/terminos">Términos y Condiciones</a>
+                <a href="/privacidad">Política de Privacidad</a>
+                <a href="/aviso-legal">Aviso Legal</a>
+            </div>
+        </div>
     </div>
 </footer>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Nuñez Aragunde - Derecho Claro",
+    "description": "Amparos de salud urgentes en CABA. Medicamentos, tratamientos, cirugías y prácticas médicas negadas. Resolución en 48-72hs.",
+    "url": "https://salud.derechoclaro.com.ar",
+    "areaServed": {
+        "@type": "City",
+        "name": "Ciudad Autónoma de Buenos Aires",
+        "addressCountry": "AR"
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad Autónoma de Buenos Aires",
+        "addressCountry": "AR"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish",
+        "areaServed": "AR",
+        "url": "https://wa.me/5491173707992"
+    },
+    "serviceType": "Amparos de Salud",
+    "knowsAbout": ["Derecho de la Salud", "Amparos de Salud", "Derecho del Paciente", "Obras Sociales", "Prepagas"]
+}
+</script>
+
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('active');
+    }
+    function closeMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.remove('active');
+    }
+
+    // FAQ accordion
+    function toggleFaq(button) {
+        const answer = button.nextElementSibling;
+        const isActive = answer.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.classList.remove('active');
+            q.setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked if was closed
+        if (!isActive) {
+            answer.classList.add('active');
+            button.classList.add('active');
+            button.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    // Form submission handling
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>Enviando...</span>';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    formError.style.display = 'none';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formError.style.display = 'block';
+                submitBtn.innerHTML = originalBtnContent;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    function resetForm() {
+        if (contactForm) {
+            contactForm.reset();
+            contactForm.style.display = 'block';
+            formSuccess.style.display = 'none';
+            formError.style.display = 'none';
+            submitBtn.innerHTML = '<span>Enviar Consulta</span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
+            submitBtn.disabled = false;
+        }
+    }
+
+</script>
 
 </body>
 </html>
