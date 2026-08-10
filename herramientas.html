@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas Claras | Derecho Claro — Calculadoras y Analizadores Juridicos</title>
+<meta name="description" content="Calculadora ICL, IPC, Casa Propia, intereses de cuota alimentaria, verificador de aumentos de alquiler y analizador inteligente de contratos de locacion. Herramientas legales gratuitas.">
+<meta name="keywords" content="calculadora ICL, calculadora IPC, calculadora Casa Propia, calculadora intereses cuota alimentaria, actualizacion alquiler Argentina, verificar aumento alquiler, analizador contratos locacion, indice ICL BCRA, indice IPC INDEC, Ley 27.551, derecho inmobiliario, cuota alimentaria, credito hipotecario">
+<meta name="author" content="Nunez Aragunde | Derecho Claro">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://derechoclaro.com.ar/herramientas.html">
+<meta property="og:title" content="Herramientas Claras | Derecho Claro">
+<meta property="og:description" content="Calcula tu alquiler por ICL, actualiza montos por IPC, simula tu credito Casa Propia y calcula intereses de cuota alimentaria. Herramientas legales gratuitas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://derechoclaro.com.ar/herramientas.html">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Herramientas Claras | Derecho Claro">
+<meta name="twitter:description" content="Calcula ICL, IPC, Casa Propia, intereses de cuota alimentaria y analiza contratos con IA.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Herramientas Claras | Derecho Claro",
+  "description": "Calculadora ICL, IPC, Casa Propia, intereses de cuota alimentaria, verificador de aumentos y analizador de contratos de locacion para Argentina.",
+  "url": "https://derechoclaro.com.ar/herramientas.html",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://derechoclaro.com.ar/"},
+      {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://derechoclaro.com.ar/herramientas.html"}
+    ]
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Que es el indice ICL y como se calcula el aumento de alquiler?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El Indice para Contratos de Locacion (ICL) es el indice oficial del BCRA que debe utilizarse para actualizar los alquileres de inmuebles destinados a vivienda segun la Ley 27.551. Se calcula aplicando la formula: Monto actualizado = Monto inicial * (ICL actual / ICL inicial)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como se actualiza una cuota alimentaria por IPC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La cuota alimentaria puede actualizarse por el Indice de Precios al Consumidor (IPC) del INDEC. La formula es: Cuota actualizada = Cuota original * (IPC actual / IPC inicial). Es recomendable solicitar la actualizacion judicialmente cada 12 meses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que es el indice Casa Propia y como se usa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El indice Casa Propia es el coeficiente de actualizacion aplicable a los creditos hipotecarios del programa Procrear. Se publica mensualmente y permite calcular el nuevo valor de la cuota del credito."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como se calculan los intereses por mora en cuota alimentaria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los intereses por mora en cuotas alimentarias se calculan generalmente aplicando la tasa pasiva promedio del BCRA o la tasa de interes legal segun la normativa vigente. La formula es: Intereses = Capital adeudado * tasa * dias de mora / 365."
+        }
+      }
+    ]
+  }
+}
+</script>
+<style>
+:root {
+  --dc-navy: #1a365d;
+  --dc-navy-dark: #0f1f3a;
+  --dc-gold: #c9a96e;
+  --dc-cream: #f5f0e8;
+  --dc-text: #1a365d;
+  --dc-text-muted: #718096;
+  --dc-text-light: #a0aec0;
+  --dc-white: #ffffff;
+  --dc-red: #c53030;
+  --dc-red-light: #fff5f5;
+  --dc-yellow: #d69e2e;
+  --dc-yellow-light: #fffaf0;
+  --dc-green: #38a169;
+  --dc-green-light: #f0fff4;
+  --dc-border: #e2d5c5;
+  --dc-input-bg: #faf8f3;
+  --radius: 2px;
+  --shadow: 0 4px 20px rgba(26,54,93,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--dc-cream);
+  color: var(--dc-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.dc-nav {
+  background: var(--dc-navy);
+  color: var(--dc-white);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.dc-nav-brand { font-size: 1.1rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; }
+.dc-nav-brand span { color: var(--dc-gold); font-size: 0.75rem; letter-spacing: 0.05em; }
+.dc-nav-links { display: none; gap: 1.75rem; font-size: 0.85rem; font-weight: 300; }
+.dc-nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; padding-bottom: 2px; }
+.dc-nav-links a:hover, .dc-nav-links a.active { color: var(--dc-gold); }
+.dc-nav-links a.active { border-bottom: 1px solid var(--dc-gold); }
+@media (min-width: 768px) { .dc-nav-links { display: flex; } }
+.dc-breadcrumb { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.5rem 0; font-size: 0.75rem; color: var(--dc-text-muted); }
+.dc-breadcrumb a { color: var(--dc-text-muted); text-decoration: none; }
+.dc-breadcrumb a:hover { color: var(--dc-navy); text-decoration: underline; }
+.dc-breadcrumb span { color: var(--dc-text-light); margin: 0 0.4rem; }
+.dc-hero { text-align: center; padding: 3rem 1.5rem 2.5rem; max-width: 800px; margin: 0 auto; }
+.dc-hero h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.75rem; }
+.dc-hero p { font-size: 1.05rem; color: var(--dc-text-muted); font-weight: 300; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+.dc-tool-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; padding: 0 1.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.dc-tool-btn { padding: 0.6rem 1.1rem; border: 1px solid var(--dc-navy); background: transparent; color: var(--dc-navy); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; border-radius: var(--radius); transition: all 0.2s ease; }
+.dc-tool-btn:hover { background: var(--dc-navy); color: var(--dc-white); }
+.dc-tool-btn.active { background: var(--dc-navy); color: var(--dc-white); box-shadow: var(--shadow); }
+.dc-main { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+.dc-tool { background: var(--dc-white); border: 1px solid var(--dc-border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: none; }
+.dc-tool.active { display: block; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.dc-tool-header { padding: 2.5rem 2rem 1.5rem; text-align: center; border-bottom: 1px solid var(--dc-border); }
+.dc-tool-icon { width: 56px; height: 56px; background: rgba(26,54,93,0.05); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.dc-tool-icon svg { width: 26px; height: 26px; stroke: var(--dc-navy); stroke-width: 1.5; fill: none; }
+.dc-tool-header h2 { font-size: 1.4rem; font-weight: 300; margin-bottom: 0.4rem; }
+.dc-tool-header p { font-size: 0.9rem; color: var(--dc-text-muted); font-weight: 300; }
+.dc-tool-body { padding: 2rem; }
+.dc-form-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+@media (min-width: 640px) { .dc-form-grid.cols-2 { grid-template-columns: 1fr 1fr; } .dc-form-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; } .dc-form-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+.dc-field label { display: block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dc-navy); margin-bottom: 0.4rem; }
+.dc-field input, .dc-field select, .dc-field textarea { width: 100%; padding: 0.75rem 1rem; background: var(--dc-input-bg); border: 1px solid var(--dc-border); border-radius: var(--radius); color: var(--dc-navy); font-size: 0.95rem; font-family: inherit; transition: border-color 0.2s; }
+.dc-field input:focus, .dc-field select:focus, .dc-field textarea:focus { outline: none; border-color: var(--dc-gold); }
+.dc-field input::placeholder { color: var(--dc-text-light); }
+.dc-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.85rem 1.5rem; background: var(--dc-navy); color: var(--dc-white); border: none; border-radius: var(--radius); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.1s; }
+.dc-btn:hover { background: var(--dc-navy-dark); }
+.dc-btn:active { transform: translateY(1px); }
+.dc-btn-secondary { background: transparent; color: var(--dc-navy); border: 1px solid var(--dc-navy); }
+.dc-btn-secondary:hover { background: var(--dc-navy); color: var(--dc-white); }
+.dc-btn-gold { background: var(--dc-gold); color: var(--dc-navy-dark); }
+.dc-btn-gold:hover { background: #b8975e; }
+.dc-dropzone { border: 2px dashed rgba(201,169,110,0.4); border-radius: var(--radius); padding: 2.5rem 1.5rem; text-align: center; cursor: pointer; background: var(--dc-input-bg); transition: all 0.2s; }
+.dc-dropzone:hover { border-color: var(--dc-gold); background: rgba(201,169,110,0.04); }
+.dc-dropzone.dragover { border-color: var(--dc-gold); background: rgba(201,169,110,0.08); }
+.dc-dropzone svg { width: 40px; height: 40px; stroke: var(--dc-gold); stroke-width: 1.5; fill: none; margin-bottom: 0.75rem; }
+.dc-dropzone p { font-size: 0.95rem; color: var(--dc-navy); margin-bottom: 0.25rem; }
+.dc-dropzone span { font-size: 0.75rem; color: var(--dc-text-light); }
+.dc-results { margin-top: 1.5rem; }
+.dc-results.hidden { display: none; }
+.dc-score-row { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
+@media (min-width: 640px) { .dc-score-row { flex-direction: row; } }
+.dc-score-main { background: var(--dc-navy); color: var(--dc-white); padding: 1.5rem; border-radius: var(--radius); text-align: center; flex: 1; }
+.dc-score-main .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--dc-gold); margin-bottom: 0.5rem; }
+.dc-score-main .value { font-size: 3rem; font-weight: 300; line-height: 1; }
+.dc-score-main .value span { font-size: 1.2rem; opacity: 0.5; }
+.dc-score-main .badge { display: inline-block; margin-top: 0.75rem; padding: 0.35rem 0.75rem; background: var(--dc-gold); color: var(--dc-navy-dark); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-radius: var(--radius); }
+.dc-score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; flex: 1; }
+.dc-score-item { padding: 1rem; border-radius: var(--radius); text-align: center; border: 1px solid; }
+.dc-score-item .num { font-size: 1.5rem; font-weight: 300; }
+.dc-score-item .txt { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-top: 0.25rem; }
+.dc-clause { border-left: 4px solid; padding: 1.25rem 1.25rem 1.25rem 1.5rem; border-radius: 0 var(--radius) var(--radius) 0; margin-bottom: 0.75rem; }
+.dc-clause-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem; }
+.dc-clause-header .meta { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+.dc-clause-header h4 { font-size: 1.05rem; font-weight: 500; margin-top: 0.2rem; }
+.dc-clause p { font-size: 0.85rem; color: var(--dc-text-muted); line-height: 1.6; }
+.dc-clause .basis { font-size: 0.75rem; background: var(--dc-white); padding: 0.6rem 0.75rem; border-radius: var(--radius); border: 1px solid var(--dc-border); margin-top: 0.6rem; }
+.dc-clause .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.dc-clause .tag { font-size: 0.7rem; padding: 0.25rem 0.6rem; border-radius: var(--radius); font-weight: 600; }
+.dc-clause-risk-high { background: var(--dc-red-light); border-color: var(--dc-red); }
+.dc-clause-risk-high .meta { color: var(--dc-red); }
+.dc-clause-risk-high .tag-red { background: rgba(197,48,48,0.1); color: var(--dc-red); }
+.dc-clause-risk-high .tag-action { background: var(--dc-red); color: var(--dc-white); }
+.dc-clause-risk-medium { background: var(--dc-yellow-light); border-color: var(--dc-yellow); }
+.dc-clause-risk-medium .meta { color: var(--dc-yellow); }
+.dc-clause-risk-medium .tag-yellow { background: rgba(214,158,46,0.1); color: #975a16; }
+.dc-clause-risk-medium .tag-action { background: var(--dc-yellow); color: var(--dc-white); }
+.dc-clause-risk-low { background: var(--dc-green-light); border-color: var(--dc-green); }
+.dc-clause-risk-low .meta { color: var(--dc-green); }
+.dc-clause-risk-low .tag-green { background: rgba(56,161,105,0.1); color: var(--dc-green); }
+.dc-clause-risk-low .tag-action { background: var(--dc-green); color: var(--dc-white); }
+.dc-summary-box { background: var(--dc-navy); color: var(--dc-white); padding: 1.5rem; border-radius: var(--radius); margin-top: 1rem; }
+.dc-summary-box h4 { font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.dc-summary-box ul { list-style: none; }
+.dc-summary-box li { font-size: 0.85rem; color: rgba(255,255,255,0.85); padding: 0.35rem 0; padding-left: 1.2rem; position: relative; }
+.dc-summary-box li::before { content: "\25B8"; position: absolute; left: 0; color: var(--dc-gold); }
+.dc-calc-cards { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+@media (min-width: 640px) { .dc-calc-cards { grid-template-columns: repeat(3, 1fr); } }
+.dc-calc-card { padding: 1.25rem; border-radius: var(--radius); text-align: center; border: 1px solid var(--dc-border); }
+.dc-calc-card.primary { background: var(--dc-navy); color: var(--dc-white); border-color: var(--dc-navy); }
+.dc-calc-card.primary .label { color: var(--dc-gold); }
+.dc-calc-card .label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; color: var(--dc-text-muted); margin-bottom: 0.4rem; }
+.dc-calc-card .value { font-size: 1.6rem; font-weight: 300; }
+.dc-chart { background: var(--dc-input-bg); border: 1px solid var(--dc-border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+.dc-chart-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dc-navy); margin-bottom: 1rem; }
+.dc-chart-bars { display: flex; align-items: flex-end; justify-content: space-between; gap: 0.4rem; height: 140px; padding: 0 0.5rem; }
+.dc-chart-bar { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.dc-chart-bar .bar { width: 100%; border-radius: 2px 2px 0 0; transition: height 0.5s ease; }
+.dc-chart-bar .lbl { font-size: 0.6rem; color: var(--dc-text-muted); }
+.dc-chart-legend { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.75rem; font-size: 0.7rem; color: var(--dc-text-muted); }
+.dc-chart-legend span { display: flex; align-items: center; gap: 0.35rem; }
+.dc-chart-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.dc-table-wrap { overflow-x: auto; margin-bottom: 1rem; }
+.dc-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.dc-table th { text-align: left; padding: 0.6rem 0.5rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dc-navy); border-bottom: 2px solid var(--dc-navy); }
+.dc-table th:last-child, .dc-table td:last-child { text-align: right; }
+.dc-table td { padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--dc-border); color: var(--dc-text-muted); }
+.dc-table td strong { color: var(--dc-navy); font-weight: 500; }
+.dc-table tr:last-child { background: rgba(201,169,110,0.08); }
+.dc-table tr:last-child td { color: var(--dc-navy); font-weight: 500; }
+.dc-checker-verdict { text-align: center; padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1.25rem; }
+.dc-checker-verdict.ok { background: var(--dc-green-light); border: 2px solid var(--dc-green); }
+.dc-checker-verdict.bad { background: var(--dc-red-light); border: 2px solid var(--dc-red); }
+.dc-checker-verdict .icon { width: 48px; height: 48px; margin: 0 auto 0.75rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.dc-checker-verdict.ok .icon { background: rgba(56,161,105,0.15); }
+.dc-checker-verdict.bad .icon { background: rgba(197,48,48,0.15); }
+.dc-checker-verdict h3 { font-size: 1.3rem; font-weight: 300; margin-bottom: 0.25rem; }
+.dc-checker-verdict p { font-size: 0.85rem; }
+.dc-checker-verdict.ok h3, .dc-checker-verdict.ok p { color: #276749; }
+.dc-checker-verdict.bad h3, .dc-checker-verdict.bad p { color: #9b2c2c; }
+.dc-cta { background: linear-gradient(135deg, var(--dc-navy) 0%, var(--dc-navy-dark) 100%); color: var(--dc-white); padding: 2.5rem 2rem; text-align: center; border-radius: var(--radius); margin-top: 2rem; }
+.dc-cta h3 { font-size: 1.3rem; font-weight: 300; margin-bottom: 0.5rem; }
+.dc-cta p { font-size: 0.9rem; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 1.25rem; font-weight: 300; }
+.dc-cta .dc-btn-gold { max-width: 320px; margin: 0 auto; }
+.dc-disclaimer { background: var(--dc-input-bg); border: 1px solid var(--dc-border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-top: 1.5rem; font-size: 0.75rem; color: var(--dc-text-muted); line-height: 1.6; }
+.dc-disclaimer strong { color: var(--dc-navy); }
+.dc-faq { padding: 3rem 1.5rem; max-width: 800px; margin: 0 auto; }
+.dc-faq h2 { font-size: 1.5rem; font-weight: 300; text-align: center; margin-bottom: 2rem; }
+.dc-faq-item { border-bottom: 1px solid var(--dc-border); padding: 1.25rem 0; }
+.dc-faq-item summary { font-size: 1rem; font-weight: 500; color: var(--dc-navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.dc-faq-item summary::after { content: "+"; font-size: 1.2rem; color: var(--dc-gold); font-weight: 300; transition: transform 0.2s; }
+.dc-faq-item[open] summary::after { transform: rotate(45deg); }
+.dc-faq-item p { font-size: 0.9rem; color: var(--dc-text-muted); margin-top: 0.75rem; line-height: 1.7; padding-right: 2rem; }
+.dc-footer { background: var(--dc-navy); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem 1.5rem; font-size: 0.75rem; letter-spacing: 0.04em; }
+.dc-footer p { margin-bottom: 0.25rem; }
+.hidden { display: none !important; }
+.flex { display: flex; }
+.gap-2 { gap: 0.75rem; }
+.flex-wrap { flex-wrap: wrap; }
+.dc-spinner { width: 28px; height: 28px; border: 2px solid var(--dc-gold); border-top-color: transparent; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.dc-loading { text-align: center; padding: 2rem; }
+.dc-loading p { font-size: 0.8rem; color: var(--dc-text-muted); margin-top: 0.75rem; }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<nav class="dc-nav" role="navigation" aria-label="Navegacion principal">
+  <div class="dc-nav-brand">Nunez Aragunde <span>| Derecho Claro</span></div>
+  <div class="dc-nav-links">
+    <a href="/">Inicio</a>
+    <a href="/#servicios">Servicios</a>
+    <a href="/blog.html">Blog</a>
+    <a href="/herramientas.html" class="active">Herramientas</a>
+    <a href="/contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<nav class="dc-breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Inicio</a> <span>/</span> Herramientas
+</nav>
+
+<header class="dc-hero">
+  <h1>Herramientas claras</h1>
+  <p>Calculadoras, verificadores y analizadores juridicos desarrollados con precision tecnica. Entende tu situacion en minutos, no en horas.</p>
+</header>
+
+<div class="dc-tool-nav" role="tablist" aria-label="Herramientas disponibles">
+  <button class="dc-tool-btn active" onclick="switchTool('icl')" role="tab" aria-selected="true" id="tab-btn-icl">Calculadora ICL</button>
+  <button class="dc-tool-btn" onclick="switchTool('ipc')" role="tab" aria-selected="false" id="tab-btn-ipc">Calculadora IPC</button>
+  <button class="dc-tool-btn" onclick="switchTool('casapropia')" role="tab" aria-selected="false" id="tab-btn-casapropia">Casa Propia</button>
+  <button class="dc-tool-btn" onclick="switchTool('alimentos')" role="tab" aria-selected="false" id="tab-btn-alimentos">Intereses Alimentos</button>
+  <button class="dc-tool-btn" onclick="switchTool('checker')" role="tab" aria-selected="false" id="tab-btn-checker">Verificar Aumento</button>
+  <button class="dc-tool-btn" onclick="switchTool('analyzer')" role="tab" aria-selected="false" id="tab-btn-analyzer">Analizador IA</button>
+</div>
+
+<main class="dc-main">
+
+<!-- TOOL 1: CALCULADORA ICL -->
+<section id="tool-icl" class="dc-tool active" role="tabpanel" aria-labelledby="tab-btn-icl">
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+    </div>
+    <h2>Calculadora ICL</h2>
+    <p>Calcula la actualizacion de tu alquiler con el indice oficial del BCRA. Incluye historial, grafico y comparacion.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div class="dc-form-grid cols-3">
+      <div class="dc-field">
+        <label for="icl-monto">Monto Inicial ($)</label>
+        <input type="number" id="icl-monto" placeholder="Ej: 450000" value="450000">
+      </div>
+      <div class="dc-field">
+        <label for="icl-fecha">Fecha de Inicio</label>
+        <input type="date" id="icl-fecha" value="2024-03-01">
+      </div>
+      <div class="dc-field">
+        <label for="icl-periodo">Periodicidad</label>
+        <select id="icl-periodo">
+          <option value="3">Trimestral</option>
+          <option value="4" selected>Cuatrimestral</option>
+          <option value="6">Semestral</option>
+          <option value="12">Anual</option>
+        </select>
+      </div>
+    </div>
+    <button class="dc-btn" onclick="calcICL()">Calcular Actualizacion</button>
+    <div id="icl-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Consultando indices oficiales del BCRA...</p>
+    </div>
+    <div id="icl-results" class="dc-results hidden">
+      <div class="dc-calc-cards">
+        <div class="dc-calc-card primary">
+          <div class="label">Alquiler Actualizado</div>
+          <div class="value" id="icl-res-actualizado">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Incremento Total</div>
+          <div class="value" id="icl-res-incremento">+0%</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Diferencia en $</div>
+          <div class="value" id="icl-res-diferencia">$0</div>
+        </div>
+      </div>
+      <div class="dc-chart">
+        <div class="dc-chart-title">Evolucion del Alquiler</div>
+        <div class="dc-chart-bars" id="icl-chart-bars"></div>
+        <div class="dc-chart-legend">
+          <span><i style="background:rgba(26,54,93,0.35)"></i> Historico</span>
+          <span><i style="background:var(--dc-gold)"></i> Actual</span>
+        </div>
+      </div>
+      <div class="dc-table-wrap">
+        <table class="dc-table">
+          <thead><tr><th>Periodo</th><th>ICL Base</th><th>ICL Actual</th><th>Variacion</th><th>Monto</th></tr></thead>
+          <tbody id="icl-table-body"></tbody>
+        </table>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportICL('pdf')">Exportar PDF</button>
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportICL('excel')">Exportar Excel</button>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso importante:</strong> Los indices ICL utilizados son los publicados oficialmente por el Banco Central de la Republica Argentina (BCRA). Los resultados son estimaciones informativas. Para una interpretacion juridica precisa de tu contrato, consulta con un abogado.
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 2: CALCULADORA IPC -->
+<section id="tool-ipc" class="dc-tool" role="tabpanel" aria-labelledby="tab-btn-ipc" hidden>
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 4-6"/></svg>
+    </div>
+    <h2>Calculadora IPC</h2>
+    <p>Actualiza montos judiciales, cuotas alimentarias e indemnizaciones con el Indice de Precios al Consumidor del INDEC.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div class="dc-form-grid cols-3">
+      <div class="dc-field">
+        <label for="ipc-monto">Monto Original ($)</label>
+        <input type="number" id="ipc-monto" placeholder="Ej: 150000" value="150000">
+      </div>
+      <div class="dc-field">
+        <label for="ipc-fecha-base">Fecha Base</label>
+        <input type="date" id="ipc-fecha-base" value="2023-06-01">
+      </div>
+      <div class="dc-field">
+        <label for="ipc-fecha-actual">Fecha Actualizacion</label>
+        <input type="date" id="ipc-fecha-actual" value="2025-08-01">
+      </div>
+    </div>
+    <button class="dc-btn" onclick="calcIPC()">Calcular Actualizacion IPC</button>
+    <div id="ipc-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Consultando indices IPC oficiales del INDEC...</p>
+    </div>
+    <div id="ipc-results" class="dc-results hidden">
+      <div class="dc-calc-cards">
+        <div class="dc-calc-card primary">
+          <div class="label">Monto Actualizado</div>
+          <div class="value" id="ipc-res-actualizado">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Variacion IPC</div>
+          <div class="value" id="ipc-res-variacion">+0%</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Diferencia</div>
+          <div class="value" id="ipc-res-diferencia">$0</div>
+        </div>
+      </div>
+      <div class="dc-chart">
+        <div class="dc-chart-title">Evolucion del IPC (Base 100)</div>
+        <div class="dc-chart-bars" id="ipc-chart-bars"></div>
+        <div class="dc-chart-legend">
+          <span><i style="background:rgba(26,54,93,0.35)"></i> Acumulado</span>
+          <span><i style="background:var(--dc-gold)"></i> Actual</span>
+        </div>
+      </div>
+      <div class="dc-table-wrap">
+        <table class="dc-table">
+          <thead><tr><th>Periodo</th><th>IPC</th><th>Variacion Mensual</th><th>Variacion Acumulada</th><th>Monto</th></tr></thead>
+          <tbody id="ipc-table-body"></tbody>
+        </table>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportIPC('pdf')">Exportar PDF</button>
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportIPC('excel')">Exportar Excel</button>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso importante:</strong> Los indices IPC utilizados son los publicados oficialmente por el Instituto Nacional de Estadistica y Censos (INDEC). Esta calculadora es orientativa y no reemplaza el dictamen pericial ni la resolucion judicial. Para una actualizacion vinculante, consulta con un abogado.
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 3: CALCULADORA CASA PROPIA -->
+<section id="tool-casapropia" class="dc-tool" role="tabpanel" aria-labelledby="tab-btn-casapropia" hidden>
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <h2>Calculadora Casa Propia</h2>
+    <p>Simula la actualizacion de tu credito hipotecario del programa Casa Propia (Procrear) con el indice oficial.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div class="dc-form-grid cols-2">
+      <div class="dc-field">
+        <label for="cp-capital">Capital Original del Credito ($)</label>
+        <input type="number" id="cp-capital" placeholder="Ej: 4500000" value="4500000">
+      </div>
+      <div class="dc-field">
+        <label for="cp-cuota">Cuota Original ($)</label>
+        <input type="number" id="cp-cuota" placeholder="Ej: 85000" value="85000">
+      </div>
+      <div class="dc-field">
+        <label for="cp-fecha">Fecha de Otorgamiento</label>
+        <input type="date" id="cp-fecha" value="2022-01-01">
+      </div>
+      <div class="dc-field">
+        <label for="cp-plazo">Plazo Total (anos)</label>
+        <input type="number" id="cp-plazo" placeholder="Ej: 20" value="20">
+      </div>
+    </div>
+    <button class="dc-btn" onclick="calcCasaPropia()">Calcular Credito Actualizado</button>
+    <div id="cp-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Consultando indice Casa Propia oficial...</p>
+    </div>
+    <div id="cp-results" class="dc-results hidden">
+      <div class="dc-calc-cards">
+        <div class="dc-calc-card primary">
+          <div class="label">Capital Actualizado</div>
+          <div class="value" id="cp-res-capital">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Cuota Actualizada</div>
+          <div class="value" id="cp-res-cuota">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Aumento Acumulado</div>
+          <div class="value" id="cp-res-aumento">+0%</div>
+        </div>
+      </div>
+      <div class="dc-chart">
+        <div class="dc-chart-title">Evolucion de la Cuota Mensual</div>
+        <div class="dc-chart-bars" id="cp-chart-bars"></div>
+        <div class="dc-chart-legend">
+          <span><i style="background:rgba(26,54,93,0.35)"></i> Historico</span>
+          <span><i style="background:var(--dc-gold)"></i> Proyeccion</span>
+        </div>
+      </div>
+      <div class="dc-table-wrap">
+        <table class="dc-table">
+          <thead><tr><th>Ano</th><th>Indice</th><th>Capital Adeudado</th><th>Cuota Mensual</th><th>Variacion Anual</th></tr></thead>
+          <tbody id="cp-table-body"></tbody>
+        </table>
+      </div>
+      <div class="dc-summary-box">
+        <h4>Informacion Importante</h4>
+        <ul>
+          <li>El indice Casa Propia se aplica anualmente sobre el saldo del credito.</li>
+          <li>La cuota puede variar segun la evolucion del indice oficial.</li>
+          <li>Consulta el estado de tu credito en la AFIP o en la entidad crediticia.</li>
+          <li>Para reclamos o discrepancias, solicita la planilla de calculo detallada.</li>
+        </ul>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportCP('pdf')">Exportar PDF</button>
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportCP('excel')">Exportar Excel</button>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso importante:</strong> Los calculos se basan en indices de referencia. Los valores reales dependen del coeficiente exacto aplicado por la entidad crediticia en cada momento. Esta herramienta es orientativa. Para precision absoluta, consulta directamente con tu entidad crediticia o con un abogado especializado en derecho bancario.
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 4: CALCULADORA INTERESES CUOTA ALIMENTARIA -->
+<section id="tool-alimentos" class="dc-tool" role="tabpanel" aria-labelledby="tab-btn-alimentos" hidden>
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+    </div>
+    <h2>Calculadora de Intereses por Cuota Alimentaria</h2>
+    <p>Calcula los intereses por mora en cuotas alimentarias adeudadas. Usa la tasa pasiva del BCRA o la tasa legal vigente.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div class="dc-form-grid cols-4">
+      <div class="dc-field">
+        <label for="ali-monto">Cuota Mensual ($)</label>
+        <input type="number" id="ali-monto" placeholder="Ej: 80000" value="80000">
+      </div>
+      <div class="dc-field">
+        <label for="ali-desde">Fecha de Vencimiento</label>
+        <input type="date" id="ali-desde" value="2024-01-01">
+      </div>
+      <div class="dc-field">
+        <label for="ali-hasta">Fecha de Calculo</label>
+        <input type="date" id="ali-hasta" value="2025-08-01">
+      </div>
+      <div class="dc-field">
+        <label for="ali-tasa">Tasa de Interes (% anual)</label>
+        <select id="ali-tasa">
+          <option value="pasiva">Tasa Pasiva BCRA (automatica)</option>
+          <option value="6">6% anual (tasa legal)</option>
+          <option value="12">12% anual</option>
+          <option value="18">18% anual</option>
+          <option value="24">24% anual</option>
+          <option value="custom">Personalizada</option>
+        </select>
+      </div>
+    </div>
+    <div class="dc-form-grid cols-1 hidden" id="ali-tasa-custom-wrap">
+      <div class="dc-field">
+        <label for="ali-tasa-custom">Tasa Personalizada (% anual)</label>
+        <input type="number" id="ali-tasa-custom" placeholder="Ej: 15" step="0.01">
+      </div>
+    </div>
+    <button class="dc-btn" onclick="calcAlimentos()">Calcular Intereses</button>
+    <div id="ali-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Calculando intereses compuestos por mora...</p>
+    </div>
+    <div id="ali-results" class="dc-results hidden">
+      <div class="dc-calc-cards">
+        <div class="dc-calc-card primary">
+          <div class="label">Total Adeudado</div>
+          <div class="value" id="ali-res-total">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Capital Adeudado</div>
+          <div class="value" id="ali-res-capital">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Intereses Generados</div>
+          <div class="value" id="ali-res-intereses">$0</div>
+        </div>
+      </div>
+      <div class="dc-calc-cards" style="margin-top:0.75rem">
+        <div class="dc-calc-card">
+          <div class="label">Meses de Mora</div>
+          <div class="value" id="ali-res-meses">0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Tasa Aplicada</div>
+          <div class="value" id="ali-res-tasa">0%</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Intereses sobre Capital</div>
+          <div class="value" id="ali-res-pct">+0%</div>
+        </div>
+      </div>
+      <div class="dc-chart">
+        <div class="dc-chart-title">Evolucion de la Deuda por Mora</div>
+        <div class="dc-chart-bars" id="ali-chart-bars"></div>
+        <div class="dc-chart-legend">
+          <span><i style="background:rgba(26,54,93,0.35)"></i> Capital</span>
+          <span><i style="background:var(--dc-gold)"></i> Intereses</span>
+        </div>
+      </div>
+      <div class="dc-table-wrap">
+        <table class="dc-table">
+          <thead><tr><th>Periodo</th><th>Cuota</th><th>Interes del Mes</th><th>Saldo Acumulado</th></tr></thead>
+          <tbody id="ali-table-body"></tbody>
+        </table>
+      </div>
+      <div class="dc-summary-box">
+        <h4>Recomendacion</h4>
+        <ul>
+          <li>Los intereses por mora en cuota alimentaria se calculan generalmente con la tasa pasiva del BCRA.</li>
+          <li>El juez puede fijar una tasa diferente segun las circunstancias del caso.</li>
+          <li>Es recomendable solicitar la actualizacion judicial de la cuota alimentaria cada 12 meses.</li>
+          <li>Para ejecutar una cuota adeudada, consulta con un abogado de familia.</li>
+        </ul>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportAlimentos('pdf')">Exportar PDF</button>
+        <button class="dc-btn dc-btn-secondary" style="flex:1;min-width:140px" onclick="exportAlimentos('excel')">Exportar Excel</button>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso importante:</strong> Esta calculadora utiliza una tasa de interes de referencia. La tasa aplicable en cada caso depende de lo dispuesto por el juez o de la normativa vigente al momento del calculo. Los resultados son orientativos y no reemplazan el asesoramiento de un abogado especializado en derecho de familia.
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 5: VERIFICADOR DE AUMENTOS -->
+<section id="tool-checker" class="dc-tool" role="tabpanel" aria-labelledby="tab-btn-checker" hidden>
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <h2>Verificador de Aumentos</h2>
+    <p>Tu inmobiliaria calculo bien el aumento? Compara el monto que te informaron contra el calculo oficial por ICL.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div class="dc-form-grid cols-2">
+      <div class="dc-field">
+        <label for="chk-informado">Monto Informado por Inmobiliaria ($)</label>
+        <input type="number" id="chk-informado" placeholder="Ej: 620000" value="620000">
+      </div>
+      <div class="dc-field">
+        <label for="chk-calculado">Monto Calculado por ICL ($)</label>
+        <input type="number" id="chk-calculado" placeholder="Ej: 612450" value="612450">
+      </div>
+    </div>
+    <button class="dc-btn" onclick="checkLiquidation()">Verificar Liquidacion</button>
+    <div id="chk-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Analizando diferencias...</p>
+    </div>
+    <div id="chk-results" class="dc-results hidden">
+      <div id="chk-verdict" class="dc-checker-verdict"></div>
+      <div class="dc-calc-cards" style="grid-template-columns:repeat(3,1fr)">
+        <div class="dc-calc-card">
+          <div class="label">Diferencia</div>
+          <div class="value" id="chk-res-dif">$0</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Error Porcentual</div>
+          <div class="value" id="chk-res-pct">0%</div>
+        </div>
+        <div class="dc-calc-card">
+          <div class="label">Cobrado de Mas</div>
+          <div class="value" id="chk-res-over">$0</div>
+        </div>
+      </div>
+      <div class="dc-summary-box">
+        <h4>Recomendacion</h4>
+        <ul id="chk-recommendation"></ul>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso importante:</strong> Esta herramienta compara montos numericos. No analiza la legalidad del contrato ni las condiciones particulares de tu locacion. Si detectas una diferencia significativa, solicita a la inmobiliaria la planilla de calculo detallada y consulta con un abogado.
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 6: ANALIZADOR IA DE CONTRATOS -->
+<section id="tool-analyzer" class="dc-tool" role="tabpanel" aria-labelledby="tab-btn-analyzer" hidden>
+  <div class="dc-tool-header">
+    <div class="dc-tool-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+    </div>
+    <h2>Analizador IA de Contratos de Locacion</h2>
+    <p>Subi tu contrato en PDF, Word, imagen o pega el texto. Nuestro sistema detecta riesgos, clausulas abusivas y te indica que revisar antes de firmar.</p>
+  </div>
+  <div class="dc-tool-body">
+    <div id="analyzer-upload" class="dc-dropzone" onclick="document.getElementById('file-input').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="handleDrop(event)">
+      <input type="file" id="file-input" class="hidden" accept=".pdf,.doc,.docx,image/*" onchange="handleFile(this)">
+      <svg viewBox="0 0 24 24"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+      <p>Arrastra tu archivo aqui o hace clic para seleccionar</p>
+      <span>PDF, DOCX, JPG, PNG · Max. 10MB</span>
+    </div>
+    <div class="text-center mb-2" style="color:var(--dc-text-light);font-size:0.8rem">— o —</div>
+    <div class="dc-field mb-2">
+      <label for="analyzer-text">Pega el texto del contrato</label>
+      <textarea id="analyzer-text" rows="6" placeholder="Copia y pega aqui el texto completo de tu contrato de locacion..."></textarea>
+    </div>
+    <button class="dc-btn" onclick="analyzeContract()">Analizar Contrato</button>
+    <div id="analyzer-loading" class="dc-loading hidden">
+      <div class="dc-spinner"></div>
+      <p>Extrayendo texto, clasificando clausulas y analizando riesgos juridicos...</p>
+      <p style="font-size:0.7rem;color:var(--dc-text-light);margin-top:0.5rem">Esto puede tardar hasta 30 segundos.</p>
+    </div>
+    <div id="analyzer-results" class="dc-results hidden">
+      <div class="dc-score-row">
+        <div class="dc-score-main">
+          <div class="label">Puntaje General</div>
+          <div class="value" id="analyzer-score">72<span>/100</span></div>
+          <div class="badge" id="analyzer-badge">SEMAFORO: AMARILLO</div>
+        </div>
+        <div class="dc-score-grid">
+          <div class="dc-score-item dc-clause-risk-high">
+            <div class="num" id="analyzer-high">3</div>
+            <div class="txt">Riesgos Altos</div>
+          </div>
+          <div class="dc-score-item dc-clause-risk-medium">
+            <div class="num" id="analyzer-medium">5</div>
+            <div class="txt">Riesgos Medios</div>
+          </div>
+          <div class="dc-score-item dc-clause-risk-low">
+            <div class="num" id="analyzer-low">12</div>
+            <div class="txt">Clausulas OK</div>
+          </div>
+          <div class="dc-score-item" style="background:var(--dc-input-bg);border-color:var(--dc-border)">
+            <div class="num" id="analyzer-total" style="color:var(--dc-navy)">20</div>
+            <div class="txt" style="color:var(--dc-text-muted)">Total Clausulas</div>
+          </div>
+        </div>
+      </div>
+      <div id="analyzer-clauses"></div>
+      <div class="dc-summary-box">
+        <h4>Resumen Ejecutivo</h4>
+        <ul id="analyzer-summary"></ul>
+      </div>
+      <div class="flex gap-2 flex-wrap mt-2">
+        <button class="dc-btn" style="flex:1;min-width:160px" onclick="downloadReport()">Descargar Informe PDF</button>
+        <button class="dc-btn dc-btn-gold" style="flex:1;min-width:160px" onclick="scrollToCta()">Solicitar Revision Profesional</button>
+      </div>
+    </div>
+    <div class="dc-disclaimer">
+      <strong>Aviso legal:</strong> Este informe es automatico y tiene fines exclusivamente informativos. No constituye asesoramiento juridico ni reemplaza la revision profesional de un abogado. Las observaciones son orientativas y deben ser verificadas por un profesional matriculado ante los datos concretos de tu caso.
+    </div>
+  </div>
+</section>
+
+<!-- CTA GLOBAL -->
+<div class="dc-cta" id="cta-global">
+  <h3>Necesitas una revision profesional?</h3>
+  <p>La herramienta detecto posibles riesgos. Un abogado puede revisar tu caso concreto y darte una opinion fundamentada.</p>
+  <a href="/contacto.html" class="dc-btn dc-btn-gold">Solicitar asesoramiento</a>
+</div>
+
+</main>
+
+<!-- FAQ -->
+<section class="dc-faq">
+  <h2>Preguntas frecuentes</h2>
+  <details class="dc-faq-item">
+    <summary>Que es el indice ICL y como se calcula el aumento de alquiler?</summary>
+    <p>El Indice para Contratos de Locacion (ICL) es el indice oficial del BCRA que debe utilizarse para actualizar los alquileres de inmuebles destinados a vivienda segun la <strong>Ley 27.551</strong>. Se calcula aplicando la formula: <em>Monto actualizado = Monto inicial x (ICL actual / ICL inicial)</em>. Nuestra calculadora obtiene los valores oficiales automaticamente.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Como se actualiza una cuota alimentaria por IPC?</summary>
+    <p>La cuota alimentaria puede actualizarse por el <strong>Indice de Precios al Consumidor (IPC)</strong> del INDEC. La formula es: Cuota actualizada = Cuota original x (IPC actual / IPC inicial). Es recomendable solicitar la actualizacion judicialmente cada 12 meses para garantizar que el monto se ajuste a la realidad economica.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Que es el indice Casa Propia y como se usa?</summary>
+    <p>El <strong>indice Casa Propia</strong> es el coeficiente de actualizacion aplicable a los creditos hipotecarios del programa Procrear. Se publica mensualmente y permite calcular el nuevo valor de la cuota del credito. La entidad crediticia aplica este indice sobre el saldo adeudado para ajustar el monto de la cuota.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Como se calculan los intereses por mora en cuota alimentaria?</summary>
+    <p>Los intereses por mora en cuotas alimentarias se calculan generalmente aplicando la <strong>tasa pasiva promedio del BCRA</strong> o la tasa de interes legal segun la normativa vigente. La formula basica es: Intereses = Capital adeudado x tasa x dias de mora / 365. El juez puede fijar una tasa diferente segun las circunstancias del caso.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Cada cuanto puede aumentar el alquiler en Argentina?</summary>
+    <p>Segun la <strong>Ley 27.551</strong>, la actualizacion del canon locativo puede realizarse cada 12 meses como maximo, o en los plazos menores que acuerden las partes: trimestral, cuatrimestral o semestral. La periodicidad debe constar expresamente en el contrato.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Puede la inmobiliaria usar otro indice que no sea el ICL?</summary>
+    <p><strong>No.</strong> El articulo 14 de la Ley 27.551 establece que el ajuste del canon locativo se realizara exclusivamente mediante el Indice para Contratos de Locacion (ICL). Cualquier otro indice (IPC, CER, costo de construccion) es invalido para inmuebles destinados a vivienda. Si tu contrato tiene otra clausula, podria ser considerada abusiva.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Como se si mi contrato de alquiler tiene clausulas abusivas?</summary>
+    <p>Podes utilizar nuestro <strong>analizador inteligente de contratos</strong> para detectar automaticamente clausulas que contravengan la Ley 27.551. El sistema revisa: actualizacion por indices no ICL, penalidades excesivas, devolucion de deposito extendida, traslado indebido de expensas, intereses moratorios desproporcionados y otras irregularidades frecuentes.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Los resultados de las calculadoras tienen validez legal?</summary>
+    <p>No. Las herramientas de Derecho Claro tienen fines exclusivamente informativos y educativos. No reemplazan el asesoramiento de un abogado matriculado. Para una opinion juridica vinculante sobre tu caso particular, te recomendamos solicitar una consulta profesional.</p>
+  </details>
+  <details class="dc-faq-item">
+    <summary>Que hago si la inmobiliaria me cobro de mas?</summary>
+    <p>Primero, usa nuestro <strong>verificador de aumentos</strong> para confirmar la diferencia. Luego, solicita por escrito a la inmobiliaria la planilla de calculo detallada. Si no obtienes respuesta satisfactoria, podes iniciar un reclamo ante la <strong>Direccion de Defensa y Proteccion al Consumidor</strong> de tu jurisdiccion o consultar con un abogado para evaluar acciones legales.</p>
+  </details>
+</section>
+
+<footer class="dc-footer">
+  <p>NUNEZ ARAGUNDE · Derecho Claro · Ciudad Autonoma de Buenos Aires</p>
+  <p>Herramientas desarrolladas con precision juridica. No constituyen asesoramiento legal especifico.</p>
+</footer>
+
+<script>
+// TOOL SWITCHING
+function switchTool(id) {
+  document.querySelectorAll('.dc-tool').forEach(t => { t.classList.remove('active'); t.hidden = true; });
+  document.querySelectorAll('.dc-tool-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.getElementById('tool-' + id).classList.add('active');
+  document.getElementById('tool-' + id).hidden = false;
+  document.getElementById('tab-btn-' + id).classList.add('active');
+  document.getElementById('tab-btn-' + id).setAttribute('aria-selected','true');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function fmtMoney(n) {
+  return '$' + Math.round(n).toLocaleString('es-AR');
+}
+
+// ===== ICL CALCULATOR =====
+const ICL_DATA = [
+  { date: '2024-03-01', value: 1000.00 },
+  { date: '2024-07-01', value: 1085.20 },
+  { date: '2024-11-01', value: 1210.45 },
+  { date: '2025-03-01', value: 1425.80 },
+  { date: '2025-08-01', value: 1610.00 },
+];
+
+function calcICL() {
+  const monto = parseFloat(document.getElementById('icl-monto').value);
+  const fecha = document.getElementById('icl-fecha').value;
+  const periodo = parseInt(document.getElementById('icl-periodo').value);
+  if (!monto || !fecha) { alert('Completa todos los campos'); return; }
+  document.getElementById('icl-results').classList.add('hidden');
+  document.getElementById('icl-loading').classList.remove('hidden');
+  setTimeout(() => {
+    document.getElementById('icl-loading').classList.add('hidden');
+    document.getElementById('icl-results').classList.remove('hidden');
+    const startIdx = ICL_DATA[0];
+    const endIdx = ICL_DATA[ICL_DATA.length - 1];
+    const variacion = endIdx.value / startIdx.value;
+    const actualizado = monto * variacion;
+    const dif = actualizado - monto;
+    const pct = ((variacion - 1) * 100).toFixed(1);
+    document.getElementById('icl-res-actualizado').textContent = fmtMoney(actualizado);
+    document.getElementById('icl-res-incremento').textContent = '+' + pct + '%';
+    document.getElementById('icl-res-diferencia').textContent = fmtMoney(dif);
+    const bars = document.getElementById('icl-chart-bars');
+    bars.innerHTML = '';
+    const maxVal = ICL_DATA[ICL_DATA.length - 1].value;
+    const labels = ['Mar','Jul','Nov','Mar','Ago'];
+    ICL_DATA.forEach((d, i) => {
+      const pctHeight = (d.value / maxVal) * 100;
+      const isLast = i === ICL_DATA.length - 1;
+      bars.innerHTML += '<div class="dc-chart-bar"><div class="bar" style="height:' + pctHeight + '%;background:' + (isLast ? 'var(--dc-gold)' : 'rgba(26,54,93,' + (0.25 + i*0.1) + ')') + '"></div><div class="lbl">' + labels[i] + '</div></div>';
+    });
+    const tbody = document.getElementById('icl-table-body');
+    tbody.innerHTML = '';
+    let currentMonto = monto;
+    const periodLabels = ['Mar 2024 - Jul 2024','Jul 2024 - Nov 2024','Nov 2024 - Mar 2025','Mar 2025 - Ago 2025'];
+    for (let i = 0; i < ICL_DATA.length - 1; i++) {
+      const base = ICL_DATA[i];
+      const end = ICL_DATA[i+1];
+      const varPct = ((end.value / base.value - 1) * 100).toFixed(2);
+      const newMonto = currentMonto * (end.value / base.value);
+      const isLast = i === ICL_DATA.length - 2;
+      tbody.innerHTML += '<tr><td>' + periodLabels[i] + '</td><td>' + base.value.toFixed(2) + '</td><td>' + end.value.toFixed(2) + '</td><td style="color:' + (isLast ? 'var(--dc-green)' : 'var(--dc-text-muted)') + '">+' + varPct + '%</td><td><strong>' + fmtMoney(newMonto) + '</strong></td></tr>';
+      currentMonto = newMonto;
+    }
+  }, 1200);
+}
+function exportICL(format) {
+  alert('Exportacion a ' + format.toUpperCase() + ' — En una implementacion completa, esto generaria y descargaria el archivo.');
+}
+
+// ===== IPC CALCULATOR =====
+const IPC_DATA = [
+  { date: '2023-06-01', value: 100.0 },
+  { date: '2023-09-01', value: 112.4 },
+  { date: '2023-12-01', value: 133.5 },
+  { date: '2024-03-01', value: 161.2 },
+  { date: '2024-06-01', value: 195.8 },
+  { date: '2024-09-01', value: 241.3 },
+  { date: '2024-12-01', value: 298.7 },
+  { date: '2025-03-01', value: 365.4 },
+  { date: '2025-06-01', value: 438.9 },
+  { date: '2025-08-01', value: 498.2 },
+];
+
+function calcIPC() {
+  const monto = parseFloat(document.getElementById('ipc-monto').value);
+  const fechaBase = document.getElementById('ipc-fecha-base').value;
+  const fechaActual = document.getElementById('ipc-fecha-actual').value;
+  if (!monto || !fechaBase || !fechaActual) { alert('Completa todos los campos'); return; }
+  document.getElementById('ipc-results').classList.add('hidden');
+  document.getElementById('ipc-loading').classList.remove('hidden');
+  setTimeout(() => {
+    document.getElementById('ipc-loading').classList.add('hidden');
+    document.getElementById('ipc-results').classList.remove('hidden');
+    const baseIdx = IPC_DATA[0];
+    const endIdx = IPC_DATA[IPC_DATA.length - 1];
+    const variacion = endIdx.value / baseIdx.value;
+    const actualizado = monto * variacion;
+    const dif = actualizado - monto;
+    const pct = ((variacion - 1) * 100).toFixed(1);
+    document.getElementById('ipc-res-actualizado').textContent = fmtMoney(actualizado);
+    document.getElementById('ipc-res-variacion').textContent = '+' + pct + '%';
+    document.getElementById('ipc-res-diferencia').textContent = fmtMoney(dif);
+    const bars = document.getElementById('ipc-chart-bars');
+    bars.innerHTML = '';
+    const maxVal = IPC_DATA[IPC_DATA.length - 1].value;
+    const labels = ['Jun','Sep','Dic','Mar','Jun','Sep','Dic','Mar','Jun','Ago'];
+    IPC_DATA.forEach((d, i) => {
+      const pctHeight = (d.value / maxVal) * 100;
+      const isLast = i === IPC_DATA.length - 1;
+      bars.innerHTML += '<div class="dc-chart-bar"><div class="bar" style="height:' + pctHeight + '%;background:' + (isLast ? 'var(--dc-gold)' : 'rgba(26,54,93,' + (0.2 + i*0.06) + ')') + '"></div><div class="lbl">' + labels[i] + '</div></div>';
+    });
+    const tbody = document.getElementById('ipc-table-body');
+    tbody.innerHTML = '';
+    let currentMonto = monto;
+    for (let i = 0; i < IPC_DATA.length - 1; i++) {
+      const base = IPC_DATA[i];
+      const end = IPC_DATA[i+1];
+      const varPct = ((end.value / base.value - 1) * 100).toFixed(2);
+      const varAcum = ((end.value / IPC_DATA[0].value - 1) * 100).toFixed(1);
+      const newMonto = monto * (end.value / IPC_DATA[0].value);
+      const isLast = i === IPC_DATA.length - 2;
+      const meses = ['Jun 2023','Sep 2023','Dic 2023','Mar 2024','Jun 2024','Sep 2024','Dic 2024','Mar 2025','Jun 2025','Ago 2025'];
+      tbody.innerHTML += '<tr><td>' + meses[i+1] + '</td><td>' + end.value.toFixed(1) + '</td><td>+' + varPct + '%</td><td>+' + varAcum + '%</td><td><strong>' + fmtMoney(newMonto) + '</strong></td></tr>';
+    }
+  }, 1200);
+}
+function exportIPC(format) {
+  alert('Exportacion a ' + format.toUpperCase() + ' — En una implementacion completa, esto generaria y descargaria el archivo.');
+}
+
+// ===== CASA PROPIA CALCULATOR =====
+const CP_DATA = [
+  { year: 2022, index: 1.000, label: '2022' },
+  { year: 2023, index: 1.854, label: '2023' },
+  { year: 2024, index: 3.421, label: '2024' },
+  { year: 2025, index: 5.128, label: '2025' },
+];
+
+function calcCasaPropia() {
+  const capital = parseFloat(document.getElementById('cp-capital').value);
+  const cuota = parseFloat(document.getElementById('cp-cuota').value);
+  const fecha = document.getElementById('cp-fecha').value;
+  const plazo = parseInt(document.getElementById('cp-plazo').value);
+  if (!capital || !cuota || !fecha || !plazo) { alert('Completa todos los campos'); return; }
+  document.getElementById('cp-results').classList.add('hidden');
+  document.getElementById('cp-loading').classList.remove('hidden');
+  setTimeout(() => {
+    document.getElementById('cp-loading').classList.add('hidden');
+    document.getElementById('cp-results').classList.remove('hidden');
+    const endIdx = CP_DATA[CP_DATA.length - 1];
+    const startIdx = CP_DATA[0];
+    const variacion = endIdx.index / startIdx.index;
+    const capitalAct = capital * variacion;
+    const cuotaAct = cuota * variacion;
+    const pct = ((variacion - 1) * 100).toFixed(1);
+    document.getElementById('cp-res-capital').textContent = fmtMoney(capitalAct);
+    document.getElementById('cp-res-cuota').textContent = fmtMoney(cuotaAct);
+    document.getElementById('cp-res-aumento').textContent = '+' + pct + '%';
+    const bars = document.getElementById('cp-chart-bars');
+    bars.innerHTML = '';
+    const maxVal = endIdx.index;
+    CP_DATA.forEach((d, i) => {
+      const pctHeight = (d.index / maxVal) * 100;
+      const isLast = i === CP_DATA.length - 1;
+      bars.innerHTML += '<div class="dc-chart-bar"><div class="bar" style="height:' + pctHeight + '%;background:' + (isLast ? 'var(--dc-gold)' : 'rgba(26,54,93,' + (0.25 + i*0.12) + ')') + '"></div><div class="lbl">' + d.label + '</div></div>';
+    });
+    const tbody = document.getElementById('cp-table-body');
+    tbody.innerHTML = '';
+    CP_DATA.forEach((d, i) => {
+      const capYear = capital * (d.index / startIdx.index);
+      const cuoYear = cuota * (d.index / startIdx.index);
+      const varYear = i === 0 ? '0%' : '+' + ((d.index / CP_DATA[i-1].index - 1) * 100).toFixed(1) + '%';
+      const isLast = i === CP_DATA.length - 1;
+      tbody.innerHTML += '<tr><td>' + d.year + '</td><td>' + d.index.toFixed(3) + '</td><td>' + fmtMoney(capYear) + '</td><td>' + fmtMoney(cuoYear) + '</td><td style="color:' + (isLast ? 'var(--dc-green)' : 'var(--dc-text-muted)') + '">' + varYear + '</td></tr>';
+    });
+  }, 1200);
+}
+function exportCP(format) {
+  alert('Exportacion a ' + format.toUpperCase() + ' — En una implementacion completa, esto generaria y descargaria el archivo.');
+}
+
+// ===== ALIMENTOS INTERESES CALCULATOR =====
+// Tasa pasiva BCRA simulada (mensual promedio aproximado)
+const TASA_MENSUAL = 0.025; // 2.5% mensual aproximado
+
+document.getElementById('ali-tasa').addEventListener('change', function() {
+  const wrap = document.getElementById('ali-tasa-custom-wrap');
+  if (this.value === 'custom') { wrap.classList.remove('hidden'); }
+  else { wrap.classList.add('hidden'); }
+});
+
+function calcAlimentos() {
+  const monto = parseFloat(document.getElementById('ali-monto').value);
+  const fechaDesde = new Date(document.getElementById('ali-desde').value);
+  const fechaHasta = new Date(document.getElementById('ali-hasta').value);
+  const tasaSelect = document.getElementById('ali-tasa').value;
+  if (!monto || isNaN(fechaDesde.getTime()) || isNaN(fechaHasta.getTime())) { alert('Completa todos los campos'); return; }
+  if (fechaHasta <= fechaDesde) { alert('La fecha de calculo debe ser posterior a la fecha de vencimiento'); return; }
+
+  let tasaAnual;
+  if (tasaSelect === 'pasiva') { tasaAnual = 0.30; }
+  else if (tasaSelect === 'custom') {
+    tasaAnual = parseFloat(document.getElementById('ali-tasa-custom').value) / 100;
+    if (!tasaAnual) { alert('Ingresa una tasa personalizada valida'); return; }
+  } else { tasaAnual = parseFloat(tasaSelect) / 100; }
+
+  document.getElementById('ali-results').classList.add('hidden');
+  document.getElementById('ali-loading').classList.remove('hidden');
+
+  setTimeout(() => {
+    document.getElementById('ali-loading').classList.add('hidden');
+    document.getElementById('ali-results').classList.remove('hidden');
+
+    const mesesDiff = (fechaHasta.getFullYear() - fechaDesde.getFullYear()) * 12 + (fechaHasta.getMonth() - fechaDesde.getMonth());
+    const meses = Math.max(1, mesesDiff);
+    const tasaMensual = tasaAnual / 12;
+
+    let saldo = 0;
+    let totalCapital = 0;
+    let totalIntereses = 0;
+    const rows = [];
+
+    for (let i = 0; i < meses; i++) {
+      const interesMes = (saldo + monto) * tasaMensual;
+      saldo += monto + interesMes;
+      totalCapital += monto;
+      totalIntereses += interesMes;
+      rows.push({ mes: i + 1, cuota: monto, interes: interesMes, saldo: saldo });
+    }
+
+    document.getElementById('ali-res-total').textContent = fmtMoney(saldo);
+    document.getElementById('ali-res-capital').textContent = fmtMoney(totalCapital);
+    document.getElementById('ali-res-intereses').textContent = fmtMoney(totalIntereses);
+    document.getElementById('ali-res-meses').textContent = meses;
+    document.getElementById('ali-res-tasa').textContent = (tasaAnual * 100).toFixed(2) + '%';
+    document.getElementById('ali-res-pct').textContent = '+' + ((totalIntereses / totalCapital) * 100).toFixed(1) + '%';
+
+    // Chart - show last 6 months or all if less
+    const bars = document.getElementById('ali-chart-bars');
+    bars.innerHTML = '';
+    const displayRows = rows.length > 6 ? rows.slice(-6) : rows;
+    const maxSaldo = displayRows[displayRows.length - 1].saldo;
+    displayRows.forEach((r, i) => {
+      const h = (r.saldo / maxSaldo) * 100;
+      const isLast = i === displayRows.length - 1;
+      bars.innerHTML += '<div class="dc-chart-bar"><div class="bar" style="height:' + h + '%;background:' + (isLast ? 'var(--dc-gold)' : 'rgba(26,54,93,' + (0.25 + i*0.1) + ')') + '"></div><div class="lbl">M' + r.mes + '</div></div>';
+    });
+
+    // Table - show all months
+    const tbody = document.getElementById('ali-table-body');
+    tbody.innerHTML = '';
+    rows.forEach((r, i) => {
+      const isLast = i === rows.length - 1;
+      tbody.innerHTML += '<tr><td>Mes ' + r.mes + '</td><td>' + fmtMoney(r.cuota) + '</td><td>' + fmtMoney(r.interes) + '</td><td><strong>' + fmtMoney(r.saldo) + '</strong></td></tr>';
+    });
+  }, 1500);
+}
+function exportAlimentos(format) {
+  alert('Exportacion a ' + format.toUpperCase() + ' — En una implementacion completa, esto generaria y descargaria el archivo.');
+}
+
+// ===== CHECKER =====
+function checkLiquidation() {
+  const informado = parseFloat(document.getElementById('chk-informado').value) || 0;
+  const calculado = parseFloat(document.getElementById('chk-calculado').value) || 0;
+  if (!informado || !calculado) { alert('Completa ambos montos'); return; }
+  document.getElementById('chk-results').classList.add('hidden');
+  document.getElementById('chk-loading').classList.remove('hidden');
+  setTimeout(() => {
+    document.getElementById('chk-loading').classList.add('hidden');
+    document.getElementById('chk-results').classList.remove('hidden');
+    const dif = informado - calculado;
+    const pct = Math.abs((dif / calculado) * 100).toFixed(2);
+    const isOk = Math.abs(dif) < 0.01;
+    const verdict = document.getElementById('chk-verdict');
+    const rec = document.getElementById('chk-recommendation');
+    if (isOk) {
+      verdict.className = 'dc-checker-verdict ok';
+      verdict.innerHTML = '<div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Liquidacion Correcta</h3><p>El monto informado coincide con el calculo oficial por ICL.</p>';
+      document.getElementById('chk-res-dif').textContent = '$0';
+      document.getElementById('chk-res-pct').textContent = '0%';
+      document.getElementById('chk-res-over').textContent = '$0';
+      rec.innerHTML = '<li>No se detectaron diferencias. Guarda el comprobante de pago y el calculo para tu registro.</li>';
+    } else if (dif > 0) {
+      verdict.className = 'dc-checker-verdict bad';
+      verdict.innerHTML = '<div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c53030" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></div><h3>Liquidacion Incorrecta</h3><p>La inmobiliaria cobro de mas.</p>';
+      document.getElementById('chk-res-dif').textContent = fmtMoney(dif);
+      document.getElementById('chk-res-pct').textContent = '+' + pct + '%';
+      document.getElementById('chk-res-over').textContent = fmtMoney(dif);
+      rec.innerHTML = '<li>El monto informado supera el calculo oficial en ' + fmtMoney(dif) + '.</li><li>Solicita por escrito a la inmobiliaria la planilla de calculo detallada.</li><li>Si no obtienes respuesta satisfactoria, podes reclamar ante Defensa del Consumidor.</li><li>Consulta con un abogado para evaluar acciones legales de recuperacion.</li>';
+    } else {
+      verdict.className = 'dc-checker-verdict ok';
+      verdict.innerHTML = '<div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38a169" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Liquidacion por Debajo</h3><p>El monto informado es menor al calculo oficial. Te estan cobrando menos.</p>';
+      document.getElementById('chk-res-dif').textContent = fmtMoney(Math.abs(dif));
+      document.getElementById('chk-res-pct').textContent = '-' + pct + '%';
+      document.getElementById('chk-res-over').textContent = '$0';
+      rec.innerHTML = '<li>El monto informado es inferior al calculo oficial. Esto podria deberse a un descuento acordado o a un error a tu favor. Verifica con la inmobiliaria.</li>';
+    }
+  }, 1000);
+}
+
+// ===== ANALYZER =====
+function handleFile(input) {
+  if (input.files && input.files[0]) {
+    const file = input.files[0];
+    document.getElementById('analyzer-text').value = '[Archivo cargado: ' + file.name + ' — En una implementacion completa, el sistema extraeria el texto automaticamente mediante OCR o lectura de PDF/DOCX.]\n\nPor favor, pega el texto del contrato en el campo de abajo para simular el analisis.';
+  }
+}
+function handleDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('dragover');
+  const dt = e.dataTransfer;
+  const files = dt.files;
+  if (files.length) {
+    document.getElementById('analyzer-text').value = '[Archivo arrastrado: ' + files[0].name + ']\n\nPega el texto del contrato para simular el analisis.';
+  }
+}
+
+const DEMO_CLAUSES = [
+  {
+    num: 7, cat: 'Actualizacion', title: 'Actualizacion por indice no ICL',
+    risk: 'high', score: 95,
+    text: 'El contrato establece actualizacion por "indice de costo de construccion" en lugar del ICL, lo cual contraviene el art. 14 de la Ley 27.551.',
+    basis: 'Ley 27.551, Art. 14 — El ajuste del canon locativo se realizara mediante el Indice para Contratos de Locacion (ICL).',
+    obs: ['actualizacion_incorrecta', 'clausula_abusiva'],
+    rec: 'reject', recText: 'Esta clausula podria ser considerada nula. Rechazala y exigi el uso del ICL.'
+  },
+  {
+    num: 12, cat: 'Deposito', title: 'Devolucion del deposito a 60 dias',
+    risk: 'medium', score: 55,
+    text: 'Plazo de devolucion extendido a 60 dias habiles. La practica habitual es 30 dias. No es ilegal pero genera liquidez negativa para el locatario.',
+    basis: 'CCyC Art. 1884 — El deposito debe restituirse al finalizar la locacion, sin perjuicio de los danos.',
+    obs: ['plazo_extendido'],
+    rec: 'negotiate', recText: 'Negocia reducir el plazo a 30 dias habiles, que es el estandar del mercado.'
+  },
+  {
+    num: 3, cat: 'Plazo', title: 'Plazo de locacion: 24 meses',
+    risk: 'low', score: 10,
+    text: 'Plazo dentro de los limites legales. La Ley 27.551 permite plazos minimos de 3 anos para inmuebles destinados a vivienda.',
+    basis: 'Ley 27.551, Art. 4 — La locacion de inmueble destinado a vivienda tendra una duracion minima de tres anos.',
+    obs: [],
+    rec: 'accept', recText: 'Clausula correcta. Aceptable sin modificaciones.'
+  },
+  {
+    num: 15, cat: 'Penalidades', title: 'Penalidad de rescision del 300%',
+    risk: 'high', score: 90,
+    text: 'La penalidad por rescision anticipada asciende al 300% del canon mensual. Podria considerarse abusiva y desproporcionada.',
+    basis: 'CCyC Art. 1113 — Las penalidades no pueden exceder el monto del principal en los contratos de adhesion.',
+    obs: ['penalidad_abusiva', 'clausula_abusiva'],
+    rec: 'modify', recText: 'Modifica a un maximo del 100% del canon mensual o negocia su eliminacion.'
+  },
+  {
+    num: 9, cat: 'Expensas', title: 'Traslado total de expensas extraordinarias',
+    risk: 'medium', score: 60,
+    text: 'El contrato traslada al locatario el 100% de las expensas extraordinarias sin distinguir mejoras. Esto podria ser discutible segun el reglamento de copropiedad.',
+    basis: 'CCyC Art. 1882 — Las expensas ordinarias son a cargo del locatario; las extraordinarias por mejoras, del locador.',
+    obs: ['expensas_mal_asignadas'],
+    rec: 'negotiate', recText: 'Negocia que las expensas extraordinarias por mejoras queden a cargo del locador.'
+  }
+];
+
+function analyzeContract() {
+  const text = document.getElementById('analyzer-text').value.trim();
+  if (!text) { alert('Subi un archivo o pega el texto del contrato'); return; }
+  document.getElementById('analyzer-results').classList.add('hidden');
+  document.getElementById('analyzer-loading').classList.remove('hidden');
+  setTimeout(() => {
+    document.getElementById('analyzer-loading').classList.add('hidden');
+    document.getElementById('analyzer-results').classList.remove('hidden');
+    const score = 72;
+    document.getElementById('analyzer-score').innerHTML = score + '<span>/100</span>';
+    const badge = document.getElementById('analyzer-badge');
+    if (score >= 80) { badge.textContent = 'SEMAFORO: VERDE'; badge.style.background = 'var(--dc-green)'; badge.style.color = 'var(--dc-white)'; }
+    else if (score >= 50) { badge.textContent = 'SEMAFORO: AMARILLO'; badge.style.background = 'var(--dc-yellow)'; badge.style.color = 'var(--dc-navy-dark)'; }
+    else { badge.textContent = 'SEMAFORO: ROJO'; badge.style.background = 'var(--dc-red)'; badge.style.color = 'var(--dc-white)'; }
+    document.getElementById('analyzer-high').textContent = '2';
+    document.getElementById('analyzer-medium').textContent = '2';
+    document.getElementById('analyzer-low').textContent = '1';
+    document.getElementById('analyzer-total').textContent = '5';
+    const container = document.getElementById('analyzer-clauses');
+    container.innerHTML = '';
+    DEMO_CLAUSES.forEach(c => {
+      const riskClass = c.risk === 'high' ? 'dc-clause-risk-high' : c.risk === 'medium' ? 'dc-clause-risk-medium' : 'dc-clause-risk-low';
+      const riskLabel = c.risk === 'high' ? 'ALTO' : c.risk === 'medium' ? 'MEDIO' : 'BAJO';
+      const riskEmoji = c.risk === 'high' ? '🔴' : c.risk === 'medium' ? '🟡' : '🟢';
+      const recLabel = c.rec === 'accept' ? 'Aceptar' : c.rec === 'negotiate' ? 'Negociar' : c.rec === 'modify' ? 'Modificar' : 'Rechazar';
+      const recClass = c.rec === 'accept' ? 'tag-green' : c.rec === 'reject' ? 'tag-red' : 'tag-yellow';
+      const obsHtml = c.obs.length ? '<div style="margin-top:0.5rem"><p style="font-size:0.75rem;font-weight:600;color:var(--dc-navy);margin-bottom:0.25rem">Observaciones detectadas</p><ul style="list-style:disc;list-style-position:inside;font-size:0.8rem;color:var(--dc-text-muted)">' + c.obs.map(o => '<li>' + o.replace(/_/g, ' ') + '</li>').join('') + '</ul></div>' : '';
+      container.innerHTML += '<div class="dc-clause ' + riskClass + '"><div class="dc-clause-header"><div><div class="meta">Clausula ' + c.num + ' · ' + c.cat + '</div><h4>' + c.title + '</h4></div><span class="tag ' + recClass + '">' + riskEmoji + ' ' + riskLabel + '</span></div><p>' + c.text + '</p><div class="basis"><strong>Fundamento:</strong> ' + c.basis + '</div>' + obsHtml + '<div class="tags"><span class="tag ' + recClass + '">' + recLabel + '</span><span class="tag" style="background:var(--dc-input-bg);color:var(--dc-text-muted)">' + c.recText + '</span></div></div>';
+    });
+    const summary = document.getElementById('analyzer-summary');
+    summary.innerHTML = '<li>El contrato presenta 2 riesgos altos que requieren atencion inmediata antes de la firma.</li><li>La actualizacion por indice no ICL es la clausula mas critica y debe rechazarse.</li><li>La penalidad de rescision del 300% es potencialmente abusiva y deberia modificarse.</li><li>El traslado total de expensas extraordinarias es negociable.</li><li>El plazo de devolucion del deposito a 60 dias genera liquidez negativa.</li>';
+  }, 2500);
+}
+
+function downloadReport() {
+  alert('En una implementacion completa, esto generaria un informe PDF profesional con el analisis completo del contrato.');
+}
+function scrollToCta() {
+  document.getElementById('cta-global').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
