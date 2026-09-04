@@ -1,0 +1,64 @@
+<!-- ============================================================
+     SECCIÓN: QUIÉN TE REPRESENTA
+     Pegar en el home y en las 4 landings (familia, civil, laboral, salud),
+     idealmente después del hero o antes del footer.
+     Foto: subir como /assets/victoria-nunez-aragunde-abogada-caba.webp
+     (retrato profesional, fondo neutro, mínimo 800x1000px, JPG de respaldo).
+     ============================================================ -->
+<section id="quien-te-representa" class="quien-te-representa">
+  <div class="qtr-contenido">
+
+    <div class="qtr-foto">
+      <img src="/assets/victoria-nunez-aragunde-abogada-caba.webp"
+           alt="Victoria Nuñez Aragunde, abogada en Ciudad Autónoma de Buenos Aires"
+           width="800" height="1000" loading="lazy">
+    </div>
+
+    <div class="qtr-texto">
+      <h2>¿Quién te representa?</h2>
+      <p class="qtr-nombre">Victoria Nuñez Aragunde</p>
+
+      <p>
+        Soy abogada egresada de la <strong>Universidad de Buenos Aires</strong>, con
+        orientación en <strong>Derecho Privado</strong>. Me especialicé en litigios de
+        familia, amparos de salud, cuestiones del derecho laboral y derecho de los
+        consumidores.
+      </p>
+      <p>
+        En <strong>Nuñez Aragunde · Derecho Claro</strong> creo que entender tu caso es
+        tan importante como ganarlo. Por eso trabajo con un solo compromiso: que sepas
+        exactamente dónde estás parado, qué opciones tenés y cuál es el camino más
+        estratégico para tu situación, en lenguaje claro y sin tecnicismos.
+      </p>
+      <p>
+        Atiendo personalmente cada consulta, presencialmente en la Ciudad Autónoma de
+        Buenos Aires o de forma virtual. Tu caso no pasa por un intermediario: lo
+        analizo y lo llevo yo.
+      </p>
+
+      <ul class="qtr-datos">
+        <li>📍 Ciudad Autónoma de Buenos Aires</li>
+        <li>🎓 Universidad de Buenos Aires — Derecho Privado</li>
+        <li>⚖️ Matriculada en el CPACF</li>
+        <li>🕘 Lun a Vie, 9 a 18 hs</li>
+      </ul>
+
+      <a class="qtr-cta" href="https://wa.me/5491173707992?text=Hola%20Victoria%2C%20quiero%20hacerte%20una%20consulta."
+         target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CSS mínimo (adaptar a los tokens del sitio) -->
+<style>
+.quien-te-representa { padding: 4rem 1.5rem; background: #f7f5f2; }
+.qtr-contenido { max-width: 1000px; margin: 0 auto; display: grid;
+  grid-template-columns: 1fr 1.4fr; gap: 3rem; align-items: center; }
+.qtr-foto img { width: 100%; max-width: 380px; border-radius: 12px; display: block; }
+.qtr-nombre { font-size: 1.4rem; font-weight: 700; margin: 0 0 1rem; }
+.qtr-datos { list-style: none; padding: 0; margin: 1.5rem 0; line-height: 2; }
+.qtr-cta { display: inline-block; background: #1a3a5c; color: #fff;
+  padding: 0.9rem 1.8rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+@media (max-width: 768px) { .qtr-contenido { grid-template-columns: 1fr; } }
+</style>
