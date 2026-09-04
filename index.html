@@ -494,6 +494,7 @@
 </script>
 <!-- ============================================================ -->
 <base target="_blank">
+<base target="_blank">
 </head>
 </html>
     <!-- Google tag (gtag.js) -->
@@ -649,7 +650,198 @@
         .social-btn svg {
             fill: currentColor;
         }
-    </style>
+    
+    /* === NUEVO HERO V2 === */
+    .dch-hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .dch-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(212,165,116,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .dch-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    .dch-hero-texto {
+      color: #fff;
+    }
+    .dch-hero-etiqueta {
+      display: inline-block;
+      background: rgba(212,165,116,0.15);
+      border: 1px solid rgba(212,165,116,0.3);
+      color: #d4a574;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .dch-hero-titulo {
+      font-family: 'Crimson Text', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: #fff;
+    }
+    .dch-hero-resaltado {
+      color: #d4a574;
+    }
+    .dch-hero-bajada {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.25rem;
+      max-width: 540px;
+    }
+    .dch-hero-especialidades {
+      background: rgba(255,255,255,0.06);
+      border-left: 3px solid #d4a574;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2rem;
+    }
+    .dch-hero-especialidades p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+    }
+    .dch-hero-especialidades strong {
+      color: #d4a574;
+    }
+    .dch-hero-botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .dch-btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #25d366;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+    }
+    .dch-btn-whatsapp:hover {
+      background: #1ebe5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+    }
+    .dch-icon-wa {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .dch-btn-secundario {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 8px;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .dch-btn-secundario:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.6);
+    }
+    .dch-hero-contacto {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .dch-contacto-sep {
+      color: rgba(212,165,116,0.5);
+    }
+    .dch-hero-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dch-hero-imagen img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 16px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    @media (max-width: 900px) {
+      .dch-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .dch-hero-bajada,
+      .dch-hero-especialidades {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .dch-hero-especialidades {
+        text-align: left;
+      }
+      .dch-hero-botones {
+        justify-content: center;
+      }
+      .dch-hero-contacto {
+        justify-content: center;
+      }
+      .dch-hero-imagen img {
+        max-width: 300px;
+      }
+    }
+    @media (max-width: 480px) {
+      .dch-hero {
+        padding: 5rem 1rem 2rem;
+      }
+      .dch-hero-titulo {
+        font-size: 2rem;
+      }
+      .dch-btn-whatsapp,
+      .dch-btn-secundario {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+</style>
 <base target="_blank">
 </head>
 <body class="font-sans text-gray-700 bg-light antialiased">
@@ -709,57 +901,49 @@
             </div>
         </div>
     </nav>
-    <section id="inicio" class="relative h-screen overflow-hidden">
-        <!-- Slide 1: Derecho de Familia -->
-        <div class="slide active" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('./familia.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-6 max-w-4xl slide-content">
-                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho de Familia</span>
-                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Protegemos lo<br>que más importa</h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Asesoramiento experto en divorcios, custodia, alimentos y sucesiones. Acompañamos a su familia en los momentos más importantes.</p>
-                </div>
-            </div>
-        </div>
+    <!-- NUEVO HERO V2 - derechoclaro.com.ar -->
+<!-- Reemplazar la sección hero actual por este bloque completo -->
 
-        <!-- Slide 2: Derecho Laboral -->
-        <div class="slide" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-6 max-w-4xl slide-content">
-                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho Laboral</span>
-                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Defendemos sus<br>Derechos Laborales</h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Despidos, accidentes laborales, negociaciones colectivas. Representación integral para empleados y empleadores.</p>
-                </div>
-            </div>
-        </div>
+<section class="dch-hero" id="inicio">
+  <div class="dch-hero-inner">
+    <div class="dch-hero-texto">
+      <p class="dch-hero-etiqueta">Estudio jurídico en CABA</p>
+      <h1 class="dch-hero-titulo">
+        Derecho que se entiende.<br>
+        <span class="dch-hero-resaltado">Abogada que responde.</span>
+      </h1>
+      <p class="dch-hero-bajada">
+        Soy Victoria Monserrat Nuñez Aragunde, abogada egresada de la UBA con orientación en Derecho Privado. 
+        Atiendo personalmente cada consulta: si me escribís, me respondés vos, no un bot ni un pasamanos.
+      </p>
+      <div class="dch-hero-especialidades">
+        <p><strong>¿Qué resolvemos?</strong> Cuotas alimentarias, divorcios, despidos, maltratos laborales, 
+        amparos de salud contra obras sociales y prepagas, y defensa de consumidores.</p>
+      </div>
+      <div class="dch-hero-botones">
+        <a href="https://wa.me/5491173707992?text=Hola%20Victoria,%20te%20escribo%20desde%20derechoclaro.com.ar" 
+           class="dch-btn-whatsapp" target="_blank" rel="noopener">
+          <svg class="dch-icon-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribime por WhatsApp
+        </a>
+        <a href="#servicios" class="dch-btn-secundario">Ver en qué te puedo ayudar</a>
+      </div>
+      <div class="dch-hero-contacto">
+        <span class="dch-contacto-item">📍 CABA</span>
+        <span class="dch-contacto-sep">·</span>
+        <span class="dch-contacto-item">🕐 Lun a Vie, 9 a 18 hs</span>
+        <span class="dch-contacto-sep">·</span>
+        <span class="dch-contacto-item">📱 +54 9 11 7370-7992</span>
+        <span class="dch-contacto-sep">·</span>
+        <span class="dch-contacto-item">✉️ derechoclarona@gmail.com</span>
+      </div>
+    </div>
+    <div class="dch-hero-imagen">
+      <img src="/assets/foto-victoria.jpg" alt="Victoria Monserrat Nuñez Aragunde, abogada en CABA" loading="lazy">
+    </div>
+  </div>
+</section>
 
-        <!-- Slide 3: Derecho Civil -->
-        <div class="slide" style="background: linear-gradient(rgba(30, 58, 95, 0.85), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center px-6 max-w-4xl slide-content">
-                    <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-accent uppercase bg-white/10 backdrop-blur-sm rounded-full">Derecho Civil y Comercial</span>
-                    <h2 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Soluciones en<br>Derecho Civil</h2>
-                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Contratos, propiedades, daños y perjuicios. Asesoramiento estratégico para proteger sus intereses patrimoniales.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slider Controls -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-10">
-            <button onclick="changeSlide(-1)" class="p-3 border border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 rounded-full">
-                <i data-lucide="chevron-left" class="w-5 h-5"></i>
-            </button>
-            <div class="flex gap-2" id="slideIndicators">
-                <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-white transition-all duration-300"></button>
-                <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300"></button>
-                <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300"></button>
-            </div>
-            <button onclick="changeSlide(1)" class="p-3 border border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300 rounded-full">
-                <i data-lucide="chevron-right" class="w-5 h-5"></i>
-            </button>
-        </div>
-
-        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-light to-transparent"></div>
-    </section>
     <!-- Herramientas -->
     <section class="py-16 bg-light border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-6 text-center">
